@@ -1,0 +1,57 @@
+[
+  {
+    "Candidate_ID": "UFC01",
+    "Candidate_Name": "South Delhi UFC Candidate",
+    "Primary_Zone": "South Delhi",
+    "Daily_Capacity_Orders": 18500,
+    "Storage_Capacity_Units": 10500,
+    "Launch_Cost_Lakh": 82,
+    "Fixed_Cost_Lakh_Annual": 24,
+    "Max_Serviceable_Orders": 16000,
+    "Target_Service_Reliability": 0.92
+  },
+  {
+    "Candidate_ID": "UFC02",
+    "Candidate_Name": "Gurgaon UFC Candidate",
+    "Primary_Zone": "Gurgaon",
+    "Daily_Capacity_Orders": 17000,
+    "Storage_Capacity_Units": 9800,
+    "Launch_Cost_Lakh": 76,
+    "Fixed_Cost_Lakh_Annual": 22,
+    "Max_Serviceable_Orders": 15000,
+    "Target_Service_Reliability": 0.9
+  },
+  {
+    "Candidate_ID": "UFC03",
+    "Candidate_Name": "Noida UFC Candidate",
+    "Primary_Zone": "Noida",
+    "Daily_Capacity_Orders": 16500,
+    "Storage_Capacity_Units": 9200,
+    "Launch_Cost_Lakh": 71,
+    "Fixed_Cost_Lakh_Annual": 23,
+    "Max_Serviceable_Orders": 14500,
+    "Target_Service_Reliability": 0.91
+  },
+  {
+    "Candidate_ID": "UFC04",
+    "Candidate_Name": "West Delhi UFC Candidate",
+    "Primary_Zone": "West Delhi",
+    "Daily_Capacity_Orders": 19000,
+    "Storage_Capacity_Units": 11200,
+    "Launch_Cost_Lakh": 88,
+    "Fixed_Cost_Lakh_Annual": 25,
+    "Max_Serviceable_Orders": 17000,
+    "Target_Service_Reliability": 0.89
+  },
+  {
+    "Candidate_ID": "UFC05",
+    "Candidate_Name": "Central Delhi UFC Candidate",
+    "Primary_Zone": "Central Delhi",
+    "Daily_Capacity_Orders": 13500,
+    "Storage_Capacity_Units": 7600,
+    "Launch_Cost_Lakh": 69,
+    "Fixed_Cost_Lakh_Annual": 21,
+    "Max_Serviceable_Orders": 12500,
+    "Target_Service_Reliability": 0.94
+  }
+]

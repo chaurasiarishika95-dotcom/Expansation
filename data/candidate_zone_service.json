@@ -1,0 +1,202 @@
+[
+  {
+    "Candidate_ID": "UFC01",
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Expected_Delivery_Min": 14,
+    "Serviceable_Customer_Pct": 0.98,
+    "Serviceable_Customers": 607600
+  },
+  {
+    "Candidate_ID": "UFC01",
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Expected_Delivery_Min": 20,
+    "Serviceable_Customer_Pct": 0.89,
+    "Serviceable_Customers": 364900
+  },
+  {
+    "Candidate_ID": "UFC01",
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Expected_Delivery_Min": 27,
+    "Serviceable_Customer_Pct": 0.764,
+    "Serviceable_Customers": 527160
+  },
+  {
+    "Candidate_ID": "UFC01",
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Expected_Delivery_Min": 25,
+    "Serviceable_Customer_Pct": 0.8,
+    "Serviceable_Customers": 464000
+  },
+  {
+    "Candidate_ID": "UFC01",
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Expected_Delivery_Min": 31,
+    "Serviceable_Customer_Pct": 0.692,
+    "Serviceable_Customers": 359840
+  },
+  {
+    "Candidate_ID": "UFC02",
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Expected_Delivery_Min": 25,
+    "Serviceable_Customer_Pct": 0.8,
+    "Serviceable_Customers": 496000
+  },
+  {
+    "Candidate_ID": "UFC02",
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Expected_Delivery_Min": 28,
+    "Serviceable_Customer_Pct": 0.746,
+    "Serviceable_Customers": 305860
+  },
+  {
+    "Candidate_ID": "UFC02",
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Expected_Delivery_Min": 34,
+    "Serviceable_Customer_Pct": 0.638,
+    "Serviceable_Customers": 440220
+  },
+  {
+    "Candidate_ID": "UFC02",
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Expected_Delivery_Min": 16,
+    "Serviceable_Customer_Pct": 0.962,
+    "Serviceable_Customers": 557960
+  },
+  {
+    "Candidate_ID": "UFC02",
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Expected_Delivery_Min": 29,
+    "Serviceable_Customer_Pct": 0.728,
+    "Serviceable_Customers": 378560
+  },
+  {
+    "Candidate_ID": "UFC03",
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Expected_Delivery_Min": 32,
+    "Serviceable_Customer_Pct": 0.674,
+    "Serviceable_Customers": 417880
+  },
+  {
+    "Candidate_ID": "UFC03",
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Expected_Delivery_Min": 27,
+    "Serviceable_Customer_Pct": 0.764,
+    "Serviceable_Customers": 313240
+  },
+  {
+    "Candidate_ID": "UFC03",
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Expected_Delivery_Min": 29,
+    "Serviceable_Customer_Pct": 0.728,
+    "Serviceable_Customers": 502320
+  },
+  {
+    "Candidate_ID": "UFC03",
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Expected_Delivery_Min": 31,
+    "Serviceable_Customer_Pct": 0.692,
+    "Serviceable_Customers": 401360
+  },
+  {
+    "Candidate_ID": "UFC03",
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Expected_Delivery_Min": 17,
+    "Serviceable_Customer_Pct": 0.944,
+    "Serviceable_Customers": 490880
+  },
+  {
+    "Candidate_ID": "UFC04",
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Expected_Delivery_Min": 28,
+    "Serviceable_Customer_Pct": 0.746,
+    "Serviceable_Customers": 462520
+  },
+  {
+    "Candidate_ID": "UFC04",
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Expected_Delivery_Min": 25,
+    "Serviceable_Customer_Pct": 0.8,
+    "Serviceable_Customers": 328000
+  },
+  {
+    "Candidate_ID": "UFC04",
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Expected_Delivery_Min": 16,
+    "Serviceable_Customer_Pct": 0.962,
+    "Serviceable_Customers": 663780
+  },
+  {
+    "Candidate_ID": "UFC04",
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Expected_Delivery_Min": 32,
+    "Serviceable_Customer_Pct": 0.674,
+    "Serviceable_Customers": 390920
+  },
+  {
+    "Candidate_ID": "UFC04",
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Expected_Delivery_Min": 30,
+    "Serviceable_Customer_Pct": 0.71,
+    "Serviceable_Customers": 369200
+  },
+  {
+    "Candidate_ID": "UFC05",
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Expected_Delivery_Min": 20,
+    "Serviceable_Customer_Pct": 0.89,
+    "Serviceable_Customers": 551800
+  },
+  {
+    "Candidate_ID": "UFC05",
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Expected_Delivery_Min": 13,
+    "Serviceable_Customer_Pct": 0.98,
+    "Serviceable_Customers": 401800
+  },
+  {
+    "Candidate_ID": "UFC05",
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Expected_Delivery_Min": 24,
+    "Serviceable_Customer_Pct": 0.818,
+    "Serviceable_Customers": 564420
+  },
+  {
+    "Candidate_ID": "UFC05",
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Expected_Delivery_Min": 29,
+    "Serviceable_Customer_Pct": 0.728,
+    "Serviceable_Customers": 422240
+  },
+  {
+    "Candidate_ID": "UFC05",
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Expected_Delivery_Min": 25,
+    "Serviceable_Customer_Pct": 0.8,
+    "Serviceable_Customers": 416000
+  }
+]

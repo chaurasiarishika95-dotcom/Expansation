@@ -1,0 +1,352 @@
+[
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C01",
+    "Category": "Beauty & Personal Care",
+    "Current_Availability_Pct": 0.844
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C02",
+    "Category": "Electronics",
+    "Current_Availability_Pct": 0.848
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C03",
+    "Category": "Home & Kitchen",
+    "Current_Availability_Pct": 0.817
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C04",
+    "Category": "Fashion",
+    "Current_Availability_Pct": 0.87
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C05",
+    "Category": "Grocery & Staples",
+    "Current_Availability_Pct": 0.955
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C06",
+    "Category": "Health & Wellness",
+    "Current_Availability_Pct": 0.943
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C07",
+    "Category": "Pet Care",
+    "Current_Availability_Pct": 0.907
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C08",
+    "Category": "Toys & Games",
+    "Current_Availability_Pct": 0.888
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C09",
+    "Category": "Sports & Fitness",
+    "Current_Availability_Pct": 0.928
+  },
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Category_ID": "C10",
+    "Category": "Books & Stationery",
+    "Current_Availability_Pct": 0.903
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C01",
+    "Category": "Beauty & Personal Care",
+    "Current_Availability_Pct": 0.957
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C02",
+    "Category": "Electronics",
+    "Current_Availability_Pct": 0.847
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C03",
+    "Category": "Home & Kitchen",
+    "Current_Availability_Pct": 0.844
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C04",
+    "Category": "Fashion",
+    "Current_Availability_Pct": 0.908
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C05",
+    "Category": "Grocery & Staples",
+    "Current_Availability_Pct": 0.864
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C06",
+    "Category": "Health & Wellness",
+    "Current_Availability_Pct": 0.913
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C07",
+    "Category": "Pet Care",
+    "Current_Availability_Pct": 0.934
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C08",
+    "Category": "Toys & Games",
+    "Current_Availability_Pct": 0.857
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C09",
+    "Category": "Sports & Fitness",
+    "Current_Availability_Pct": 0.893
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Category_ID": "C10",
+    "Category": "Books & Stationery",
+    "Current_Availability_Pct": 0.923
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C01",
+    "Category": "Beauty & Personal Care",
+    "Current_Availability_Pct": 0.94
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C02",
+    "Category": "Electronics",
+    "Current_Availability_Pct": 0.9
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C03",
+    "Category": "Home & Kitchen",
+    "Current_Availability_Pct": 0.865
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C04",
+    "Category": "Fashion",
+    "Current_Availability_Pct": 0.91
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C05",
+    "Category": "Grocery & Staples",
+    "Current_Availability_Pct": 0.895
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C06",
+    "Category": "Health & Wellness",
+    "Current_Availability_Pct": 0.933
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C07",
+    "Category": "Pet Care",
+    "Current_Availability_Pct": 0.907
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C08",
+    "Category": "Toys & Games",
+    "Current_Availability_Pct": 0.874
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C09",
+    "Category": "Sports & Fitness",
+    "Current_Availability_Pct": 0.931
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Category_ID": "C10",
+    "Category": "Books & Stationery",
+    "Current_Availability_Pct": 0.902
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C01",
+    "Category": "Beauty & Personal Care",
+    "Current_Availability_Pct": 0.861
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C02",
+    "Category": "Electronics",
+    "Current_Availability_Pct": 0.908
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C03",
+    "Category": "Home & Kitchen",
+    "Current_Availability_Pct": 0.954
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C04",
+    "Category": "Fashion",
+    "Current_Availability_Pct": 0.885
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C05",
+    "Category": "Grocery & Staples",
+    "Current_Availability_Pct": 0.876
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C06",
+    "Category": "Health & Wellness",
+    "Current_Availability_Pct": 0.925
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C07",
+    "Category": "Pet Care",
+    "Current_Availability_Pct": 0.874
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C08",
+    "Category": "Toys & Games",
+    "Current_Availability_Pct": 0.905
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C09",
+    "Category": "Sports & Fitness",
+    "Current_Availability_Pct": 0.903
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Category_ID": "C10",
+    "Category": "Books & Stationery",
+    "Current_Availability_Pct": 0.87
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C01",
+    "Category": "Beauty & Personal Care",
+    "Current_Availability_Pct": 0.882
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C02",
+    "Category": "Electronics",
+    "Current_Availability_Pct": 0.953
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C03",
+    "Category": "Home & Kitchen",
+    "Current_Availability_Pct": 0.87
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C04",
+    "Category": "Fashion",
+    "Current_Availability_Pct": 0.936
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C05",
+    "Category": "Grocery & Staples",
+    "Current_Availability_Pct": 0.92
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C06",
+    "Category": "Health & Wellness",
+    "Current_Availability_Pct": 0.904
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C07",
+    "Category": "Pet Care",
+    "Current_Availability_Pct": 0.857
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C08",
+    "Category": "Toys & Games",
+    "Current_Availability_Pct": 0.865
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C09",
+    "Category": "Sports & Fitness",
+    "Current_Availability_Pct": 0.861
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Category_ID": "C10",
+    "Category": "Books & Stationery",
+    "Current_Availability_Pct": 0.91
+  }
+]

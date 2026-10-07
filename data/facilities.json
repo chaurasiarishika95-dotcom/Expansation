@@ -1,0 +1,52 @@
+[
+  {
+    "Facility_ID": "MFC01",
+    "Facility_Name": "Saket MFC",
+    "Facility_Type": "MFC",
+    "Primary_Zone": "South Delhi",
+    "Daily_Capacity_Orders": 15000,
+    "Current_Utilization": 0.86,
+    "Storage_Capacity_Units": 18000,
+    "Average_Pick_Min": 12
+  },
+  {
+    "Facility_ID": "MFC02",
+    "Facility_Name": "Connaught Place MFC",
+    "Facility_Type": "MFC",
+    "Primary_Zone": "Central Delhi",
+    "Daily_Capacity_Orders": 11000,
+    "Current_Utilization": 0.79,
+    "Storage_Capacity_Units": 13500,
+    "Average_Pick_Min": 12
+  },
+  {
+    "Facility_ID": "MFC03",
+    "Facility_Name": "Rajouri Garden MFC",
+    "Facility_Type": "MFC",
+    "Primary_Zone": "West Delhi",
+    "Daily_Capacity_Orders": 14000,
+    "Current_Utilization": 0.82,
+    "Storage_Capacity_Units": 16500,
+    "Average_Pick_Min": 14
+  },
+  {
+    "Facility_ID": "MFC04",
+    "Facility_Name": "Golf Course MFC",
+    "Facility_Type": "MFC",
+    "Primary_Zone": "Gurgaon",
+    "Daily_Capacity_Orders": 14500,
+    "Current_Utilization": 0.88,
+    "Storage_Capacity_Units": 17000,
+    "Average_Pick_Min": 14
+  },
+  {
+    "Facility_ID": "MFC05",
+    "Facility_Name": "Sector 62 MFC",
+    "Facility_Type": "MFC",
+    "Primary_Zone": "Noida",
+    "Daily_Capacity_Orders": 13000,
+    "Current_Utilization": 0.76,
+    "Storage_Capacity_Units": 15500,
+    "Average_Pick_Min": 15
+  }
+]

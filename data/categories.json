@@ -1,0 +1,72 @@
+[
+  {
+    "Category_ID": "C01",
+    "Category": "Beauty & Personal Care",
+    "Demand_Index": 1.1,
+    "Storage_Units_per_Order": 0.9,
+    "Avg_Item_Value": 1.25
+  },
+  {
+    "Category_ID": "C02",
+    "Category": "Electronics",
+    "Demand_Index": 0.72,
+    "Storage_Units_per_Order": 1.35,
+    "Avg_Item_Value": 1.8
+  },
+  {
+    "Category_ID": "C03",
+    "Category": "Home & Kitchen",
+    "Demand_Index": 0.88,
+    "Storage_Units_per_Order": 1.1,
+    "Avg_Item_Value": 1.55
+  },
+  {
+    "Category_ID": "C04",
+    "Category": "Fashion",
+    "Demand_Index": 0.95,
+    "Storage_Units_per_Order": 1.0,
+    "Avg_Item_Value": 1.2
+  },
+  {
+    "Category_ID": "C05",
+    "Category": "Grocery & Staples",
+    "Demand_Index": 1.35,
+    "Storage_Units_per_Order": 0.72,
+    "Avg_Item_Value": 0.85
+  },
+  {
+    "Category_ID": "C06",
+    "Category": "Health & Wellness",
+    "Demand_Index": 1.05,
+    "Storage_Units_per_Order": 0.82,
+    "Avg_Item_Value": 0.95
+  },
+  {
+    "Category_ID": "C07",
+    "Category": "Pet Care",
+    "Demand_Index": 0.7,
+    "Storage_Units_per_Order": 0.78,
+    "Avg_Item_Value": 1.05
+  },
+  {
+    "Category_ID": "C08",
+    "Category": "Toys & Games",
+    "Demand_Index": 0.64,
+    "Storage_Units_per_Order": 0.92,
+    "Avg_Item_Value": 1.15
+  },
+  {
+    "Category_ID": "C09",
+    "Category": "Sports & Fitness",
+    "Demand_Index": 0.58,
+    "Storage_Units_per_Order": 1.02,
+    "Avg_Item_Value": 1.3
+  },
+  {
+    "Category_ID": "C10",
+    "Category": "Books & Stationery",
+    "Demand_Index": 0.62,
+    "Storage_Units_per_Order": 0.68,
+    "Avg_Item_Value": 0.9
+  }
+]

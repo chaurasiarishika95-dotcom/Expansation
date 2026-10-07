@@ -1,0 +1,37 @@
+[
+  {
+    "Zone_ID": "Z01",
+    "Zone": "South Delhi",
+    "Addressable_Customers": 620000,
+    "Digital_Order_Penetration": 0.74,
+    "Current_Avg_Delivery_Min": 18.5
+  },
+  {
+    "Zone_ID": "Z02",
+    "Zone": "Central Delhi",
+    "Addressable_Customers": 410000,
+    "Digital_Order_Penetration": 0.68,
+    "Current_Avg_Delivery_Min": 17.2
+  },
+  {
+    "Zone_ID": "Z03",
+    "Zone": "West Delhi",
+    "Addressable_Customers": 690000,
+    "Digital_Order_Penetration": 0.61,
+    "Current_Avg_Delivery_Min": 20.1
+  },
+  {
+    "Zone_ID": "Z04",
+    "Zone": "Gurgaon",
+    "Addressable_Customers": 580000,
+    "Digital_Order_Penetration": 0.72,
+    "Current_Avg_Delivery_Min": 18.9
+  },
+  {
+    "Zone_ID": "Z05",
+    "Zone": "Noida",
+    "Addressable_Customers": 520000,
+    "Digital_Order_Penetration": 0.66,
+    "Current_Avg_Delivery_Min": 19.6
+  }
+]

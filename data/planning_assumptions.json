@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "Forecast_Horizon_Days",
+    "Value": 30.0,
+    "Unit": "days",
+    "Description": "Planning horizon for forecast"
+  },
+  {
+    "Parameter": "Target_Delivery_Minutes",
+    "Value": 20.0,
+    "Unit": "minutes",
+    "Description": "Desired average delivery time"
+  },
+  {
+    "Parameter": "Max_UFC_Utilization",
+    "Value": 0.85,
+    "Unit": "ratio",
+    "Description": "Planning utilization ceiling"
+  },
+  {
+    "Parameter": "Min_Service_Reliability",
+    "Value": 0.9,
+    "Unit": "ratio",
+    "Description": "Minimum service reliability"
+  },
+  {
+    "Parameter": "Demand_Growth_Buffer",
+    "Value": 0.1,
+    "Unit": "ratio",
+    "Description": "Capacity buffer over forecast demand"
+  },
+  {
+    "Parameter": "Assortment_Expansion_Threshold",
+    "Value": 0.9,
+    "Unit": "ratio",
+    "Description": "Expand assortment after demand validation"
+  },
+  {
+    "Parameter": "Scenario_Demand_Low",
+    "Value": 0.9,
+    "Unit": "ratio",
+    "Description": "Low-demand scenario multiplier"
+  },
+  {
+    "Parameter": "Scenario_Demand_High",
+    "Value": 1.15,
+    "Unit": "ratio",
+    "Description": "High-demand scenario multiplier"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "Facility_ID": "MFC01",
+    "Zone": "South Delhi",
+    "Coverage_Share": 1.0,
+    "Avg_Delivery_Min": 16,
+    "Service_Reliability": 0.98
+  },
+  {
+    "Facility_ID": "MFC01",
+    "Zone": "Central Delhi",
+    "Coverage_Share": 0.42,
+    "Avg_Delivery_Min": 23,
+    "Service_Reliability": 0.62
+  },
+  {
+    "Facility_ID": "MFC02",
+    "Zone": "Central Delhi",
+    "Coverage_Share": 1.0,
+    "Avg_Delivery_Min": 14,
+    "Service_Reliability": 0.99
+  },
+  {
+    "Facility_ID": "MFC02",
+    "Zone": "South Delhi",
+    "Coverage_Share": 0.48,
+    "Avg_Delivery_Min": 22,
+    "Service_Reliability": 0.65
+  },
+  {
+    "Facility_ID": "MFC02",
+    "Zone": "West Delhi",
+    "Coverage_Share": 0.3,
+    "Avg_Delivery_Min": 26,
+    "Service_Reliability": 0.45
+  },
+  {
+    "Facility_ID": "MFC03",
+    "Zone": "West Delhi",
+    "Coverage_Share": 1.0,
+    "Avg_Delivery_Min": 18,
+    "Service_Reliability": 0.96
+  },
+  {
+    "Facility_ID": "MFC03",
+    "Zone": "Central Delhi",
+    "Coverage_Share": 0.38,
+    "Avg_Delivery_Min": 24,
+    "Service_Reliability": 0.58
+  },
+  {
+    "Facility_ID": "MFC04",
+    "Zone": "Gurgaon",
+    "Coverage_Share": 1.0,
+    "Avg_Delivery_Min": 17,
+    "Service_Reliability": 0.97
+  },
+  {
+    "Facility_ID": "MFC04",
+    "Zone": "South Delhi",
+    "Coverage_Share": 0.35,
+    "Avg_Delivery_Min": 25,
+    "Service_Reliability": 0.52
+  },
+  {
+    "Facility_ID": "MFC05",
+    "Zone": "Noida",
+    "Coverage_Share": 1.0,
+    "Avg_Delivery_Min": 18,
+    "Service_Reliability": 0.96
+  },
+  {
+    "Facility_ID": "MFC05",
+    "Zone": "Central Delhi",
+    "Coverage_Share": 0.3,
+    "Avg_Delivery_Min": 25,
+    "Service_Reliability": 0.44
+  }
+]
