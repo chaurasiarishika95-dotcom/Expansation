@@ -1,0 +1,18 @@
+[
+  {
+    "Node_Type": "Small MFC",
+    "Max_Assortment_SKUs": 1200,
+    "Target_Utilization_Pct": 85,
+    "Min_Service_Level_Pct": 92,
+    "Upgrade_Utilization_Trigger_Pct": 90,
+    "Typical_Ramp_Days": 45
+  },
+  {
+    "Node_Type": "UFC",
+    "Max_Assortment_SKUs": 4000,
+    "Target_Utilization_Pct": 85,
+    "Min_Service_Level_Pct": 95,
+    "Upgrade_Utilization_Trigger_Pct": 95,
+    "Typical_Ramp_Days": 90
+  }
+]

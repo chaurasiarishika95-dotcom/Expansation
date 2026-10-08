@@ -1,50 +1,37 @@
-[
-  {
-    "Parameter": "Forecast_Horizon_Days",
-    "Value": 30.0,
-    "Unit": "days",
-    "Description": "Planning horizon for forecast"
-  },
-  {
-    "Parameter": "Target_Delivery_Minutes",
-    "Value": 20.0,
-    "Unit": "minutes",
-    "Description": "Desired average delivery time"
-  },
-  {
-    "Parameter": "Max_UFC_Utilization",
-    "Value": 0.85,
-    "Unit": "ratio",
-    "Description": "Planning utilization ceiling"
-  },
-  {
-    "Parameter": "Min_Service_Reliability",
-    "Value": 0.9,
-    "Unit": "ratio",
-    "Description": "Minimum service reliability"
-  },
-  {
-    "Parameter": "Demand_Growth_Buffer",
-    "Value": 0.1,
-    "Unit": "ratio",
-    "Description": "Capacity buffer over forecast demand"
-  },
-  {
-    "Parameter": "Assortment_Expansion_Threshold",
-    "Value": 0.9,
-    "Unit": "ratio",
-    "Description": "Expand assortment after demand validation"
-  },
-  {
-    "Parameter": "Scenario_Demand_Low",
-    "Value": 0.9,
-    "Unit": "ratio",
-    "Description": "Low-demand scenario multiplier"
-  },
-  {
-    "Parameter": "Scenario_Demand_High",
-    "Value": 1.15,
-    "Unit": "ratio",
-    "Description": "High-demand scenario multiplier"
-  }
-]
+{
+  "Default_Demand_Multiplier": 1.0,
+  "Default_Budget_Lakh": 100,
+  "Default_Storage_Limit_Pct": 85,
+  "Default_Delivery_Target_Min": 20,
+  "Default_Capacity_Buffer_Pct": 10,
+  "Phased_Expansion_Trigger_Utilization_Pct": 90,
+  "Phased_Expansion_Trigger_Demand_Growth_Pct": 15,
+  "Assortment_Validation_Period_Days": 30,
+  "Scenario_Demand_Range_Pct": [
+    -20,
+    -10,
+    0,
+    10,
+    20,
+    30
+  ],
+  "Scenario_Budget_Lakh": [
+    60,
+    80,
+    100,
+    120,
+    150
+  ],
+  "Scenario_Delivery_Target_Min": [
+    15,
+    18,
+    20,
+    25
+  ],
+  "Scenario_Storage_Limit_Pct": [
+    70,
+    80,
+    85,
+    90
+  ]
+}

@@ -1,0 +1,898 @@
+[
+  {
+    "Zone": "South Delhi",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1332,
+    "Unavailable_Searches": 283,
+    "Unmet_Demand_Index": 0.212
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 890,
+    "Unavailable_Searches": 181,
+    "Unmet_Demand_Index": 0.203
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 986,
+    "Unavailable_Searches": 165,
+    "Unmet_Demand_Index": 0.167
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 759,
+    "Unavailable_Searches": 148,
+    "Unmet_Demand_Index": 0.195
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 721,
+    "Unavailable_Searches": 149,
+    "Unmet_Demand_Index": 0.207
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 613,
+    "Unavailable_Searches": 129,
+    "Unmet_Demand_Index": 0.21
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 932,
+    "Unavailable_Searches": 190,
+    "Unmet_Demand_Index": 0.204
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 588,
+    "Unavailable_Searches": 92,
+    "Unmet_Demand_Index": 0.156
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 471,
+    "Unavailable_Searches": 108,
+    "Unmet_Demand_Index": 0.229
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 397,
+    "Unavailable_Searches": 86,
+    "Unmet_Demand_Index": 0.217
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 337,
+    "Unavailable_Searches": 66,
+    "Unmet_Demand_Index": 0.196
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 466,
+    "Unavailable_Searches": 85,
+    "Unmet_Demand_Index": 0.182
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 649,
+    "Unavailable_Searches": 115,
+    "Unmet_Demand_Index": 0.177
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 496,
+    "Unavailable_Searches": 101,
+    "Unmet_Demand_Index": 0.204
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 373,
+    "Unavailable_Searches": 88,
+    "Unmet_Demand_Index": 0.236
+  },
+  {
+    "Zone": "South Delhi",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 236,
+    "Unavailable_Searches": 41,
+    "Unmet_Demand_Index": 0.174
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1309,
+    "Unavailable_Searches": 220,
+    "Unmet_Demand_Index": 0.168
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 1043,
+    "Unavailable_Searches": 129,
+    "Unmet_Demand_Index": 0.124
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 771,
+    "Unavailable_Searches": 143,
+    "Unmet_Demand_Index": 0.185
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 679,
+    "Unavailable_Searches": 101,
+    "Unmet_Demand_Index": 0.149
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 717,
+    "Unavailable_Searches": 110,
+    "Unmet_Demand_Index": 0.153
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 555,
+    "Unavailable_Searches": 77,
+    "Unmet_Demand_Index": 0.139
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 853,
+    "Unavailable_Searches": 144,
+    "Unmet_Demand_Index": 0.169
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 602,
+    "Unavailable_Searches": 88,
+    "Unmet_Demand_Index": 0.146
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 504,
+    "Unavailable_Searches": 62,
+    "Unmet_Demand_Index": 0.123
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 342,
+    "Unavailable_Searches": 58,
+    "Unmet_Demand_Index": 0.17
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 289,
+    "Unavailable_Searches": 46,
+    "Unmet_Demand_Index": 0.159
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 460,
+    "Unavailable_Searches": 84,
+    "Unmet_Demand_Index": 0.183
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 526,
+    "Unavailable_Searches": 98,
+    "Unmet_Demand_Index": 0.186
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 401,
+    "Unavailable_Searches": 58,
+    "Unmet_Demand_Index": 0.145
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 312,
+    "Unavailable_Searches": 37,
+    "Unmet_Demand_Index": 0.119
+  },
+  {
+    "Zone": "Gurgaon",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 205,
+    "Unavailable_Searches": 31,
+    "Unmet_Demand_Index": 0.151
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1454,
+    "Unavailable_Searches": 298,
+    "Unmet_Demand_Index": 0.205
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 867,
+    "Unavailable_Searches": 212,
+    "Unmet_Demand_Index": 0.245
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 809,
+    "Unavailable_Searches": 137,
+    "Unmet_Demand_Index": 0.169
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 743,
+    "Unavailable_Searches": 145,
+    "Unmet_Demand_Index": 0.195
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 698,
+    "Unavailable_Searches": 142,
+    "Unmet_Demand_Index": 0.203
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 597,
+    "Unavailable_Searches": 142,
+    "Unmet_Demand_Index": 0.238
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 848,
+    "Unavailable_Searches": 148,
+    "Unmet_Demand_Index": 0.175
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 512,
+    "Unavailable_Searches": 88,
+    "Unmet_Demand_Index": 0.172
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 497,
+    "Unavailable_Searches": 109,
+    "Unmet_Demand_Index": 0.219
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 442,
+    "Unavailable_Searches": 72,
+    "Unmet_Demand_Index": 0.163
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 356,
+    "Unavailable_Searches": 75,
+    "Unmet_Demand_Index": 0.211
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 431,
+    "Unavailable_Searches": 85,
+    "Unmet_Demand_Index": 0.197
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 480,
+    "Unavailable_Searches": 87,
+    "Unmet_Demand_Index": 0.181
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 439,
+    "Unavailable_Searches": 96,
+    "Unmet_Demand_Index": 0.219
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 351,
+    "Unavailable_Searches": 59,
+    "Unmet_Demand_Index": 0.168
+  },
+  {
+    "Zone": "Noida",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 218,
+    "Unavailable_Searches": 54,
+    "Unmet_Demand_Index": 0.248
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1068,
+    "Unavailable_Searches": 135,
+    "Unmet_Demand_Index": 0.126
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 807,
+    "Unavailable_Searches": 110,
+    "Unmet_Demand_Index": 0.136
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 833,
+    "Unavailable_Searches": 94,
+    "Unmet_Demand_Index": 0.113
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 535,
+    "Unavailable_Searches": 63,
+    "Unmet_Demand_Index": 0.118
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 531,
+    "Unavailable_Searches": 57,
+    "Unmet_Demand_Index": 0.107
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 483,
+    "Unavailable_Searches": 77,
+    "Unmet_Demand_Index": 0.159
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 793,
+    "Unavailable_Searches": 103,
+    "Unmet_Demand_Index": 0.13
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 542,
+    "Unavailable_Searches": 80,
+    "Unmet_Demand_Index": 0.148
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 415,
+    "Unavailable_Searches": 71,
+    "Unmet_Demand_Index": 0.171
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 287,
+    "Unavailable_Searches": 36,
+    "Unmet_Demand_Index": 0.125
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 299,
+    "Unavailable_Searches": 36,
+    "Unmet_Demand_Index": 0.12
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 336,
+    "Unavailable_Searches": 44,
+    "Unmet_Demand_Index": 0.131
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 464,
+    "Unavailable_Searches": 66,
+    "Unmet_Demand_Index": 0.142
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 349,
+    "Unavailable_Searches": 52,
+    "Unmet_Demand_Index": 0.149
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 250,
+    "Unavailable_Searches": 35,
+    "Unmet_Demand_Index": 0.14
+  },
+  {
+    "Zone": "West Delhi",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 229,
+    "Unavailable_Searches": 36,
+    "Unmet_Demand_Index": 0.157
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 742,
+    "Unavailable_Searches": 99,
+    "Unmet_Demand_Index": 0.133
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 582,
+    "Unavailable_Searches": 79,
+    "Unmet_Demand_Index": 0.136
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 571,
+    "Unavailable_Searches": 73,
+    "Unmet_Demand_Index": 0.128
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 507,
+    "Unavailable_Searches": 58,
+    "Unmet_Demand_Index": 0.114
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 407,
+    "Unavailable_Searches": 51,
+    "Unmet_Demand_Index": 0.125
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 384,
+    "Unavailable_Searches": 38,
+    "Unmet_Demand_Index": 0.099
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 594,
+    "Unavailable_Searches": 87,
+    "Unmet_Demand_Index": 0.146
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 418,
+    "Unavailable_Searches": 60,
+    "Unmet_Demand_Index": 0.144
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 293,
+    "Unavailable_Searches": 35,
+    "Unmet_Demand_Index": 0.119
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 239,
+    "Unavailable_Searches": 29,
+    "Unmet_Demand_Index": 0.121
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 247,
+    "Unavailable_Searches": 36,
+    "Unmet_Demand_Index": 0.146
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 319,
+    "Unavailable_Searches": 37,
+    "Unmet_Demand_Index": 0.116
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 383,
+    "Unavailable_Searches": 47,
+    "Unmet_Demand_Index": 0.123
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 330,
+    "Unavailable_Searches": 37,
+    "Unmet_Demand_Index": 0.112
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 213,
+    "Unavailable_Searches": 33,
+    "Unmet_Demand_Index": 0.155
+  },
+  {
+    "Zone": "Central Delhi",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 179,
+    "Unavailable_Searches": 22,
+    "Unmet_Demand_Index": 0.123
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1066,
+    "Unavailable_Searches": 206,
+    "Unmet_Demand_Index": 0.193
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 690,
+    "Unavailable_Searches": 138,
+    "Unmet_Demand_Index": 0.2
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 699,
+    "Unavailable_Searches": 154,
+    "Unmet_Demand_Index": 0.22
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 483,
+    "Unavailable_Searches": 83,
+    "Unmet_Demand_Index": 0.172
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 481,
+    "Unavailable_Searches": 82,
+    "Unmet_Demand_Index": 0.17
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 460,
+    "Unavailable_Searches": 95,
+    "Unmet_Demand_Index": 0.207
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 749,
+    "Unavailable_Searches": 147,
+    "Unmet_Demand_Index": 0.196
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 483,
+    "Unavailable_Searches": 65,
+    "Unmet_Demand_Index": 0.135
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 363,
+    "Unavailable_Searches": 53,
+    "Unmet_Demand_Index": 0.146
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 249,
+    "Unavailable_Searches": 42,
+    "Unmet_Demand_Index": 0.169
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 228,
+    "Unavailable_Searches": 42,
+    "Unmet_Demand_Index": 0.184
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 312,
+    "Unavailable_Searches": 56,
+    "Unmet_Demand_Index": 0.179
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 382,
+    "Unavailable_Searches": 55,
+    "Unmet_Demand_Index": 0.144
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 361,
+    "Unavailable_Searches": 50,
+    "Unmet_Demand_Index": 0.139
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 250,
+    "Unavailable_Searches": 36,
+    "Unmet_Demand_Index": 0.144
+  },
+  {
+    "Zone": "North Delhi",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 180,
+    "Unavailable_Searches": 31,
+    "Unmet_Demand_Index": 0.172
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1115,
+    "Unavailable_Searches": 240,
+    "Unmet_Demand_Index": 0.215
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 777,
+    "Unavailable_Searches": 145,
+    "Unmet_Demand_Index": 0.187
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 665,
+    "Unavailable_Searches": 132,
+    "Unmet_Demand_Index": 0.198
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 655,
+    "Unavailable_Searches": 118,
+    "Unmet_Demand_Index": 0.18
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 659,
+    "Unavailable_Searches": 160,
+    "Unmet_Demand_Index": 0.243
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 516,
+    "Unavailable_Searches": 110,
+    "Unmet_Demand_Index": 0.213
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 794,
+    "Unavailable_Searches": 193,
+    "Unmet_Demand_Index": 0.243
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 531,
+    "Unavailable_Searches": 131,
+    "Unmet_Demand_Index": 0.247
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 391,
+    "Unavailable_Searches": 92,
+    "Unmet_Demand_Index": 0.235
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 318,
+    "Unavailable_Searches": 65,
+    "Unmet_Demand_Index": 0.204
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 301,
+    "Unavailable_Searches": 73,
+    "Unmet_Demand_Index": 0.243
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 430,
+    "Unavailable_Searches": 97,
+    "Unmet_Demand_Index": 0.226
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 497,
+    "Unavailable_Searches": 77,
+    "Unmet_Demand_Index": 0.155
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 429,
+    "Unavailable_Searches": 109,
+    "Unmet_Demand_Index": 0.254
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 315,
+    "Unavailable_Searches": 63,
+    "Unmet_Demand_Index": 0.2
+  },
+  {
+    "Zone": "East Delhi",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 236,
+    "Unavailable_Searches": 45,
+    "Unmet_Demand_Index": 0.191
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Fresh Produce",
+    "Daily_Search_Demand": 1010,
+    "Unavailable_Searches": 218,
+    "Unmet_Demand_Index": 0.216
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Dairy",
+    "Daily_Search_Demand": 720,
+    "Unavailable_Searches": 170,
+    "Unmet_Demand_Index": 0.236
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Snacks",
+    "Daily_Search_Demand": 575,
+    "Unavailable_Searches": 149,
+    "Unmet_Demand_Index": 0.259
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Beverages",
+    "Daily_Search_Demand": 495,
+    "Unavailable_Searches": 95,
+    "Unmet_Demand_Index": 0.192
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Household Cleaning",
+    "Daily_Search_Demand": 474,
+    "Unavailable_Searches": 125,
+    "Unmet_Demand_Index": 0.264
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Personal Care",
+    "Daily_Search_Demand": 548,
+    "Unavailable_Searches": 164,
+    "Unmet_Demand_Index": 0.299
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Packaged Food",
+    "Daily_Search_Demand": 614,
+    "Unavailable_Searches": 129,
+    "Unmet_Demand_Index": 0.21
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Bakery",
+    "Daily_Search_Demand": 404,
+    "Unavailable_Searches": 109,
+    "Unmet_Demand_Index": 0.27
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Frozen Foods",
+    "Daily_Search_Demand": 316,
+    "Unavailable_Searches": 59,
+    "Unmet_Demand_Index": 0.187
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Baby Care",
+    "Daily_Search_Demand": 281,
+    "Unavailable_Searches": 75,
+    "Unmet_Demand_Index": 0.267
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Pet Care",
+    "Daily_Search_Demand": 227,
+    "Unavailable_Searches": 61,
+    "Unmet_Demand_Index": 0.269
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Health & Wellness",
+    "Daily_Search_Demand": 300,
+    "Unavailable_Searches": 69,
+    "Unmet_Demand_Index": 0.23
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Home Essentials",
+    "Daily_Search_Demand": 405,
+    "Unavailable_Searches": 74,
+    "Unmet_Demand_Index": 0.183
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Beauty",
+    "Daily_Search_Demand": 282,
+    "Unavailable_Searches": 72,
+    "Unmet_Demand_Index": 0.255
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Electronics Accessories",
+    "Daily_Search_Demand": 254,
+    "Unavailable_Searches": 72,
+    "Unmet_Demand_Index": 0.283
+  },
+  {
+    "Zone": "Ghaziabad",
+    "Category": "Meat Alternatives",
+    "Daily_Search_Demand": 187,
+    "Unavailable_Searches": 52,
+    "Unmet_Demand_Index": 0.278
+  }
+]

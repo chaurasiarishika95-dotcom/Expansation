@@ -1,0 +1,514 @@
+[
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 540000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 25
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 26000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 37
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 30500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 37
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 189000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 115500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 21500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 37
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 25000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 37
+  },
+  {
+    "Facility_ID": "F-SD-01",
+    "Facility_Zone": "South Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 21000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 37
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 210000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 23
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 468000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 18
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 30500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 27000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 115500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 23
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 21500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 25000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-GGN-01",
+    "Facility_Zone": "Gurgaon",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 21000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 30000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 40
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 26000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 40
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 549000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 28
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 27000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 40
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 115500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 21500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 40
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 175000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Facility_Zone": "Noida",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 147000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 210000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 26000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 30500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 486000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 115500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 150500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 25000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Facility_Zone": "West Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 21000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 210000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 182000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 30500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 189000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 297000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 17
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 150500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 175000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Facility_Zone": "Central Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 21000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 30000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 36
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 26000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 36
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 30500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 36
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 189000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 115500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 387000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 175000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Facility_Zone": "North Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 21000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 36
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 30000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 38
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 26000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 38
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 213500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 27000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 38
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 115500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 150500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 450000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 26
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Facility_Zone": "East Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 147000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 30000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 43
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 26000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 43
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 213500,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 36
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 27000,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 43
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 16500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 43
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 21500,
+    "Serviceable_Pct": 0.05,
+    "Expected_Delivery_Min": 43
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 175000,
+    "Serviceable_Pct": 0.35,
+    "Expected_Delivery_Min": 36
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Facility_Zone": "Ghaziabad",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 378000,
+    "Serviceable_Pct": 0.9,
+    "Expected_Delivery_Min": 31
+  }
+]

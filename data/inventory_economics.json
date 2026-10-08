@@ -1,0 +1,4322 @@
+[
+  {
+    "SKU_ID": "SKU0001",
+    "Unit_Cost": 26.94,
+    "Margin_Per_Unit": 12.31,
+    "Storage_Requirement_Units": 0.75,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0216
+  },
+  {
+    "SKU_ID": "SKU0002",
+    "Unit_Cost": 24.44,
+    "Margin_Per_Unit": 17.43,
+    "Storage_Requirement_Units": 0.99,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0196
+  },
+  {
+    "SKU_ID": "SKU0003",
+    "Unit_Cost": 30.96,
+    "Margin_Per_Unit": 13.53,
+    "Storage_Requirement_Units": 2.57,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0248
+  },
+  {
+    "SKU_ID": "SKU0004",
+    "Unit_Cost": 31.73,
+    "Margin_Per_Unit": 15.38,
+    "Storage_Requirement_Units": 0.77,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0254
+  },
+  {
+    "SKU_ID": "SKU0005",
+    "Unit_Cost": 28.69,
+    "Margin_Per_Unit": 21.04,
+    "Storage_Requirement_Units": 1.76,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.023
+  },
+  {
+    "SKU_ID": "SKU0006",
+    "Unit_Cost": 34.86,
+    "Margin_Per_Unit": 17.49,
+    "Storage_Requirement_Units": 2.2,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0279
+  },
+  {
+    "SKU_ID": "SKU0007",
+    "Unit_Cost": 36.37,
+    "Margin_Per_Unit": 18.6,
+    "Storage_Requirement_Units": 1.16,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0291
+  },
+  {
+    "SKU_ID": "SKU0008",
+    "Unit_Cost": 34.11,
+    "Margin_Per_Unit": 23.48,
+    "Storage_Requirement_Units": 2.53,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0273
+  },
+  {
+    "SKU_ID": "SKU0009",
+    "Unit_Cost": 42.25,
+    "Margin_Per_Unit": 17.97,
+    "Storage_Requirement_Units": 1.41,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0338
+  },
+  {
+    "SKU_ID": "SKU0010",
+    "Unit_Cost": 36.19,
+    "Margin_Per_Unit": 26.65,
+    "Storage_Requirement_Units": 2.3,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.029
+  },
+  {
+    "SKU_ID": "SKU0011",
+    "Unit_Cost": 35.62,
+    "Margin_Per_Unit": 29.84,
+    "Storage_Requirement_Units": 0.9,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0285
+  },
+  {
+    "SKU_ID": "SKU0012",
+    "Unit_Cost": 46.09,
+    "Margin_Per_Unit": 21.99,
+    "Storage_Requirement_Units": 2.39,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0369
+  },
+  {
+    "SKU_ID": "SKU0013",
+    "Unit_Cost": 45.21,
+    "Margin_Per_Unit": 25.49,
+    "Storage_Requirement_Units": 0.96,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0362
+  },
+  {
+    "SKU_ID": "SKU0014",
+    "Unit_Cost": 39.63,
+    "Margin_Per_Unit": 33.69,
+    "Storage_Requirement_Units": 1.32,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0317
+  },
+  {
+    "SKU_ID": "SKU0015",
+    "Unit_Cost": 51.7,
+    "Margin_Per_Unit": 24.24,
+    "Storage_Requirement_Units": 2.51,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0414
+  },
+  {
+    "SKU_ID": "SKU0016",
+    "Unit_Cost": 44.78,
+    "Margin_Per_Unit": 33.78,
+    "Storage_Requirement_Units": 0.85,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0358
+  },
+  {
+    "SKU_ID": "SKU0017",
+    "Unit_Cost": 47.02,
+    "Margin_Per_Unit": 34.16,
+    "Storage_Requirement_Units": 1.31,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0376
+  },
+  {
+    "SKU_ID": "SKU0018",
+    "Unit_Cost": 62.21,
+    "Margin_Per_Unit": 21.59,
+    "Storage_Requirement_Units": 2.52,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0498
+  },
+  {
+    "SKU_ID": "SKU0019",
+    "Unit_Cost": 51.18,
+    "Margin_Per_Unit": 35.24,
+    "Storage_Requirement_Units": 2.03,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0409
+  },
+  {
+    "SKU_ID": "SKU0020",
+    "Unit_Cost": 50.07,
+    "Margin_Per_Unit": 38.97,
+    "Storage_Requirement_Units": 1.45,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0401
+  },
+  {
+    "SKU_ID": "SKU0021",
+    "Unit_Cost": 54.03,
+    "Margin_Per_Unit": 37.63,
+    "Storage_Requirement_Units": 2.67,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0432
+  },
+  {
+    "SKU_ID": "SKU0022",
+    "Unit_Cost": 50.78,
+    "Margin_Per_Unit": 43.5,
+    "Storage_Requirement_Units": 2.03,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0406
+  },
+  {
+    "SKU_ID": "SKU0023",
+    "Unit_Cost": 68.76,
+    "Margin_Per_Unit": 28.15,
+    "Storage_Requirement_Units": 1.04,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.055
+  },
+  {
+    "SKU_ID": "SKU0024",
+    "Unit_Cost": 58.74,
+    "Margin_Per_Unit": 40.79,
+    "Storage_Requirement_Units": 2.64,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.047
+  },
+  {
+    "SKU_ID": "SKU0025",
+    "Unit_Cost": 67.91,
+    "Margin_Per_Unit": 34.24,
+    "Storage_Requirement_Units": 2.14,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0543
+  },
+  {
+    "SKU_ID": "SKU0026",
+    "Unit_Cost": 60.72,
+    "Margin_Per_Unit": 44.05,
+    "Storage_Requirement_Units": 0.77,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0486
+  },
+  {
+    "SKU_ID": "SKU0027",
+    "Unit_Cost": 67.04,
+    "Margin_Per_Unit": 40.35,
+    "Storage_Requirement_Units": 0.84,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0536
+  },
+  {
+    "SKU_ID": "SKU0028",
+    "Unit_Cost": 82.27,
+    "Margin_Per_Unit": 27.74,
+    "Storage_Requirement_Units": 1.36,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0658
+  },
+  {
+    "SKU_ID": "SKU0029",
+    "Unit_Cost": 73.19,
+    "Margin_Per_Unit": 39.44,
+    "Storage_Requirement_Units": 2.56,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0586
+  },
+  {
+    "SKU_ID": "SKU0030",
+    "Unit_Cost": 73.68,
+    "Margin_Per_Unit": 41.57,
+    "Storage_Requirement_Units": 1.26,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0589
+  },
+  {
+    "SKU_ID": "SKU0031",
+    "Unit_Cost": 37.47,
+    "Margin_Per_Unit": 15.03,
+    "Storage_Requirement_Units": 1.83,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.03
+  },
+  {
+    "SKU_ID": "SKU0032",
+    "Unit_Cost": 38.06,
+    "Margin_Per_Unit": 18.58,
+    "Storage_Requirement_Units": 2.59,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0304
+  },
+  {
+    "SKU_ID": "SKU0033",
+    "Unit_Cost": 37.33,
+    "Margin_Per_Unit": 23.45,
+    "Storage_Requirement_Units": 2.79,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0299
+  },
+  {
+    "SKU_ID": "SKU0034",
+    "Unit_Cost": 42.35,
+    "Margin_Per_Unit": 22.56,
+    "Storage_Requirement_Units": 0.89,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0339
+  },
+  {
+    "SKU_ID": "SKU0035",
+    "Unit_Cost": 51.37,
+    "Margin_Per_Unit": 17.68,
+    "Storage_Requirement_Units": 1.02,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0411
+  },
+  {
+    "SKU_ID": "SKU0036",
+    "Unit_Cost": 53.13,
+    "Margin_Per_Unit": 20.06,
+    "Storage_Requirement_Units": 1.59,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0425
+  },
+  {
+    "SKU_ID": "SKU0037",
+    "Unit_Cost": 47.95,
+    "Margin_Per_Unit": 29.38,
+    "Storage_Requirement_Units": 1.95,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0384
+  },
+  {
+    "SKU_ID": "SKU0038",
+    "Unit_Cost": 53.57,
+    "Margin_Per_Unit": 27.9,
+    "Storage_Requirement_Units": 2.74,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0429
+  },
+  {
+    "SKU_ID": "SKU0039",
+    "Unit_Cost": 59.65,
+    "Margin_Per_Unit": 25.95,
+    "Storage_Requirement_Units": 0.94,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0477
+  },
+  {
+    "SKU_ID": "SKU0040",
+    "Unit_Cost": 64.18,
+    "Margin_Per_Unit": 25.56,
+    "Storage_Requirement_Units": 2.31,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0513
+  },
+  {
+    "SKU_ID": "SKU0041",
+    "Unit_Cost": 51.54,
+    "Margin_Per_Unit": 42.34,
+    "Storage_Requirement_Units": 1.61,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0412
+  },
+  {
+    "SKU_ID": "SKU0042",
+    "Unit_Cost": 51.05,
+    "Margin_Per_Unit": 46.97,
+    "Storage_Requirement_Units": 2.22,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0408
+  },
+  {
+    "SKU_ID": "SKU0043",
+    "Unit_Cost": 60.12,
+    "Margin_Per_Unit": 42.04,
+    "Storage_Requirement_Units": 1.75,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0481
+  },
+  {
+    "SKU_ID": "SKU0044",
+    "Unit_Cost": 69.3,
+    "Margin_Per_Unit": 36.99,
+    "Storage_Requirement_Units": 0.92,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0554
+  },
+  {
+    "SKU_ID": "SKU0045",
+    "Unit_Cost": 65.99,
+    "Margin_Per_Unit": 44.44,
+    "Storage_Requirement_Units": 2.04,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0528
+  },
+  {
+    "SKU_ID": "SKU0046",
+    "Unit_Cost": 65.5,
+    "Margin_Per_Unit": 49.07,
+    "Storage_Requirement_Units": 1.49,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0524
+  },
+  {
+    "SKU_ID": "SKU0047",
+    "Unit_Cost": 78.38,
+    "Margin_Per_Unit": 40.33,
+    "Storage_Requirement_Units": 2.34,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0627
+  },
+  {
+    "SKU_ID": "SKU0048",
+    "Unit_Cost": 93.21,
+    "Margin_Per_Unit": 29.63,
+    "Storage_Requirement_Units": 1.96,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0746
+  },
+  {
+    "SKU_ID": "SKU0049",
+    "Unit_Cost": 66.67,
+    "Margin_Per_Unit": 60.31,
+    "Storage_Requirement_Units": 2.65,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0533
+  },
+  {
+    "SKU_ID": "SKU0050",
+    "Unit_Cost": 76.35,
+    "Margin_Per_Unit": 54.77,
+    "Storage_Requirement_Units": 1.21,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0611
+  },
+  {
+    "SKU_ID": "SKU0051",
+    "Unit_Cost": 103.64,
+    "Margin_Per_Unit": 31.62,
+    "Storage_Requirement_Units": 0.88,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0829
+  },
+  {
+    "SKU_ID": "SKU0052",
+    "Unit_Cost": 102.06,
+    "Margin_Per_Unit": 37.34,
+    "Storage_Requirement_Units": 2.75,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0816
+  },
+  {
+    "SKU_ID": "SKU0053",
+    "Unit_Cost": 103.21,
+    "Margin_Per_Unit": 40.32,
+    "Storage_Requirement_Units": 0.97,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0826
+  },
+  {
+    "SKU_ID": "SKU0054",
+    "Unit_Cost": 113.14,
+    "Margin_Per_Unit": 34.53,
+    "Storage_Requirement_Units": 1.05,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0905
+  },
+  {
+    "SKU_ID": "SKU0055",
+    "Unit_Cost": 113.38,
+    "Margin_Per_Unit": 38.43,
+    "Storage_Requirement_Units": 1.59,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0907
+  },
+  {
+    "SKU_ID": "SKU0056",
+    "Unit_Cost": 118.76,
+    "Margin_Per_Unit": 37.19,
+    "Storage_Requirement_Units": 2.29,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.095
+  },
+  {
+    "SKU_ID": "SKU0057",
+    "Unit_Cost": 91.62,
+    "Margin_Per_Unit": 68.47,
+    "Storage_Requirement_Units": 1.35,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0733
+  },
+  {
+    "SKU_ID": "SKU0058",
+    "Unit_Cost": 113.14,
+    "Margin_Per_Unit": 51.08,
+    "Storage_Requirement_Units": 1.62,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0905
+  },
+  {
+    "SKU_ID": "SKU0059",
+    "Unit_Cost": 107.31,
+    "Margin_Per_Unit": 61.05,
+    "Storage_Requirement_Units": 1.22,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0858
+  },
+  {
+    "SKU_ID": "SKU0060",
+    "Unit_Cost": 104.86,
+    "Margin_Per_Unit": 67.64,
+    "Storage_Requirement_Units": 1.94,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0839
+  },
+  {
+    "SKU_ID": "SKU0061",
+    "Unit_Cost": 24.73,
+    "Margin_Per_Unit": 12.02,
+    "Storage_Requirement_Units": 0.72,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0198
+  },
+  {
+    "SKU_ID": "SKU0062",
+    "Unit_Cost": 21.9,
+    "Margin_Per_Unit": 18.85,
+    "Storage_Requirement_Units": 0.77,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0175
+  },
+  {
+    "SKU_ID": "SKU0063",
+    "Unit_Cost": 29.25,
+    "Margin_Per_Unit": 15.5,
+    "Storage_Requirement_Units": 1.28,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0234
+  },
+  {
+    "SKU_ID": "SKU0064",
+    "Unit_Cost": 32.18,
+    "Margin_Per_Unit": 16.57,
+    "Storage_Requirement_Units": 2.22,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0257
+  },
+  {
+    "SKU_ID": "SKU0065",
+    "Unit_Cost": 38.19,
+    "Margin_Per_Unit": 14.56,
+    "Storage_Requirement_Units": 2.4,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0306
+  },
+  {
+    "SKU_ID": "SKU0066",
+    "Unit_Cost": 30.94,
+    "Margin_Per_Unit": 25.81,
+    "Storage_Requirement_Units": 1.61,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0248
+  },
+  {
+    "SKU_ID": "SKU0067",
+    "Unit_Cost": 38.97,
+    "Margin_Per_Unit": 21.78,
+    "Storage_Requirement_Units": 2.23,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0312
+  },
+  {
+    "SKU_ID": "SKU0068",
+    "Unit_Cost": 40.45,
+    "Margin_Per_Unit": 24.3,
+    "Storage_Requirement_Units": 1.41,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0324
+  },
+  {
+    "SKU_ID": "SKU0069",
+    "Unit_Cost": 39.17,
+    "Margin_Per_Unit": 29.58,
+    "Storage_Requirement_Units": 1.83,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0313
+  },
+  {
+    "SKU_ID": "SKU0070",
+    "Unit_Cost": 41.3,
+    "Margin_Per_Unit": 31.45,
+    "Storage_Requirement_Units": 1.67,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.033
+  },
+  {
+    "SKU_ID": "SKU0071",
+    "Unit_Cost": 56.03,
+    "Margin_Per_Unit": 20.72,
+    "Storage_Requirement_Units": 2.5,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0448
+  },
+  {
+    "SKU_ID": "SKU0072",
+    "Unit_Cost": 55.68,
+    "Margin_Per_Unit": 25.07,
+    "Storage_Requirement_Units": 1.84,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0445
+  },
+  {
+    "SKU_ID": "SKU0073",
+    "Unit_Cost": 64.48,
+    "Margin_Per_Unit": 20.27,
+    "Storage_Requirement_Units": 2.48,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0516
+  },
+  {
+    "SKU_ID": "SKU0074",
+    "Unit_Cost": 57.36,
+    "Margin_Per_Unit": 31.39,
+    "Storage_Requirement_Units": 1.15,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0459
+  },
+  {
+    "SKU_ID": "SKU0075",
+    "Unit_Cost": 52.2,
+    "Margin_Per_Unit": 40.55,
+    "Storage_Requirement_Units": 0.7,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0418
+  },
+  {
+    "SKU_ID": "SKU0076",
+    "Unit_Cost": 73.62,
+    "Margin_Per_Unit": 23.13,
+    "Storage_Requirement_Units": 2.35,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0589
+  },
+  {
+    "SKU_ID": "SKU0077",
+    "Unit_Cost": 70.64,
+    "Margin_Per_Unit": 30.11,
+    "Storage_Requirement_Units": 2.23,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0565
+  },
+  {
+    "SKU_ID": "SKU0078",
+    "Unit_Cost": 59.64,
+    "Margin_Per_Unit": 45.11,
+    "Storage_Requirement_Units": 1.16,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0477
+  },
+  {
+    "SKU_ID": "SKU0079",
+    "Unit_Cost": 77.35,
+    "Margin_Per_Unit": 31.4,
+    "Storage_Requirement_Units": 0.83,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0619
+  },
+  {
+    "SKU_ID": "SKU0080",
+    "Unit_Cost": 60.1,
+    "Margin_Per_Unit": 52.65,
+    "Storage_Requirement_Units": 1.7,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0481
+  },
+  {
+    "SKU_ID": "SKU0081",
+    "Unit_Cost": 89.87,
+    "Margin_Per_Unit": 26.88,
+    "Storage_Requirement_Units": 0.87,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0719
+  },
+  {
+    "SKU_ID": "SKU0082",
+    "Unit_Cost": 81.47,
+    "Margin_Per_Unit": 39.28,
+    "Storage_Requirement_Units": 2.12,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0652
+  },
+  {
+    "SKU_ID": "SKU0083",
+    "Unit_Cost": 68.76,
+    "Margin_Per_Unit": 55.99,
+    "Storage_Requirement_Units": 2.57,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.055
+  },
+  {
+    "SKU_ID": "SKU0084",
+    "Unit_Cost": 86.85,
+    "Margin_Per_Unit": 41.9,
+    "Storage_Requirement_Units": 2.0,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0695
+  },
+  {
+    "SKU_ID": "SKU0085",
+    "Unit_Cost": 89.18,
+    "Margin_Per_Unit": 43.57,
+    "Storage_Requirement_Units": 1.8,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0713
+  },
+  {
+    "SKU_ID": "SKU0086",
+    "Unit_Cost": 94.92,
+    "Margin_Per_Unit": 41.83,
+    "Storage_Requirement_Units": 1.36,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0759
+  },
+  {
+    "SKU_ID": "SKU0087",
+    "Unit_Cost": 77.98,
+    "Margin_Per_Unit": 62.77,
+    "Storage_Requirement_Units": 2.06,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0624
+  },
+  {
+    "SKU_ID": "SKU0088",
+    "Unit_Cost": 110.23,
+    "Margin_Per_Unit": 34.52,
+    "Storage_Requirement_Units": 2.67,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0882
+  },
+  {
+    "SKU_ID": "SKU0089",
+    "Unit_Cost": 101.37,
+    "Margin_Per_Unit": 47.38,
+    "Storage_Requirement_Units": 1.88,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0811
+  },
+  {
+    "SKU_ID": "SKU0090",
+    "Unit_Cost": 100.78,
+    "Margin_Per_Unit": 51.97,
+    "Storage_Requirement_Units": 1.76,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0806
+  },
+  {
+    "SKU_ID": "SKU0091",
+    "Unit_Cost": 29.59,
+    "Margin_Per_Unit": 9.91,
+    "Storage_Requirement_Units": 2.55,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0237
+  },
+  {
+    "SKU_ID": "SKU0092",
+    "Unit_Cost": 24.17,
+    "Margin_Per_Unit": 18.92,
+    "Storage_Requirement_Units": 2.45,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0193
+  },
+  {
+    "SKU_ID": "SKU0093",
+    "Unit_Cost": 36.21,
+    "Margin_Per_Unit": 10.46,
+    "Storage_Requirement_Units": 2.39,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.029
+  },
+  {
+    "SKU_ID": "SKU0094",
+    "Unit_Cost": 36.81,
+    "Margin_Per_Unit": 13.45,
+    "Storage_Requirement_Units": 1.33,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0294
+  },
+  {
+    "SKU_ID": "SKU0095",
+    "Unit_Cost": 31.7,
+    "Margin_Per_Unit": 22.14,
+    "Storage_Requirement_Units": 2.57,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0254
+  },
+  {
+    "SKU_ID": "SKU0096",
+    "Unit_Cost": 34.07,
+    "Margin_Per_Unit": 23.36,
+    "Storage_Requirement_Units": 1.14,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0273
+  },
+  {
+    "SKU_ID": "SKU0097",
+    "Unit_Cost": 42.64,
+    "Margin_Per_Unit": 18.38,
+    "Storage_Requirement_Units": 2.49,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0341
+  },
+  {
+    "SKU_ID": "SKU0098",
+    "Unit_Cost": 48.8,
+    "Margin_Per_Unit": 15.8,
+    "Storage_Requirement_Units": 2.48,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.039
+  },
+  {
+    "SKU_ID": "SKU0099",
+    "Unit_Cost": 42.97,
+    "Margin_Per_Unit": 25.22,
+    "Storage_Requirement_Units": 1.28,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0344
+  },
+  {
+    "SKU_ID": "SKU0100",
+    "Unit_Cost": 51.72,
+    "Margin_Per_Unit": 20.06,
+    "Storage_Requirement_Units": 2.04,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0414
+  },
+  {
+    "SKU_ID": "SKU0101",
+    "Unit_Cost": 53.71,
+    "Margin_Per_Unit": 21.65,
+    "Storage_Requirement_Units": 1.86,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.043
+  },
+  {
+    "SKU_ID": "SKU0102",
+    "Unit_Cost": 41.25,
+    "Margin_Per_Unit": 37.7,
+    "Storage_Requirement_Units": 0.86,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.033
+  },
+  {
+    "SKU_ID": "SKU0103",
+    "Unit_Cost": 43.69,
+    "Margin_Per_Unit": 38.84,
+    "Storage_Requirement_Units": 1.48,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.035
+  },
+  {
+    "SKU_ID": "SKU0104",
+    "Unit_Cost": 47.64,
+    "Margin_Per_Unit": 38.48,
+    "Storage_Requirement_Units": 1.35,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0381
+  },
+  {
+    "SKU_ID": "SKU0105",
+    "Unit_Cost": 51.55,
+    "Margin_Per_Unit": 38.16,
+    "Storage_Requirement_Units": 1.22,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0412
+  },
+  {
+    "SKU_ID": "SKU0106",
+    "Unit_Cost": 67.43,
+    "Margin_Per_Unit": 25.86,
+    "Storage_Requirement_Units": 2.56,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0539
+  },
+  {
+    "SKU_ID": "SKU0107",
+    "Unit_Cost": 69.26,
+    "Margin_Per_Unit": 27.62,
+    "Storage_Requirement_Units": 2.64,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0554
+  },
+  {
+    "SKU_ID": "SKU0108",
+    "Unit_Cost": 77.75,
+    "Margin_Per_Unit": 22.72,
+    "Storage_Requirement_Units": 2.4,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0622
+  },
+  {
+    "SKU_ID": "SKU0109",
+    "Unit_Cost": 58.96,
+    "Margin_Per_Unit": 45.09,
+    "Storage_Requirement_Units": 2.64,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0472
+  },
+  {
+    "SKU_ID": "SKU0110",
+    "Unit_Cost": 80.15,
+    "Margin_Per_Unit": 27.49,
+    "Storage_Requirement_Units": 2.4,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0641
+  },
+  {
+    "SKU_ID": "SKU0111",
+    "Unit_Cost": 80.6,
+    "Margin_Per_Unit": 30.62,
+    "Storage_Requirement_Units": 0.93,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0645
+  },
+  {
+    "SKU_ID": "SKU0112",
+    "Unit_Cost": 66.34,
+    "Margin_Per_Unit": 48.47,
+    "Storage_Requirement_Units": 2.41,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0531
+  },
+  {
+    "SKU_ID": "SKU0113",
+    "Unit_Cost": 70.96,
+    "Margin_Per_Unit": 47.44,
+    "Storage_Requirement_Units": 2.37,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0568
+  },
+  {
+    "SKU_ID": "SKU0114",
+    "Unit_Cost": 64.18,
+    "Margin_Per_Unit": 57.8,
+    "Storage_Requirement_Units": 1.11,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0513
+  },
+  {
+    "SKU_ID": "SKU0115",
+    "Unit_Cost": 93.52,
+    "Margin_Per_Unit": 32.05,
+    "Storage_Requirement_Units": 2.73,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0748
+  },
+  {
+    "SKU_ID": "SKU0116",
+    "Unit_Cost": 88.71,
+    "Margin_Per_Unit": 40.45,
+    "Storage_Requirement_Units": 1.54,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.071
+  },
+  {
+    "SKU_ID": "SKU0117",
+    "Unit_Cost": 73.01,
+    "Margin_Per_Unit": 59.73,
+    "Storage_Requirement_Units": 2.74,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0584
+  },
+  {
+    "SKU_ID": "SKU0118",
+    "Unit_Cost": 105.01,
+    "Margin_Per_Unit": 31.32,
+    "Storage_Requirement_Units": 1.26,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.084
+  },
+  {
+    "SKU_ID": "SKU0119",
+    "Unit_Cost": 88.56,
+    "Margin_Per_Unit": 51.35,
+    "Storage_Requirement_Units": 2.23,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0708
+  },
+  {
+    "SKU_ID": "SKU0120",
+    "Unit_Cost": 97.24,
+    "Margin_Per_Unit": 46.26,
+    "Storage_Requirement_Units": 1.77,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0778
+  },
+  {
+    "SKU_ID": "SKU0121",
+    "Unit_Cost": 58.94,
+    "Margin_Per_Unit": 44.56,
+    "Storage_Requirement_Units": 0.79,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0472
+  },
+  {
+    "SKU_ID": "SKU0122",
+    "Unit_Cost": 73.05,
+    "Margin_Per_Unit": 38.45,
+    "Storage_Requirement_Units": 2.39,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0584
+  },
+  {
+    "SKU_ID": "SKU0123",
+    "Unit_Cost": 75.54,
+    "Margin_Per_Unit": 43.96,
+    "Storage_Requirement_Units": 2.69,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0604
+  },
+  {
+    "SKU_ID": "SKU0124",
+    "Unit_Cost": 76.71,
+    "Margin_Per_Unit": 50.79,
+    "Storage_Requirement_Units": 2.48,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0614
+  },
+  {
+    "SKU_ID": "SKU0125",
+    "Unit_Cost": 81.36,
+    "Margin_Per_Unit": 54.14,
+    "Storage_Requirement_Units": 1.56,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0651
+  },
+  {
+    "SKU_ID": "SKU0126",
+    "Unit_Cost": 85.65,
+    "Margin_Per_Unit": 57.85,
+    "Storage_Requirement_Units": 0.97,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0685
+  },
+  {
+    "SKU_ID": "SKU0127",
+    "Unit_Cost": 115.82,
+    "Margin_Per_Unit": 35.68,
+    "Storage_Requirement_Units": 2.12,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0927
+  },
+  {
+    "SKU_ID": "SKU0128",
+    "Unit_Cost": 106.54,
+    "Margin_Per_Unit": 52.96,
+    "Storage_Requirement_Units": 1.55,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0852
+  },
+  {
+    "SKU_ID": "SKU0129",
+    "Unit_Cost": 99.6,
+    "Margin_Per_Unit": 67.9,
+    "Storage_Requirement_Units": 1.6,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0797
+  },
+  {
+    "SKU_ID": "SKU0130",
+    "Unit_Cost": 111.42,
+    "Margin_Per_Unit": 64.08,
+    "Storage_Requirement_Units": 2.12,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0891
+  },
+  {
+    "SKU_ID": "SKU0131",
+    "Unit_Cost": 103.52,
+    "Margin_Per_Unit": 79.98,
+    "Storage_Requirement_Units": 0.88,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0828
+  },
+  {
+    "SKU_ID": "SKU0132",
+    "Unit_Cost": 140.33,
+    "Margin_Per_Unit": 51.17,
+    "Storage_Requirement_Units": 2.28,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1123
+  },
+  {
+    "SKU_ID": "SKU0133",
+    "Unit_Cost": 145.58,
+    "Margin_Per_Unit": 53.92,
+    "Storage_Requirement_Units": 1.01,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1165
+  },
+  {
+    "SKU_ID": "SKU0134",
+    "Unit_Cost": 160.98,
+    "Margin_Per_Unit": 46.52,
+    "Storage_Requirement_Units": 1.98,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1288
+  },
+  {
+    "SKU_ID": "SKU0135",
+    "Unit_Cost": 135.28,
+    "Margin_Per_Unit": 80.22,
+    "Storage_Requirement_Units": 2.02,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1082
+  },
+  {
+    "SKU_ID": "SKU0136",
+    "Unit_Cost": 156.69,
+    "Margin_Per_Unit": 66.81,
+    "Storage_Requirement_Units": 1.74,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1254
+  },
+  {
+    "SKU_ID": "SKU0137",
+    "Unit_Cost": 159.87,
+    "Margin_Per_Unit": 71.63,
+    "Storage_Requirement_Units": 0.71,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1279
+  },
+  {
+    "SKU_ID": "SKU0138",
+    "Unit_Cost": 138.17,
+    "Margin_Per_Unit": 101.33,
+    "Storage_Requirement_Units": 2.39,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1105
+  },
+  {
+    "SKU_ID": "SKU0139",
+    "Unit_Cost": 164.57,
+    "Margin_Per_Unit": 82.93,
+    "Storage_Requirement_Units": 2.63,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1317
+  },
+  {
+    "SKU_ID": "SKU0140",
+    "Unit_Cost": 141.72,
+    "Margin_Per_Unit": 113.78,
+    "Storage_Requirement_Units": 1.68,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1134
+  },
+  {
+    "SKU_ID": "SKU0141",
+    "Unit_Cost": 178.99,
+    "Margin_Per_Unit": 84.51,
+    "Storage_Requirement_Units": 2.21,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1432
+  },
+  {
+    "SKU_ID": "SKU0142",
+    "Unit_Cost": 172.66,
+    "Margin_Per_Unit": 98.84,
+    "Storage_Requirement_Units": 1.03,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1381
+  },
+  {
+    "SKU_ID": "SKU0143",
+    "Unit_Cost": 164.18,
+    "Margin_Per_Unit": 115.32,
+    "Storage_Requirement_Units": 1.22,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1313
+  },
+  {
+    "SKU_ID": "SKU0144",
+    "Unit_Cost": 185.72,
+    "Margin_Per_Unit": 101.78,
+    "Storage_Requirement_Units": 1.2,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1486
+  },
+  {
+    "SKU_ID": "SKU0145",
+    "Unit_Cost": 208.48,
+    "Margin_Per_Unit": 87.02,
+    "Storage_Requirement_Units": 1.19,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1668
+  },
+  {
+    "SKU_ID": "SKU0146",
+    "Unit_Cost": 228.29,
+    "Margin_Per_Unit": 75.21,
+    "Storage_Requirement_Units": 0.87,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1826
+  },
+  {
+    "SKU_ID": "SKU0147",
+    "Unit_Cost": 193.0,
+    "Margin_Per_Unit": 118.5,
+    "Storage_Requirement_Units": 1.02,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1544
+  },
+  {
+    "SKU_ID": "SKU0148",
+    "Unit_Cost": 200.6,
+    "Margin_Per_Unit": 118.9,
+    "Storage_Requirement_Units": 1.39,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1605
+  },
+  {
+    "SKU_ID": "SKU0149",
+    "Unit_Cost": 175.6,
+    "Margin_Per_Unit": 151.9,
+    "Storage_Requirement_Units": 2.45,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1405
+  },
+  {
+    "SKU_ID": "SKU0150",
+    "Unit_Cost": 256.98,
+    "Margin_Per_Unit": 78.52,
+    "Storage_Requirement_Units": 0.74,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2056
+  },
+  {
+    "SKU_ID": "SKU0151",
+    "Unit_Cost": 61.28,
+    "Margin_Per_Unit": 56.22,
+    "Storage_Requirement_Units": 1.44,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.049
+  },
+  {
+    "SKU_ID": "SKU0152",
+    "Unit_Cost": 85.73,
+    "Margin_Per_Unit": 44.18,
+    "Storage_Requirement_Units": 2.24,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0686
+  },
+  {
+    "SKU_ID": "SKU0153",
+    "Unit_Cost": 82.13,
+    "Margin_Per_Unit": 60.2,
+    "Storage_Requirement_Units": 1.62,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0657
+  },
+  {
+    "SKU_ID": "SKU0154",
+    "Unit_Cost": 93.99,
+    "Margin_Per_Unit": 60.75,
+    "Storage_Requirement_Units": 2.13,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0752
+  },
+  {
+    "SKU_ID": "SKU0155",
+    "Unit_Cost": 94.1,
+    "Margin_Per_Unit": 73.06,
+    "Storage_Requirement_Units": 1.68,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0753
+  },
+  {
+    "SKU_ID": "SKU0156",
+    "Unit_Cost": 118.31,
+    "Margin_Per_Unit": 61.26,
+    "Storage_Requirement_Units": 2.6,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0946
+  },
+  {
+    "SKU_ID": "SKU0157",
+    "Unit_Cost": 131.91,
+    "Margin_Per_Unit": 60.07,
+    "Storage_Requirement_Units": 0.98,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1055
+  },
+  {
+    "SKU_ID": "SKU0158",
+    "Unit_Cost": 108.96,
+    "Margin_Per_Unit": 95.44,
+    "Storage_Requirement_Units": 1.5,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0872
+  },
+  {
+    "SKU_ID": "SKU0159",
+    "Unit_Cost": 131.17,
+    "Margin_Per_Unit": 85.64,
+    "Storage_Requirement_Units": 2.3,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1049
+  },
+  {
+    "SKU_ID": "SKU0160",
+    "Unit_Cost": 164.01,
+    "Margin_Per_Unit": 65.21,
+    "Storage_Requirement_Units": 2.45,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1312
+  },
+  {
+    "SKU_ID": "SKU0161",
+    "Unit_Cost": 155.2,
+    "Margin_Per_Unit": 86.44,
+    "Storage_Requirement_Units": 2.27,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1242
+  },
+  {
+    "SKU_ID": "SKU0162",
+    "Unit_Cost": 146.92,
+    "Margin_Per_Unit": 107.13,
+    "Storage_Requirement_Units": 0.84,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1175
+  },
+  {
+    "SKU_ID": "SKU0163",
+    "Unit_Cost": 204.36,
+    "Margin_Per_Unit": 62.11,
+    "Storage_Requirement_Units": 1.12,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1635
+  },
+  {
+    "SKU_ID": "SKU0164",
+    "Unit_Cost": 156.07,
+    "Margin_Per_Unit": 122.81,
+    "Storage_Requirement_Units": 0.97,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1249
+  },
+  {
+    "SKU_ID": "SKU0165",
+    "Unit_Cost": 223.25,
+    "Margin_Per_Unit": 68.04,
+    "Storage_Requirement_Units": 1.68,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1786
+  },
+  {
+    "SKU_ID": "SKU0166",
+    "Unit_Cost": 171.18,
+    "Margin_Per_Unit": 132.53,
+    "Storage_Requirement_Units": 1.98,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1369
+  },
+  {
+    "SKU_ID": "SKU0167",
+    "Unit_Cost": 243.67,
+    "Margin_Per_Unit": 72.45,
+    "Storage_Requirement_Units": 0.93,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1949
+  },
+  {
+    "SKU_ID": "SKU0168",
+    "Unit_Cost": 220.02,
+    "Margin_Per_Unit": 108.51,
+    "Storage_Requirement_Units": 2.61,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.176
+  },
+  {
+    "SKU_ID": "SKU0169",
+    "Unit_Cost": 260.75,
+    "Margin_Per_Unit": 80.2,
+    "Storage_Requirement_Units": 1.12,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2086
+  },
+  {
+    "SKU_ID": "SKU0170",
+    "Unit_Cost": 247.8,
+    "Margin_Per_Unit": 105.56,
+    "Storage_Requirement_Units": 1.33,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1982
+  },
+  {
+    "SKU_ID": "SKU0171",
+    "Unit_Cost": 264.64,
+    "Margin_Per_Unit": 101.14,
+    "Storage_Requirement_Units": 1.43,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.2117
+  },
+  {
+    "SKU_ID": "SKU0172",
+    "Unit_Cost": 233.1,
+    "Margin_Per_Unit": 145.09,
+    "Storage_Requirement_Units": 1.76,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1865
+  },
+  {
+    "SKU_ID": "SKU0173",
+    "Unit_Cost": 289.39,
+    "Margin_Per_Unit": 101.21,
+    "Storage_Requirement_Units": 2.43,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2315
+  },
+  {
+    "SKU_ID": "SKU0174",
+    "Unit_Cost": 310.25,
+    "Margin_Per_Unit": 92.77,
+    "Storage_Requirement_Units": 2.03,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.2482
+  },
+  {
+    "SKU_ID": "SKU0175",
+    "Unit_Cost": 232.55,
+    "Margin_Per_Unit": 182.88,
+    "Storage_Requirement_Units": 1.07,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.186
+  },
+  {
+    "SKU_ID": "SKU0176",
+    "Unit_Cost": 312.38,
+    "Margin_Per_Unit": 115.46,
+    "Storage_Requirement_Units": 1.83,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2499
+  },
+  {
+    "SKU_ID": "SKU0177",
+    "Unit_Cost": 278.79,
+    "Margin_Per_Unit": 161.47,
+    "Storage_Requirement_Units": 2.24,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.223
+  },
+  {
+    "SKU_ID": "SKU0178",
+    "Unit_Cost": 335.63,
+    "Margin_Per_Unit": 117.04,
+    "Storage_Requirement_Units": 2.44,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2685
+  },
+  {
+    "SKU_ID": "SKU0179",
+    "Unit_Cost": 348.46,
+    "Margin_Per_Unit": 116.63,
+    "Storage_Requirement_Units": 1.21,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2788
+  },
+  {
+    "SKU_ID": "SKU0180",
+    "Unit_Cost": 324.07,
+    "Margin_Per_Unit": 153.43,
+    "Storage_Requirement_Units": 1.5,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2593
+  },
+  {
+    "SKU_ID": "SKU0181",
+    "Unit_Cost": 52.26,
+    "Margin_Per_Unit": 18.24,
+    "Storage_Requirement_Units": 1.08,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0418
+  },
+  {
+    "SKU_ID": "SKU0182",
+    "Unit_Cost": 56.7,
+    "Margin_Per_Unit": 21.25,
+    "Storage_Requirement_Units": 1.41,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0454
+  },
+  {
+    "SKU_ID": "SKU0183",
+    "Unit_Cost": 44.63,
+    "Margin_Per_Unit": 40.77,
+    "Storage_Requirement_Units": 2.69,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0357
+  },
+  {
+    "SKU_ID": "SKU0184",
+    "Unit_Cost": 65.66,
+    "Margin_Per_Unit": 27.18,
+    "Storage_Requirement_Units": 1.73,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0525
+  },
+  {
+    "SKU_ID": "SKU0185",
+    "Unit_Cost": 64.57,
+    "Margin_Per_Unit": 35.72,
+    "Storage_Requirement_Units": 2.19,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0517
+  },
+  {
+    "SKU_ID": "SKU0186",
+    "Unit_Cost": 58.63,
+    "Margin_Per_Unit": 49.11,
+    "Storage_Requirement_Units": 1.17,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0469
+  },
+  {
+    "SKU_ID": "SKU0187",
+    "Unit_Cost": 79.78,
+    "Margin_Per_Unit": 35.41,
+    "Storage_Requirement_Units": 1.47,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0638
+  },
+  {
+    "SKU_ID": "SKU0188",
+    "Unit_Cost": 95.55,
+    "Margin_Per_Unit": 27.09,
+    "Storage_Requirement_Units": 1.86,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0764
+  },
+  {
+    "SKU_ID": "SKU0189",
+    "Unit_Cost": 82.99,
+    "Margin_Per_Unit": 47.1,
+    "Storage_Requirement_Units": 1.34,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0664
+  },
+  {
+    "SKU_ID": "SKU0190",
+    "Unit_Cost": 97.31,
+    "Margin_Per_Unit": 40.22,
+    "Storage_Requirement_Units": 1.36,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0778
+  },
+  {
+    "SKU_ID": "SKU0191",
+    "Unit_Cost": 83.55,
+    "Margin_Per_Unit": 61.43,
+    "Storage_Requirement_Units": 1.72,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0668
+  },
+  {
+    "SKU_ID": "SKU0192",
+    "Unit_Cost": 112.26,
+    "Margin_Per_Unit": 40.17,
+    "Storage_Requirement_Units": 1.32,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0898
+  },
+  {
+    "SKU_ID": "SKU0193",
+    "Unit_Cost": 95.7,
+    "Margin_Per_Unit": 64.18,
+    "Storage_Requirement_Units": 2.19,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0766
+  },
+  {
+    "SKU_ID": "SKU0194",
+    "Unit_Cost": 88.99,
+    "Margin_Per_Unit": 78.34,
+    "Storage_Requirement_Units": 0.81,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0712
+  },
+  {
+    "SKU_ID": "SKU0195",
+    "Unit_Cost": 133.79,
+    "Margin_Per_Unit": 40.99,
+    "Storage_Requirement_Units": 2.04,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.107
+  },
+  {
+    "SKU_ID": "SKU0196",
+    "Unit_Cost": 136.1,
+    "Margin_Per_Unit": 46.12,
+    "Storage_Requirement_Units": 1.91,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1089
+  },
+  {
+    "SKU_ID": "SKU0197",
+    "Unit_Cost": 120.35,
+    "Margin_Per_Unit": 69.32,
+    "Storage_Requirement_Units": 1.09,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0963
+  },
+  {
+    "SKU_ID": "SKU0198",
+    "Unit_Cost": 150.73,
+    "Margin_Per_Unit": 46.39,
+    "Storage_Requirement_Units": 1.7,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1206
+  },
+  {
+    "SKU_ID": "SKU0199",
+    "Unit_Cost": 132.53,
+    "Margin_Per_Unit": 72.04,
+    "Storage_Requirement_Units": 1.91,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.106
+  },
+  {
+    "SKU_ID": "SKU0200",
+    "Unit_Cost": 118.47,
+    "Margin_Per_Unit": 93.55,
+    "Storage_Requirement_Units": 1.88,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0948
+  },
+  {
+    "SKU_ID": "SKU0201",
+    "Unit_Cost": 170.84,
+    "Margin_Per_Unit": 48.63,
+    "Storage_Requirement_Units": 0.95,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1367
+  },
+  {
+    "SKU_ID": "SKU0202",
+    "Unit_Cost": 153.16,
+    "Margin_Per_Unit": 73.75,
+    "Storage_Requirement_Units": 2.0,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1225
+  },
+  {
+    "SKU_ID": "SKU0203",
+    "Unit_Cost": 177.23,
+    "Margin_Per_Unit": 57.13,
+    "Storage_Requirement_Units": 1.32,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1418
+  },
+  {
+    "SKU_ID": "SKU0204",
+    "Unit_Cost": 161.49,
+    "Margin_Per_Unit": 80.32,
+    "Storage_Requirement_Units": 0.83,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1292
+  },
+  {
+    "SKU_ID": "SKU0205",
+    "Unit_Cost": 170.15,
+    "Margin_Per_Unit": 79.11,
+    "Storage_Requirement_Units": 1.26,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1361
+  },
+  {
+    "SKU_ID": "SKU0206",
+    "Unit_Cost": 149.5,
+    "Margin_Per_Unit": 107.21,
+    "Storage_Requirement_Units": 1.86,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1196
+  },
+  {
+    "SKU_ID": "SKU0207",
+    "Unit_Cost": 165.42,
+    "Margin_Per_Unit": 98.74,
+    "Storage_Requirement_Units": 2.15,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1323
+  },
+  {
+    "SKU_ID": "SKU0208",
+    "Unit_Cost": 143.54,
+    "Margin_Per_Unit": 128.06,
+    "Storage_Requirement_Units": 1.31,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1148
+  },
+  {
+    "SKU_ID": "SKU0209",
+    "Unit_Cost": 207.47,
+    "Margin_Per_Unit": 71.58,
+    "Storage_Requirement_Units": 0.85,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.166
+  },
+  {
+    "SKU_ID": "SKU0210",
+    "Unit_Cost": 207.67,
+    "Margin_Per_Unit": 78.83,
+    "Storage_Requirement_Units": 2.01,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1661
+  },
+  {
+    "SKU_ID": "SKU0211",
+    "Unit_Cost": 32.3,
+    "Margin_Per_Unit": 26.45,
+    "Storage_Requirement_Units": 1.17,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0258
+  },
+  {
+    "SKU_ID": "SKU0212",
+    "Unit_Cost": 49.12,
+    "Margin_Per_Unit": 15.84,
+    "Storage_Requirement_Units": 2.44,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0393
+  },
+  {
+    "SKU_ID": "SKU0213",
+    "Unit_Cost": 38.11,
+    "Margin_Per_Unit": 33.05,
+    "Storage_Requirement_Units": 2.36,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0305
+  },
+  {
+    "SKU_ID": "SKU0214",
+    "Unit_Cost": 55.3,
+    "Margin_Per_Unit": 22.07,
+    "Storage_Requirement_Units": 1.9,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0442
+  },
+  {
+    "SKU_ID": "SKU0215",
+    "Unit_Cost": 53.0,
+    "Margin_Per_Unit": 30.58,
+    "Storage_Requirement_Units": 1.68,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0424
+  },
+  {
+    "SKU_ID": "SKU0216",
+    "Unit_Cost": 63.02,
+    "Margin_Per_Unit": 26.76,
+    "Storage_Requirement_Units": 2.68,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0504
+  },
+  {
+    "SKU_ID": "SKU0217",
+    "Unit_Cost": 63.39,
+    "Margin_Per_Unit": 32.6,
+    "Storage_Requirement_Units": 1.62,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0507
+  },
+  {
+    "SKU_ID": "SKU0218",
+    "Unit_Cost": 54.2,
+    "Margin_Per_Unit": 48.0,
+    "Storage_Requirement_Units": 1.61,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0434
+  },
+  {
+    "SKU_ID": "SKU0219",
+    "Unit_Cost": 73.39,
+    "Margin_Per_Unit": 35.02,
+    "Storage_Requirement_Units": 0.75,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0587
+  },
+  {
+    "SKU_ID": "SKU0220",
+    "Unit_Cost": 88.26,
+    "Margin_Per_Unit": 26.35,
+    "Storage_Requirement_Units": 2.46,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0706
+  },
+  {
+    "SKU_ID": "SKU0221",
+    "Unit_Cost": 81.27,
+    "Margin_Per_Unit": 39.55,
+    "Storage_Requirement_Units": 0.74,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.065
+  },
+  {
+    "SKU_ID": "SKU0222",
+    "Unit_Cost": 93.19,
+    "Margin_Per_Unit": 33.84,
+    "Storage_Requirement_Units": 1.91,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0746
+  },
+  {
+    "SKU_ID": "SKU0223",
+    "Unit_Cost": 85.58,
+    "Margin_Per_Unit": 47.65,
+    "Storage_Requirement_Units": 2.07,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0685
+  },
+  {
+    "SKU_ID": "SKU0224",
+    "Unit_Cost": 79.09,
+    "Margin_Per_Unit": 60.35,
+    "Storage_Requirement_Units": 1.93,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0633
+  },
+  {
+    "SKU_ID": "SKU0225",
+    "Unit_Cost": 106.57,
+    "Margin_Per_Unit": 39.08,
+    "Storage_Requirement_Units": 2.74,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0853
+  },
+  {
+    "SKU_ID": "SKU0226",
+    "Unit_Cost": 92.7,
+    "Margin_Per_Unit": 59.15,
+    "Storage_Requirement_Units": 1.4,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0742
+  },
+  {
+    "SKU_ID": "SKU0227",
+    "Unit_Cost": 86.49,
+    "Margin_Per_Unit": 71.57,
+    "Storage_Requirement_Units": 1.04,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0692
+  },
+  {
+    "SKU_ID": "SKU0228",
+    "Unit_Cost": 115.05,
+    "Margin_Per_Unit": 49.22,
+    "Storage_Requirement_Units": 1.31,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.092
+  },
+  {
+    "SKU_ID": "SKU0229",
+    "Unit_Cost": 124.7,
+    "Margin_Per_Unit": 45.77,
+    "Storage_Requirement_Units": 1.86,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0998
+  },
+  {
+    "SKU_ID": "SKU0230",
+    "Unit_Cost": 95.92,
+    "Margin_Per_Unit": 80.76,
+    "Storage_Requirement_Units": 1.23,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0767
+  },
+  {
+    "SKU_ID": "SKU0231",
+    "Unit_Cost": 141.24,
+    "Margin_Per_Unit": 41.65,
+    "Storage_Requirement_Units": 1.55,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.113
+  },
+  {
+    "SKU_ID": "SKU0232",
+    "Unit_Cost": 138.88,
+    "Margin_Per_Unit": 50.21,
+    "Storage_Requirement_Units": 0.7,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1111
+  },
+  {
+    "SKU_ID": "SKU0233",
+    "Unit_Cost": 125.01,
+    "Margin_Per_Unit": 70.29,
+    "Storage_Requirement_Units": 0.81,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1
+  },
+  {
+    "SKU_ID": "SKU0234",
+    "Unit_Cost": 123.74,
+    "Margin_Per_Unit": 77.77,
+    "Storage_Requirement_Units": 2.29,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.099
+  },
+  {
+    "SKU_ID": "SKU0235",
+    "Unit_Cost": 131.89,
+    "Margin_Per_Unit": 75.83,
+    "Storage_Requirement_Units": 0.81,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1055
+  },
+  {
+    "SKU_ID": "SKU0236",
+    "Unit_Cost": 141.79,
+    "Margin_Per_Unit": 72.13,
+    "Storage_Requirement_Units": 2.65,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1134
+  },
+  {
+    "SKU_ID": "SKU0237",
+    "Unit_Cost": 164.88,
+    "Margin_Per_Unit": 55.25,
+    "Storage_Requirement_Units": 1.72,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1319
+  },
+  {
+    "SKU_ID": "SKU0238",
+    "Unit_Cost": 174.96,
+    "Margin_Per_Unit": 51.38,
+    "Storage_Requirement_Units": 1.98,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.14
+  },
+  {
+    "SKU_ID": "SKU0239",
+    "Unit_Cost": 163.83,
+    "Margin_Per_Unit": 68.71,
+    "Storage_Requirement_Units": 1.35,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1311
+  },
+  {
+    "SKU_ID": "SKU0240",
+    "Unit_Cost": 158.43,
+    "Margin_Per_Unit": 80.32,
+    "Storage_Requirement_Units": 0.9,
+    "Minimum_Stock_Days": 2,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1267
+  },
+  {
+    "SKU_ID": "SKU0241",
+    "Unit_Cost": 70.4,
+    "Margin_Per_Unit": 39.6,
+    "Storage_Requirement_Units": 0.95,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0563
+  },
+  {
+    "SKU_ID": "SKU0242",
+    "Unit_Cost": 92.28,
+    "Margin_Per_Unit": 28.75,
+    "Storage_Requirement_Units": 1.31,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0738
+  },
+  {
+    "SKU_ID": "SKU0243",
+    "Unit_Cost": 97.34,
+    "Margin_Per_Unit": 34.73,
+    "Storage_Requirement_Units": 2.76,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0779
+  },
+  {
+    "SKU_ID": "SKU0244",
+    "Unit_Cost": 94.92,
+    "Margin_Per_Unit": 48.18,
+    "Storage_Requirement_Units": 1.51,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0759
+  },
+  {
+    "SKU_ID": "SKU0245",
+    "Unit_Cost": 91.22,
+    "Margin_Per_Unit": 62.92,
+    "Storage_Requirement_Units": 2.36,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.073
+  },
+  {
+    "SKU_ID": "SKU0246",
+    "Unit_Cost": 126.01,
+    "Margin_Per_Unit": 39.16,
+    "Storage_Requirement_Units": 1.77,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1008
+  },
+  {
+    "SKU_ID": "SKU0247",
+    "Unit_Cost": 124.89,
+    "Margin_Per_Unit": 51.32,
+    "Storage_Requirement_Units": 2.46,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.0999
+  },
+  {
+    "SKU_ID": "SKU0248",
+    "Unit_Cost": 119.1,
+    "Margin_Per_Unit": 68.14,
+    "Storage_Requirement_Units": 1.72,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0953
+  },
+  {
+    "SKU_ID": "SKU0249",
+    "Unit_Cost": 142.43,
+    "Margin_Per_Unit": 55.85,
+    "Storage_Requirement_Units": 1.49,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1139
+  },
+  {
+    "SKU_ID": "SKU0250",
+    "Unit_Cost": 162.22,
+    "Margin_Per_Unit": 47.09,
+    "Storage_Requirement_Units": 1.2,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1298
+  },
+  {
+    "SKU_ID": "SKU0251",
+    "Unit_Cost": 163.62,
+    "Margin_Per_Unit": 56.72,
+    "Storage_Requirement_Units": 1.56,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1309
+  },
+  {
+    "SKU_ID": "SKU0252",
+    "Unit_Cost": 148.77,
+    "Margin_Per_Unit": 82.61,
+    "Storage_Requirement_Units": 2.62,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.119
+  },
+  {
+    "SKU_ID": "SKU0253",
+    "Unit_Cost": 188.35,
+    "Margin_Per_Unit": 54.06,
+    "Storage_Requirement_Units": 2.36,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1507
+  },
+  {
+    "SKU_ID": "SKU0254",
+    "Unit_Cost": 195.37,
+    "Margin_Per_Unit": 58.08,
+    "Storage_Requirement_Units": 0.97,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1563
+  },
+  {
+    "SKU_ID": "SKU0255",
+    "Unit_Cost": 197.64,
+    "Margin_Per_Unit": 66.84,
+    "Storage_Requirement_Units": 1.62,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1581
+  },
+  {
+    "SKU_ID": "SKU0256",
+    "Unit_Cost": 195.02,
+    "Margin_Per_Unit": 80.5,
+    "Storage_Requirement_Units": 1.56,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.156
+  },
+  {
+    "SKU_ID": "SKU0257",
+    "Unit_Cost": 183.98,
+    "Margin_Per_Unit": 102.57,
+    "Storage_Requirement_Units": 2.74,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1472
+  },
+  {
+    "SKU_ID": "SKU0258",
+    "Unit_Cost": 208.34,
+    "Margin_Per_Unit": 89.25,
+    "Storage_Requirement_Units": 2.06,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1667
+  },
+  {
+    "SKU_ID": "SKU0259",
+    "Unit_Cost": 229.44,
+    "Margin_Per_Unit": 79.18,
+    "Storage_Requirement_Units": 1.5,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1836
+  },
+  {
+    "SKU_ID": "SKU0260",
+    "Unit_Cost": 225.96,
+    "Margin_Per_Unit": 93.7,
+    "Storage_Requirement_Units": 2.29,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1808
+  },
+  {
+    "SKU_ID": "SKU0261",
+    "Unit_Cost": 177.84,
+    "Margin_Per_Unit": 152.85,
+    "Storage_Requirement_Units": 2.03,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1423
+  },
+  {
+    "SKU_ID": "SKU0262",
+    "Unit_Cost": 244.04,
+    "Margin_Per_Unit": 97.68,
+    "Storage_Requirement_Units": 1.61,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1952
+  },
+  {
+    "SKU_ID": "SKU0263",
+    "Unit_Cost": 247.99,
+    "Margin_Per_Unit": 104.77,
+    "Storage_Requirement_Units": 0.91,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1984
+  },
+  {
+    "SKU_ID": "SKU0264",
+    "Unit_Cost": 217.5,
+    "Margin_Per_Unit": 146.29,
+    "Storage_Requirement_Units": 0.76,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.174
+  },
+  {
+    "SKU_ID": "SKU0265",
+    "Unit_Cost": 223.5,
+    "Margin_Per_Unit": 151.33,
+    "Storage_Requirement_Units": 1.49,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1788
+  },
+  {
+    "SKU_ID": "SKU0266",
+    "Unit_Cost": 253.94,
+    "Margin_Per_Unit": 131.92,
+    "Storage_Requirement_Units": 1.89,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2032
+  },
+  {
+    "SKU_ID": "SKU0267",
+    "Unit_Cost": 224.45,
+    "Margin_Per_Unit": 172.45,
+    "Storage_Requirement_Units": 1.98,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1796
+  },
+  {
+    "SKU_ID": "SKU0268",
+    "Unit_Cost": 284.58,
+    "Margin_Per_Unit": 123.35,
+    "Storage_Requirement_Units": 1.75,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2277
+  },
+  {
+    "SKU_ID": "SKU0269",
+    "Unit_Cost": 268.1,
+    "Margin_Per_Unit": 150.87,
+    "Storage_Requirement_Units": 1.23,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.2145
+  },
+  {
+    "SKU_ID": "SKU0270",
+    "Unit_Cost": 224.65,
+    "Margin_Per_Unit": 205.35,
+    "Storage_Requirement_Units": 2.39,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1797
+  },
+  {
+    "SKU_ID": "SKU0271",
+    "Unit_Cost": 134.41,
+    "Margin_Per_Unit": 68.59,
+    "Storage_Requirement_Units": 0.86,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1075
+  },
+  {
+    "SKU_ID": "SKU0272",
+    "Unit_Cost": 134.87,
+    "Margin_Per_Unit": 90.75,
+    "Storage_Requirement_Units": 2.72,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1079
+  },
+  {
+    "SKU_ID": "SKU0273",
+    "Unit_Cost": 183.64,
+    "Margin_Per_Unit": 64.6,
+    "Storage_Requirement_Units": 1.12,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1469
+  },
+  {
+    "SKU_ID": "SKU0274",
+    "Unit_Cost": 148.36,
+    "Margin_Per_Unit": 122.5,
+    "Storage_Requirement_Units": 1.5,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1187
+  },
+  {
+    "SKU_ID": "SKU0275",
+    "Unit_Cost": 175.19,
+    "Margin_Per_Unit": 118.29,
+    "Storage_Requirement_Units": 2.17,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1402
+  },
+  {
+    "SKU_ID": "SKU0276",
+    "Unit_Cost": 196.9,
+    "Margin_Per_Unit": 119.2,
+    "Storage_Requirement_Units": 0.72,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1575
+  },
+  {
+    "SKU_ID": "SKU0277",
+    "Unit_Cost": 241.76,
+    "Margin_Per_Unit": 96.96,
+    "Storage_Requirement_Units": 2.45,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1934
+  },
+  {
+    "SKU_ID": "SKU0278",
+    "Unit_Cost": 244.93,
+    "Margin_Per_Unit": 116.41,
+    "Storage_Requirement_Units": 1.44,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1959
+  },
+  {
+    "SKU_ID": "SKU0279",
+    "Unit_Cost": 224.69,
+    "Margin_Per_Unit": 159.28,
+    "Storage_Requirement_Units": 2.29,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1798
+  },
+  {
+    "SKU_ID": "SKU0280",
+    "Unit_Cost": 221.7,
+    "Margin_Per_Unit": 184.89,
+    "Storage_Requirement_Units": 2.02,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1774
+  },
+  {
+    "SKU_ID": "SKU0281",
+    "Unit_Cost": 311.19,
+    "Margin_Per_Unit": 118.02,
+    "Storage_Requirement_Units": 0.77,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.249
+  },
+  {
+    "SKU_ID": "SKU0282",
+    "Unit_Cost": 250.39,
+    "Margin_Per_Unit": 201.44,
+    "Storage_Requirement_Units": 2.61,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.2003
+  },
+  {
+    "SKU_ID": "SKU0283",
+    "Unit_Cost": 297.97,
+    "Margin_Per_Unit": 176.48,
+    "Storage_Requirement_Units": 1.12,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2384
+  },
+  {
+    "SKU_ID": "SKU0284",
+    "Unit_Cost": 323.33,
+    "Margin_Per_Unit": 173.74,
+    "Storage_Requirement_Units": 1.27,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2587
+  },
+  {
+    "SKU_ID": "SKU0285",
+    "Unit_Cost": 393.74,
+    "Margin_Per_Unit": 125.95,
+    "Storage_Requirement_Units": 2.68,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.315
+  },
+  {
+    "SKU_ID": "SKU0286",
+    "Unit_Cost": 404.73,
+    "Margin_Per_Unit": 137.58,
+    "Storage_Requirement_Units": 2.39,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3238
+  },
+  {
+    "SKU_ID": "SKU0287",
+    "Unit_Cost": 314.44,
+    "Margin_Per_Unit": 250.49,
+    "Storage_Requirement_Units": 2.73,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2516
+  },
+  {
+    "SKU_ID": "SKU0288",
+    "Unit_Cost": 361.4,
+    "Margin_Per_Unit": 226.15,
+    "Storage_Requirement_Units": 2.36,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2891
+  },
+  {
+    "SKU_ID": "SKU0289",
+    "Unit_Cost": 402.41,
+    "Margin_Per_Unit": 207.76,
+    "Storage_Requirement_Units": 1.66,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.3219
+  },
+  {
+    "SKU_ID": "SKU0290",
+    "Unit_Cost": 391.74,
+    "Margin_Per_Unit": 241.05,
+    "Storage_Requirement_Units": 2.04,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3134
+  },
+  {
+    "SKU_ID": "SKU0291",
+    "Unit_Cost": 455.81,
+    "Margin_Per_Unit": 199.6,
+    "Storage_Requirement_Units": 1.69,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.3646
+  },
+  {
+    "SKU_ID": "SKU0292",
+    "Unit_Cost": 391.6,
+    "Margin_Per_Unit": 286.43,
+    "Storage_Requirement_Units": 0.83,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.3133
+  },
+  {
+    "SKU_ID": "SKU0293",
+    "Unit_Cost": 419.39,
+    "Margin_Per_Unit": 281.27,
+    "Storage_Requirement_Units": 1.56,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3355
+  },
+  {
+    "SKU_ID": "SKU0294",
+    "Unit_Cost": 554.05,
+    "Margin_Per_Unit": 169.23,
+    "Storage_Requirement_Units": 1.34,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4432
+  },
+  {
+    "SKU_ID": "SKU0295",
+    "Unit_Cost": 406.72,
+    "Margin_Per_Unit": 339.18,
+    "Storage_Requirement_Units": 2.56,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3254
+  },
+  {
+    "SKU_ID": "SKU0296",
+    "Unit_Cost": 490.28,
+    "Margin_Per_Unit": 278.24,
+    "Storage_Requirement_Units": 2.11,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.3922
+  },
+  {
+    "SKU_ID": "SKU0297",
+    "Unit_Cost": 564.07,
+    "Margin_Per_Unit": 227.07,
+    "Storage_Requirement_Units": 1.02,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4513
+  },
+  {
+    "SKU_ID": "SKU0298",
+    "Unit_Cost": 444.11,
+    "Margin_Per_Unit": 369.65,
+    "Storage_Requirement_Units": 1.73,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3553
+  },
+  {
+    "SKU_ID": "SKU0299",
+    "Unit_Cost": 442.03,
+    "Margin_Per_Unit": 394.35,
+    "Storage_Requirement_Units": 1.48,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3536
+  },
+  {
+    "SKU_ID": "SKU0300",
+    "Unit_Cost": 658.98,
+    "Margin_Per_Unit": 200.02,
+    "Storage_Requirement_Units": 2.5,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.5272
+  },
+  {
+    "SKU_ID": "SKU0301",
+    "Unit_Cost": 147.41,
+    "Margin_Per_Unit": 92.09,
+    "Storage_Requirement_Units": 2.59,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1179
+  },
+  {
+    "SKU_ID": "SKU0302",
+    "Unit_Cost": 168.77,
+    "Margin_Per_Unit": 101.9,
+    "Storage_Requirement_Units": 1.1,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.135
+  },
+  {
+    "SKU_ID": "SKU0303",
+    "Unit_Cost": 164.15,
+    "Margin_Per_Unit": 137.69,
+    "Storage_Requirement_Units": 1.15,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1313
+  },
+  {
+    "SKU_ID": "SKU0304",
+    "Unit_Cost": 241.3,
+    "Margin_Per_Unit": 91.72,
+    "Storage_Requirement_Units": 1.21,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.193
+  },
+  {
+    "SKU_ID": "SKU0305",
+    "Unit_Cost": 208.81,
+    "Margin_Per_Unit": 155.38,
+    "Storage_Requirement_Units": 2.44,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.167
+  },
+  {
+    "SKU_ID": "SKU0306",
+    "Unit_Cost": 227.79,
+    "Margin_Per_Unit": 167.57,
+    "Storage_Requirement_Units": 2.53,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1822
+  },
+  {
+    "SKU_ID": "SKU0307",
+    "Unit_Cost": 309.25,
+    "Margin_Per_Unit": 117.28,
+    "Storage_Requirement_Units": 1.95,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2474
+  },
+  {
+    "SKU_ID": "SKU0308",
+    "Unit_Cost": 355.53,
+    "Margin_Per_Unit": 102.18,
+    "Storage_Requirement_Units": 1.83,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2844
+  },
+  {
+    "SKU_ID": "SKU0309",
+    "Unit_Cost": 338.24,
+    "Margin_Per_Unit": 150.64,
+    "Storage_Requirement_Units": 0.75,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2706
+  },
+  {
+    "SKU_ID": "SKU0310",
+    "Unit_Cost": 377.24,
+    "Margin_Per_Unit": 142.81,
+    "Storage_Requirement_Units": 1.2,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3018
+  },
+  {
+    "SKU_ID": "SKU0311",
+    "Unit_Cost": 311.61,
+    "Margin_Per_Unit": 239.61,
+    "Storage_Requirement_Units": 0.81,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2493
+  },
+  {
+    "SKU_ID": "SKU0312",
+    "Unit_Cost": 320.06,
+    "Margin_Per_Unit": 262.34,
+    "Storage_Requirement_Units": 0.83,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.256
+  },
+  {
+    "SKU_ID": "SKU0313",
+    "Unit_Cost": 400.93,
+    "Margin_Per_Unit": 212.64,
+    "Storage_Requirement_Units": 0.93,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.3207
+  },
+  {
+    "SKU_ID": "SKU0314",
+    "Unit_Cost": 342.53,
+    "Margin_Per_Unit": 302.21,
+    "Storage_Requirement_Units": 2.34,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.274
+  },
+  {
+    "SKU_ID": "SKU0315",
+    "Unit_Cost": 464.53,
+    "Margin_Per_Unit": 211.38,
+    "Storage_Requirement_Units": 0.77,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3716
+  },
+  {
+    "SKU_ID": "SKU0316",
+    "Unit_Cost": 446.05,
+    "Margin_Per_Unit": 261.04,
+    "Storage_Requirement_Units": 0.93,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3568
+  },
+  {
+    "SKU_ID": "SKU0317",
+    "Unit_Cost": 556.51,
+    "Margin_Per_Unit": 181.75,
+    "Storage_Requirement_Units": 1.38,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4452
+  },
+  {
+    "SKU_ID": "SKU0318",
+    "Unit_Cost": 425.35,
+    "Margin_Per_Unit": 344.08,
+    "Storage_Requirement_Units": 2.01,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3403
+  },
+  {
+    "SKU_ID": "SKU0319",
+    "Unit_Cost": 623.35,
+    "Margin_Per_Unit": 177.25,
+    "Storage_Requirement_Units": 1.81,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.4987
+  },
+  {
+    "SKU_ID": "SKU0320",
+    "Unit_Cost": 563.46,
+    "Margin_Per_Unit": 268.32,
+    "Storage_Requirement_Units": 0.91,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4508
+  },
+  {
+    "SKU_ID": "SKU0321",
+    "Unit_Cost": 594.78,
+    "Margin_Per_Unit": 268.17,
+    "Storage_Requirement_Units": 2.31,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.4758
+  },
+  {
+    "SKU_ID": "SKU0322",
+    "Unit_Cost": 569.92,
+    "Margin_Per_Unit": 324.2,
+    "Storage_Requirement_Units": 1.18,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.4559
+  },
+  {
+    "SKU_ID": "SKU0323",
+    "Unit_Cost": 577.08,
+    "Margin_Per_Unit": 348.21,
+    "Storage_Requirement_Units": 2.23,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.4617
+  },
+  {
+    "SKU_ID": "SKU0324",
+    "Unit_Cost": 575.08,
+    "Margin_Per_Unit": 381.39,
+    "Storage_Requirement_Units": 1.24,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4601
+  },
+  {
+    "SKU_ID": "SKU0325",
+    "Unit_Cost": 750.58,
+    "Margin_Per_Unit": 237.06,
+    "Storage_Requirement_Units": 0.84,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6005
+  },
+  {
+    "SKU_ID": "SKU0326",
+    "Unit_Cost": 644.18,
+    "Margin_Per_Unit": 374.63,
+    "Storage_Requirement_Units": 2.26,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5153
+  },
+  {
+    "SKU_ID": "SKU0327",
+    "Unit_Cost": 697.88,
+    "Margin_Per_Unit": 352.1,
+    "Storage_Requirement_Units": 1.93,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.5583
+  },
+  {
+    "SKU_ID": "SKU0328",
+    "Unit_Cost": 596.56,
+    "Margin_Per_Unit": 484.6,
+    "Storage_Requirement_Units": 1.44,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4772
+  },
+  {
+    "SKU_ID": "SKU0329",
+    "Unit_Cost": 593.29,
+    "Margin_Per_Unit": 519.04,
+    "Storage_Requirement_Units": 1.3,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.4746
+  },
+  {
+    "SKU_ID": "SKU0330",
+    "Unit_Cost": 625.42,
+    "Margin_Per_Unit": 518.08,
+    "Storage_Requirement_Units": 1.77,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.5003
+  },
+  {
+    "SKU_ID": "SKU0331",
+    "Unit_Cost": 200.06,
+    "Margin_Per_Unit": 109.94,
+    "Storage_Requirement_Units": 2.48,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.16
+  },
+  {
+    "SKU_ID": "SKU0332",
+    "Unit_Cost": 214.6,
+    "Margin_Per_Unit": 134.02,
+    "Storage_Requirement_Units": 2.3,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1717
+  },
+  {
+    "SKU_ID": "SKU0333",
+    "Unit_Cost": 286.46,
+    "Margin_Per_Unit": 100.78,
+    "Storage_Requirement_Units": 2.75,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2292
+  },
+  {
+    "SKU_ID": "SKU0334",
+    "Unit_Cost": 324.32,
+    "Margin_Per_Unit": 101.54,
+    "Storage_Requirement_Units": 2.44,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2595
+  },
+  {
+    "SKU_ID": "SKU0335",
+    "Unit_Cost": 263.32,
+    "Margin_Per_Unit": 201.16,
+    "Storage_Requirement_Units": 2.18,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2107
+  },
+  {
+    "SKU_ID": "SKU0336",
+    "Unit_Cost": 307.53,
+    "Margin_Per_Unit": 195.57,
+    "Storage_Requirement_Units": 1.08,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.246
+  },
+  {
+    "SKU_ID": "SKU0337",
+    "Unit_Cost": 374.28,
+    "Margin_Per_Unit": 167.44,
+    "Storage_Requirement_Units": 0.85,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2994
+  },
+  {
+    "SKU_ID": "SKU0338",
+    "Unit_Cost": 414.36,
+    "Margin_Per_Unit": 165.98,
+    "Storage_Requirement_Units": 1.15,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3315
+  },
+  {
+    "SKU_ID": "SKU0339",
+    "Unit_Cost": 376.73,
+    "Margin_Per_Unit": 242.24,
+    "Storage_Requirement_Units": 1.48,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.3014
+  },
+  {
+    "SKU_ID": "SKU0340",
+    "Unit_Cost": 443.89,
+    "Margin_Per_Unit": 213.7,
+    "Storage_Requirement_Units": 2.56,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3551
+  },
+  {
+    "SKU_ID": "SKU0341",
+    "Unit_Cost": 498.59,
+    "Margin_Per_Unit": 197.62,
+    "Storage_Requirement_Units": 0.8,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3989
+  },
+  {
+    "SKU_ID": "SKU0342",
+    "Unit_Cost": 466.77,
+    "Margin_Per_Unit": 268.06,
+    "Storage_Requirement_Units": 1.59,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3734
+  },
+  {
+    "SKU_ID": "SKU0343",
+    "Unit_Cost": 457.13,
+    "Margin_Per_Unit": 316.32,
+    "Storage_Requirement_Units": 2.29,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3657
+  },
+  {
+    "SKU_ID": "SKU0344",
+    "Unit_Cost": 513.05,
+    "Margin_Per_Unit": 299.02,
+    "Storage_Requirement_Units": 1.29,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.4104
+  },
+  {
+    "SKU_ID": "SKU0345",
+    "Unit_Cost": 589.91,
+    "Margin_Per_Unit": 260.78,
+    "Storage_Requirement_Units": 0.8,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.4719
+  },
+  {
+    "SKU_ID": "SKU0346",
+    "Unit_Cost": 475.11,
+    "Margin_Per_Unit": 414.2,
+    "Storage_Requirement_Units": 1.13,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3801
+  },
+  {
+    "SKU_ID": "SKU0347",
+    "Unit_Cost": 666.89,
+    "Margin_Per_Unit": 261.04,
+    "Storage_Requirement_Units": 1.31,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5335
+  },
+  {
+    "SKU_ID": "SKU0348",
+    "Unit_Cost": 627.6,
+    "Margin_Per_Unit": 338.95,
+    "Storage_Requirement_Units": 1.6,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.5021
+  },
+  {
+    "SKU_ID": "SKU0349",
+    "Unit_Cost": 661.88,
+    "Margin_Per_Unit": 343.29,
+    "Storage_Requirement_Units": 1.18,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5295
+  },
+  {
+    "SKU_ID": "SKU0350",
+    "Unit_Cost": 650.53,
+    "Margin_Per_Unit": 393.26,
+    "Storage_Requirement_Units": 2.26,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5204
+  },
+  {
+    "SKU_ID": "SKU0351",
+    "Unit_Cost": 692.24,
+    "Margin_Per_Unit": 390.17,
+    "Storage_Requirement_Units": 0.86,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.5538
+  },
+  {
+    "SKU_ID": "SKU0352",
+    "Unit_Cost": 708.06,
+    "Margin_Per_Unit": 412.97,
+    "Storage_Requirement_Units": 1.55,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.5664
+  },
+  {
+    "SKU_ID": "SKU0353",
+    "Unit_Cost": 637.75,
+    "Margin_Per_Unit": 521.91,
+    "Storage_Requirement_Units": 0.74,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5102
+  },
+  {
+    "SKU_ID": "SKU0354",
+    "Unit_Cost": 872.76,
+    "Margin_Per_Unit": 325.52,
+    "Storage_Requirement_Units": 2.0,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6982
+  },
+  {
+    "SKU_ID": "SKU0355",
+    "Unit_Cost": 783.63,
+    "Margin_Per_Unit": 453.27,
+    "Storage_Requirement_Units": 0.92,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.6269
+  },
+  {
+    "SKU_ID": "SKU0356",
+    "Unit_Cost": 796.07,
+    "Margin_Per_Unit": 479.45,
+    "Storage_Requirement_Units": 0.87,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.6369
+  },
+  {
+    "SKU_ID": "SKU0357",
+    "Unit_Cost": 799.36,
+    "Margin_Per_Unit": 514.78,
+    "Storage_Requirement_Units": 1.4,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6395
+  },
+  {
+    "SKU_ID": "SKU0358",
+    "Unit_Cost": 882.98,
+    "Margin_Per_Unit": 469.78,
+    "Storage_Requirement_Units": 0.94,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.7064
+  },
+  {
+    "SKU_ID": "SKU0359",
+    "Unit_Cost": 850.53,
+    "Margin_Per_Unit": 540.85,
+    "Storage_Requirement_Units": 2.71,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6804
+  },
+  {
+    "SKU_ID": "SKU0360",
+    "Unit_Cost": 781.82,
+    "Margin_Per_Unit": 648.18,
+    "Storage_Requirement_Units": 1.24,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.6255
+  },
+  {
+    "SKU_ID": "SKU0361",
+    "Unit_Cost": 112.51,
+    "Margin_Per_Unit": 88.49,
+    "Storage_Requirement_Units": 2.64,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.09
+  },
+  {
+    "SKU_ID": "SKU0362",
+    "Unit_Cost": 174.13,
+    "Margin_Per_Unit": 52.8,
+    "Storage_Requirement_Units": 2.32,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1393
+  },
+  {
+    "SKU_ID": "SKU0363",
+    "Unit_Cost": 181.44,
+    "Margin_Per_Unit": 71.42,
+    "Storage_Requirement_Units": 1.89,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1452
+  },
+  {
+    "SKU_ID": "SKU0364",
+    "Unit_Cost": 167.89,
+    "Margin_Per_Unit": 110.9,
+    "Storage_Requirement_Units": 1.87,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1343
+  },
+  {
+    "SKU_ID": "SKU0365",
+    "Unit_Cost": 208.48,
+    "Margin_Per_Unit": 96.24,
+    "Storage_Requirement_Units": 2.73,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1668
+  },
+  {
+    "SKU_ID": "SKU0366",
+    "Unit_Cost": 215.56,
+    "Margin_Per_Unit": 115.1,
+    "Storage_Requirement_Units": 1.55,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1724
+  },
+  {
+    "SKU_ID": "SKU0367",
+    "Unit_Cost": 190.7,
+    "Margin_Per_Unit": 165.89,
+    "Storage_Requirement_Units": 2.81,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1526
+  },
+  {
+    "SKU_ID": "SKU0368",
+    "Unit_Cost": 284.86,
+    "Margin_Per_Unit": 97.66,
+    "Storage_Requirement_Units": 2.87,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2279
+  },
+  {
+    "SKU_ID": "SKU0369",
+    "Unit_Cost": 274.02,
+    "Margin_Per_Unit": 134.43,
+    "Storage_Requirement_Units": 3.11,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2192
+  },
+  {
+    "SKU_ID": "SKU0370",
+    "Unit_Cost": 328.54,
+    "Margin_Per_Unit": 105.84,
+    "Storage_Requirement_Units": 2.19,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2628
+  },
+  {
+    "SKU_ID": "SKU0371",
+    "Unit_Cost": 311.77,
+    "Margin_Per_Unit": 148.54,
+    "Storage_Requirement_Units": 2.02,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2494
+  },
+  {
+    "SKU_ID": "SKU0372",
+    "Unit_Cost": 265.93,
+    "Margin_Per_Unit": 220.31,
+    "Storage_Requirement_Units": 2.98,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.2127
+  },
+  {
+    "SKU_ID": "SKU0373",
+    "Unit_Cost": 277.56,
+    "Margin_Per_Unit": 234.61,
+    "Storage_Requirement_Units": 2.37,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.222
+  },
+  {
+    "SKU_ID": "SKU0374",
+    "Unit_Cost": 378.81,
+    "Margin_Per_Unit": 159.29,
+    "Storage_Requirement_Units": 3.2,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.303
+  },
+  {
+    "SKU_ID": "SKU0375",
+    "Unit_Cost": 347.97,
+    "Margin_Per_Unit": 216.06,
+    "Storage_Requirement_Units": 1.49,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2784
+  },
+  {
+    "SKU_ID": "SKU0376",
+    "Unit_Cost": 410.92,
+    "Margin_Per_Unit": 179.05,
+    "Storage_Requirement_Units": 0.93,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3287
+  },
+  {
+    "SKU_ID": "SKU0377",
+    "Unit_Cost": 373.06,
+    "Margin_Per_Unit": 242.84,
+    "Storage_Requirement_Units": 2.15,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2984
+  },
+  {
+    "SKU_ID": "SKU0378",
+    "Unit_Cost": 375.8,
+    "Margin_Per_Unit": 266.03,
+    "Storage_Requirement_Units": 2.86,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3006
+  },
+  {
+    "SKU_ID": "SKU0379",
+    "Unit_Cost": 361.39,
+    "Margin_Per_Unit": 306.37,
+    "Storage_Requirement_Units": 2.41,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2891
+  },
+  {
+    "SKU_ID": "SKU0380",
+    "Unit_Cost": 535.25,
+    "Margin_Per_Unit": 158.44,
+    "Storage_Requirement_Units": 2.49,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4282
+  },
+  {
+    "SKU_ID": "SKU0381",
+    "Unit_Cost": 485.54,
+    "Margin_Per_Unit": 234.08,
+    "Storage_Requirement_Units": 3.07,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.3884
+  },
+  {
+    "SKU_ID": "SKU0382",
+    "Unit_Cost": 460.7,
+    "Margin_Per_Unit": 284.85,
+    "Storage_Requirement_Units": 2.72,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.3686
+  },
+  {
+    "SKU_ID": "SKU0383",
+    "Unit_Cost": 542.15,
+    "Margin_Per_Unit": 229.33,
+    "Storage_Requirement_Units": 3.09,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4337
+  },
+  {
+    "SKU_ID": "SKU0384",
+    "Unit_Cost": 553.66,
+    "Margin_Per_Unit": 243.75,
+    "Storage_Requirement_Units": 2.03,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.4429
+  },
+  {
+    "SKU_ID": "SKU0385",
+    "Unit_Cost": 494.26,
+    "Margin_Per_Unit": 329.08,
+    "Storage_Requirement_Units": 3.1,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3954
+  },
+  {
+    "SKU_ID": "SKU0386",
+    "Unit_Cost": 484.02,
+    "Margin_Per_Unit": 365.26,
+    "Storage_Requirement_Units": 3.22,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3872
+  },
+  {
+    "SKU_ID": "SKU0387",
+    "Unit_Cost": 522.42,
+    "Margin_Per_Unit": 352.79,
+    "Storage_Requirement_Units": 2.71,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4179
+  },
+  {
+    "SKU_ID": "SKU0388",
+    "Unit_Cost": 547.5,
+    "Margin_Per_Unit": 353.64,
+    "Storage_Requirement_Units": 2.66,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.438
+  },
+  {
+    "SKU_ID": "SKU0389",
+    "Unit_Cost": 572.88,
+    "Margin_Per_Unit": 354.19,
+    "Storage_Requirement_Units": 1.2,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4583
+  },
+  {
+    "SKU_ID": "SKU0390",
+    "Unit_Cost": 604.01,
+    "Margin_Per_Unit": 348.99,
+    "Storage_Requirement_Units": 1.8,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.4832
+  },
+  {
+    "SKU_ID": "SKU0391",
+    "Unit_Cost": 240.96,
+    "Margin_Per_Unit": 114.04,
+    "Storage_Requirement_Units": 2.28,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1928
+  },
+  {
+    "SKU_ID": "SKU0392",
+    "Unit_Cost": 264.79,
+    "Margin_Per_Unit": 137.11,
+    "Storage_Requirement_Units": 1.35,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2118
+  },
+  {
+    "SKU_ID": "SKU0393",
+    "Unit_Cost": 276.29,
+    "Margin_Per_Unit": 172.5,
+    "Storage_Requirement_Units": 2.69,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.221
+  },
+  {
+    "SKU_ID": "SKU0394",
+    "Unit_Cost": 356.92,
+    "Margin_Per_Unit": 138.77,
+    "Storage_Requirement_Units": 2.33,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2855
+  },
+  {
+    "SKU_ID": "SKU0395",
+    "Unit_Cost": 397.39,
+    "Margin_Per_Unit": 145.2,
+    "Storage_Requirement_Units": 2.38,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3179
+  },
+  {
+    "SKU_ID": "SKU0396",
+    "Unit_Cost": 314.53,
+    "Margin_Per_Unit": 274.95,
+    "Storage_Requirement_Units": 1.71,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2516
+  },
+  {
+    "SKU_ID": "SKU0397",
+    "Unit_Cost": 485.5,
+    "Margin_Per_Unit": 150.88,
+    "Storage_Requirement_Units": 2.19,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3884
+  },
+  {
+    "SKU_ID": "SKU0398",
+    "Unit_Cost": 370.21,
+    "Margin_Per_Unit": 313.07,
+    "Storage_Requirement_Units": 1.04,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2962
+  },
+  {
+    "SKU_ID": "SKU0399",
+    "Unit_Cost": 407.66,
+    "Margin_Per_Unit": 322.51,
+    "Storage_Requirement_Units": 1.62,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.3261
+  },
+  {
+    "SKU_ID": "SKU0400",
+    "Unit_Cost": 582.81,
+    "Margin_Per_Unit": 194.26,
+    "Storage_Requirement_Units": 2.65,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4662
+  },
+  {
+    "SKU_ID": "SKU0401",
+    "Unit_Cost": 513.4,
+    "Margin_Per_Unit": 310.57,
+    "Storage_Requirement_Units": 1.49,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4107
+  },
+  {
+    "SKU_ID": "SKU0402",
+    "Unit_Cost": 537.74,
+    "Margin_Per_Unit": 333.12,
+    "Storage_Requirement_Units": 0.76,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4302
+  },
+  {
+    "SKU_ID": "SKU0403",
+    "Unit_Cost": 632.33,
+    "Margin_Per_Unit": 285.43,
+    "Storage_Requirement_Units": 2.36,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5059
+  },
+  {
+    "SKU_ID": "SKU0404",
+    "Unit_Cost": 573.58,
+    "Margin_Per_Unit": 391.08,
+    "Storage_Requirement_Units": 2.44,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.4589
+  },
+  {
+    "SKU_ID": "SKU0405",
+    "Unit_Cost": 649.38,
+    "Margin_Per_Unit": 362.17,
+    "Storage_Requirement_Units": 1.99,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5195
+  },
+  {
+    "SKU_ID": "SKU0406",
+    "Unit_Cost": 620.82,
+    "Margin_Per_Unit": 437.63,
+    "Storage_Requirement_Units": 2.45,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4967
+  },
+  {
+    "SKU_ID": "SKU0407",
+    "Unit_Cost": 797.84,
+    "Margin_Per_Unit": 307.5,
+    "Storage_Requirement_Units": 1.2,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6383
+  },
+  {
+    "SKU_ID": "SKU0408",
+    "Unit_Cost": 670.6,
+    "Margin_Per_Unit": 481.64,
+    "Storage_Requirement_Units": 2.04,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5365
+  },
+  {
+    "SKU_ID": "SKU0409",
+    "Unit_Cost": 658.12,
+    "Margin_Per_Unit": 541.02,
+    "Storage_Requirement_Units": 2.6,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.5265
+  },
+  {
+    "SKU_ID": "SKU0410",
+    "Unit_Cost": 814.9,
+    "Margin_Per_Unit": 431.13,
+    "Storage_Requirement_Units": 1.21,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.6519
+  },
+  {
+    "SKU_ID": "SKU0411",
+    "Unit_Cost": 816.62,
+    "Margin_Per_Unit": 476.31,
+    "Storage_Requirement_Units": 1.99,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.6533
+  },
+  {
+    "SKU_ID": "SKU0412",
+    "Unit_Cost": 841.83,
+    "Margin_Per_Unit": 498.0,
+    "Storage_Requirement_Units": 2.1,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.6735
+  },
+  {
+    "SKU_ID": "SKU0413",
+    "Unit_Cost": 1072.5,
+    "Margin_Per_Unit": 314.22,
+    "Storage_Requirement_Units": 0.84,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.858
+  },
+  {
+    "SKU_ID": "SKU0414",
+    "Unit_Cost": 1071.01,
+    "Margin_Per_Unit": 362.61,
+    "Storage_Requirement_Units": 0.79,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.8568
+  },
+  {
+    "SKU_ID": "SKU0415",
+    "Unit_Cost": 867.51,
+    "Margin_Per_Unit": 613.01,
+    "Storage_Requirement_Units": 0.73,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.694
+  },
+  {
+    "SKU_ID": "SKU0416",
+    "Unit_Cost": 890.01,
+    "Margin_Per_Unit": 637.4,
+    "Storage_Requirement_Units": 2.08,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.712
+  },
+  {
+    "SKU_ID": "SKU0417",
+    "Unit_Cost": 1119.57,
+    "Margin_Per_Unit": 454.74,
+    "Storage_Requirement_Units": 1.4,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.8957
+  },
+  {
+    "SKU_ID": "SKU0418",
+    "Unit_Cost": 1073.18,
+    "Margin_Per_Unit": 548.03,
+    "Storage_Requirement_Units": 2.41,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.8585
+  },
+  {
+    "SKU_ID": "SKU0419",
+    "Unit_Cost": 1068.92,
+    "Margin_Per_Unit": 599.18,
+    "Storage_Requirement_Units": 2.16,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.8551
+  },
+  {
+    "SKU_ID": "SKU0420",
+    "Unit_Cost": 919.94,
+    "Margin_Per_Unit": 795.06,
+    "Storage_Requirement_Units": 2.33,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.736
+  },
+  {
+    "SKU_ID": "SKU0421",
+    "Unit_Cost": 229.57,
+    "Margin_Per_Unit": 155.43,
+    "Storage_Requirement_Units": 0.91,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1837
+  },
+  {
+    "SKU_ID": "SKU0422",
+    "Unit_Cost": 263.34,
+    "Margin_Per_Unit": 174.07,
+    "Storage_Requirement_Units": 1.55,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.2107
+  },
+  {
+    "SKU_ID": "SKU0423",
+    "Unit_Cost": 315.0,
+    "Margin_Per_Unit": 174.83,
+    "Storage_Requirement_Units": 0.89,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.252
+  },
+  {
+    "SKU_ID": "SKU0424",
+    "Unit_Cost": 332.29,
+    "Margin_Per_Unit": 209.95,
+    "Storage_Requirement_Units": 2.69,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2658
+  },
+  {
+    "SKU_ID": "SKU0425",
+    "Unit_Cost": 328.47,
+    "Margin_Per_Unit": 266.19,
+    "Storage_Requirement_Units": 1.69,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.2628
+  },
+  {
+    "SKU_ID": "SKU0426",
+    "Unit_Cost": 410.46,
+    "Margin_Per_Unit": 236.61,
+    "Storage_Requirement_Units": 3.11,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3284
+  },
+  {
+    "SKU_ID": "SKU0427",
+    "Unit_Cost": 453.97,
+    "Margin_Per_Unit": 245.51,
+    "Storage_Requirement_Units": 2.01,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.3632
+  },
+  {
+    "SKU_ID": "SKU0428",
+    "Unit_Cost": 533.13,
+    "Margin_Per_Unit": 218.77,
+    "Storage_Requirement_Units": 1.0,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.4265
+  },
+  {
+    "SKU_ID": "SKU0429",
+    "Unit_Cost": 479.67,
+    "Margin_Per_Unit": 324.64,
+    "Storage_Requirement_Units": 1.05,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.3837
+  },
+  {
+    "SKU_ID": "SKU0430",
+    "Unit_Cost": 511.35,
+    "Margin_Per_Unit": 345.37,
+    "Storage_Requirement_Units": 1.88,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4091
+  },
+  {
+    "SKU_ID": "SKU0431",
+    "Unit_Cost": 635.8,
+    "Margin_Per_Unit": 273.34,
+    "Storage_Requirement_Units": 1.65,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.5086
+  },
+  {
+    "SKU_ID": "SKU0432",
+    "Unit_Cost": 717.52,
+    "Margin_Per_Unit": 244.03,
+    "Storage_Requirement_Units": 1.66,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.574
+  },
+  {
+    "SKU_ID": "SKU0433",
+    "Unit_Cost": 695.85,
+    "Margin_Per_Unit": 318.12,
+    "Storage_Requirement_Units": 2.72,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5567
+  },
+  {
+    "SKU_ID": "SKU0434",
+    "Unit_Cost": 740.61,
+    "Margin_Per_Unit": 325.77,
+    "Storage_Requirement_Units": 1.79,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.5925
+  },
+  {
+    "SKU_ID": "SKU0435",
+    "Unit_Cost": 623.3,
+    "Margin_Per_Unit": 495.49,
+    "Storage_Requirement_Units": 2.27,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.4986
+  },
+  {
+    "SKU_ID": "SKU0436",
+    "Unit_Cost": 647.47,
+    "Margin_Per_Unit": 523.74,
+    "Storage_Requirement_Units": 1.37,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.518
+  },
+  {
+    "SKU_ID": "SKU0437",
+    "Unit_Cost": 758.08,
+    "Margin_Per_Unit": 465.54,
+    "Storage_Requirement_Units": 2.17,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.6065
+  },
+  {
+    "SKU_ID": "SKU0438",
+    "Unit_Cost": 812.81,
+    "Margin_Per_Unit": 463.22,
+    "Storage_Requirement_Units": 1.7,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6502
+  },
+  {
+    "SKU_ID": "SKU0439",
+    "Unit_Cost": 889.02,
+    "Margin_Per_Unit": 439.43,
+    "Storage_Requirement_Units": 2.08,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.7112
+  },
+  {
+    "SKU_ID": "SKU0440",
+    "Unit_Cost": 951.25,
+    "Margin_Per_Unit": 429.61,
+    "Storage_Requirement_Units": 1.41,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.761
+  },
+  {
+    "SKU_ID": "SKU0441",
+    "Unit_Cost": 1019.46,
+    "Margin_Per_Unit": 413.82,
+    "Storage_Requirement_Units": 2.01,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.8156
+  },
+  {
+    "SKU_ID": "SKU0442",
+    "Unit_Cost": 818.05,
+    "Margin_Per_Unit": 667.64,
+    "Storage_Requirement_Units": 2.68,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.6544
+  },
+  {
+    "SKU_ID": "SKU0443",
+    "Unit_Cost": 1198.26,
+    "Margin_Per_Unit": 339.84,
+    "Storage_Requirement_Units": 1.49,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.9586
+  },
+  {
+    "SKU_ID": "SKU0444",
+    "Unit_Cost": 877.79,
+    "Margin_Per_Unit": 712.73,
+    "Storage_Requirement_Units": 2.86,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.7022
+  },
+  {
+    "SKU_ID": "SKU0445",
+    "Unit_Cost": 1238.2,
+    "Margin_Per_Unit": 404.73,
+    "Storage_Requirement_Units": 1.88,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.9906
+  },
+  {
+    "SKU_ID": "SKU0446",
+    "Unit_Cost": 1308.07,
+    "Margin_Per_Unit": 387.27,
+    "Storage_Requirement_Units": 3.19,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 1.0465
+  },
+  {
+    "SKU_ID": "SKU0447",
+    "Unit_Cost": 938.34,
+    "Margin_Per_Unit": 809.42,
+    "Storage_Requirement_Units": 2.11,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.7507
+  },
+  {
+    "SKU_ID": "SKU0448",
+    "Unit_Cost": 1269.25,
+    "Margin_Per_Unit": 530.92,
+    "Storage_Requirement_Units": 3.04,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 1.0154
+  },
+  {
+    "SKU_ID": "SKU0449",
+    "Unit_Cost": 1208.4,
+    "Margin_Per_Unit": 644.19,
+    "Storage_Requirement_Units": 1.1,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.9667
+  },
+  {
+    "SKU_ID": "SKU0450",
+    "Unit_Cost": 1107.86,
+    "Margin_Per_Unit": 797.14,
+    "Storage_Requirement_Units": 2.0,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.8863
+  },
+  {
+    "SKU_ID": "SKU0451",
+    "Unit_Cost": 84.27,
+    "Margin_Per_Unit": 41.73,
+    "Storage_Requirement_Units": 1.68,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0674
+  },
+  {
+    "SKU_ID": "SKU0452",
+    "Unit_Cost": 103.59,
+    "Margin_Per_Unit": 34.55,
+    "Storage_Requirement_Units": 0.84,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0829
+  },
+  {
+    "SKU_ID": "SKU0453",
+    "Unit_Cost": 106.23,
+    "Margin_Per_Unit": 44.05,
+    "Storage_Requirement_Units": 1.8,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.085
+  },
+  {
+    "SKU_ID": "SKU0454",
+    "Unit_Cost": 87.57,
+    "Margin_Per_Unit": 74.84,
+    "Storage_Requirement_Units": 2.74,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.0701
+  },
+  {
+    "SKU_ID": "SKU0455",
+    "Unit_Cost": 111.91,
+    "Margin_Per_Unit": 62.64,
+    "Storage_Requirement_Units": 1.79,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.0895
+  },
+  {
+    "SKU_ID": "SKU0456",
+    "Unit_Cost": 128.13,
+    "Margin_Per_Unit": 58.56,
+    "Storage_Requirement_Units": 1.08,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1025
+  },
+  {
+    "SKU_ID": "SKU0457",
+    "Unit_Cost": 129.39,
+    "Margin_Per_Unit": 69.44,
+    "Storage_Requirement_Units": 2.52,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1035
+  },
+  {
+    "SKU_ID": "SKU0458",
+    "Unit_Cost": 118.1,
+    "Margin_Per_Unit": 92.87,
+    "Storage_Requirement_Units": 1.05,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.0945
+  },
+  {
+    "SKU_ID": "SKU0459",
+    "Unit_Cost": 129.09,
+    "Margin_Per_Unit": 94.01,
+    "Storage_Requirement_Units": 2.69,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1033
+  },
+  {
+    "SKU_ID": "SKU0460",
+    "Unit_Cost": 137.65,
+    "Margin_Per_Unit": 97.59,
+    "Storage_Requirement_Units": 2.03,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1101
+  },
+  {
+    "SKU_ID": "SKU0461",
+    "Unit_Cost": 168.84,
+    "Margin_Per_Unit": 78.54,
+    "Storage_Requirement_Units": 1.99,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1351
+  },
+  {
+    "SKU_ID": "SKU0462",
+    "Unit_Cost": 178.2,
+    "Margin_Per_Unit": 81.32,
+    "Storage_Requirement_Units": 1.94,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1426
+  },
+  {
+    "SKU_ID": "SKU0463",
+    "Unit_Cost": 187.79,
+    "Margin_Per_Unit": 83.87,
+    "Storage_Requirement_Units": 2.21,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1502
+  },
+  {
+    "SKU_ID": "SKU0464",
+    "Unit_Cost": 150.61,
+    "Margin_Per_Unit": 133.18,
+    "Storage_Requirement_Units": 2.51,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1205
+  },
+  {
+    "SKU_ID": "SKU0465",
+    "Unit_Cost": 226.87,
+    "Margin_Per_Unit": 69.06,
+    "Storage_Requirement_Units": 2.32,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1815
+  },
+  {
+    "SKU_ID": "SKU0466",
+    "Unit_Cost": 177.08,
+    "Margin_Per_Unit": 130.99,
+    "Storage_Requirement_Units": 1.9,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1417
+  },
+  {
+    "SKU_ID": "SKU0467",
+    "Unit_Cost": 240.52,
+    "Margin_Per_Unit": 79.69,
+    "Storage_Requirement_Units": 1.85,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1924
+  },
+  {
+    "SKU_ID": "SKU0468",
+    "Unit_Cost": 193.98,
+    "Margin_Per_Unit": 138.36,
+    "Storage_Requirement_Units": 2.4,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1552
+  },
+  {
+    "SKU_ID": "SKU0469",
+    "Unit_Cost": 219.75,
+    "Margin_Per_Unit": 124.73,
+    "Storage_Requirement_Units": 2.15,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.1758
+  },
+  {
+    "SKU_ID": "SKU0470",
+    "Unit_Cost": 223.98,
+    "Margin_Per_Unit": 132.64,
+    "Storage_Requirement_Units": 1.68,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1792
+  },
+  {
+    "SKU_ID": "SKU0471",
+    "Unit_Cost": 205.53,
+    "Margin_Per_Unit": 163.23,
+    "Storage_Requirement_Units": 2.51,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 4,
+    "Holding_Cost_Per_Unit_Day": 0.1644
+  },
+  {
+    "SKU_ID": "SKU0472",
+    "Unit_Cost": 295.92,
+    "Margin_Per_Unit": 84.98,
+    "Storage_Requirement_Units": 1.43,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2367
+  },
+  {
+    "SKU_ID": "SKU0473",
+    "Unit_Cost": 282.11,
+    "Margin_Per_Unit": 110.92,
+    "Storage_Requirement_Units": 1.78,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2257
+  },
+  {
+    "SKU_ID": "SKU0474",
+    "Unit_Cost": 236.15,
+    "Margin_Per_Unit": 169.02,
+    "Storage_Requirement_Units": 0.96,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.1889
+  },
+  {
+    "SKU_ID": "SKU0475",
+    "Unit_Cost": 232.29,
+    "Margin_Per_Unit": 185.02,
+    "Storage_Requirement_Units": 0.81,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.1858
+  },
+  {
+    "SKU_ID": "SKU0476",
+    "Unit_Cost": 270.0,
+    "Margin_Per_Unit": 159.45,
+    "Storage_Requirement_Units": 2.72,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.216
+  },
+  {
+    "SKU_ID": "SKU0477",
+    "Unit_Cost": 336.83,
+    "Margin_Per_Unit": 104.76,
+    "Storage_Requirement_Units": 2.21,
+    "Minimum_Stock_Days": 5,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2695
+  },
+  {
+    "SKU_ID": "SKU0478",
+    "Unit_Cost": 294.71,
+    "Margin_Per_Unit": 159.01,
+    "Storage_Requirement_Units": 1.78,
+    "Minimum_Stock_Days": 3,
+    "Replenishment_Days": 2,
+    "Holding_Cost_Per_Unit_Day": 0.2358
+  },
+  {
+    "SKU_ID": "SKU0479",
+    "Unit_Cost": 302.49,
+    "Margin_Per_Unit": 163.37,
+    "Storage_Requirement_Units": 0.89,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 3,
+    "Holding_Cost_Per_Unit_Day": 0.242
+  },
+  {
+    "SKU_ID": "SKU0480",
+    "Unit_Cost": 305.38,
+    "Margin_Per_Unit": 172.62,
+    "Storage_Requirement_Units": 1.21,
+    "Minimum_Stock_Days": 4,
+    "Replenishment_Days": 1,
+    "Holding_Cost_Per_Unit_Day": 0.2443
+  }
+]

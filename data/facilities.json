@@ -1,52 +1,74 @@
 [
   {
-    "Facility_ID": "MFC01",
-    "Facility_Name": "Saket MFC",
-    "Facility_Type": "MFC",
-    "Primary_Zone": "South Delhi",
-    "Daily_Capacity_Orders": 15000,
-    "Current_Utilization": 0.86,
-    "Storage_Capacity_Units": 18000,
-    "Average_Pick_Min": 12
-  },
-  {
-    "Facility_ID": "MFC02",
-    "Facility_Name": "Connaught Place MFC",
-    "Facility_Type": "MFC",
-    "Primary_Zone": "Central Delhi",
-    "Daily_Capacity_Orders": 11000,
-    "Current_Utilization": 0.79,
-    "Storage_Capacity_Units": 13500,
-    "Average_Pick_Min": 12
-  },
-  {
-    "Facility_ID": "MFC03",
-    "Facility_Name": "Rajouri Garden MFC",
-    "Facility_Type": "MFC",
-    "Primary_Zone": "West Delhi",
-    "Daily_Capacity_Orders": 14000,
-    "Current_Utilization": 0.82,
-    "Storage_Capacity_Units": 16500,
-    "Average_Pick_Min": 14
-  },
-  {
-    "Facility_ID": "MFC04",
-    "Facility_Name": "Golf Course MFC",
-    "Facility_Type": "MFC",
-    "Primary_Zone": "Gurgaon",
-    "Daily_Capacity_Orders": 14500,
+    "Facility_ID": "F-SD-01",
+    "Zone": "South Delhi",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 6500,
     "Current_Utilization": 0.88,
-    "Storage_Capacity_Units": 17000,
-    "Average_Pick_Min": 14
+    "Storage_Capacity_Units": 12000,
+    "Avg_Delivery_Min": 25
   },
   {
-    "Facility_ID": "MFC05",
-    "Facility_Name": "Sector 62 MFC",
-    "Facility_Type": "MFC",
-    "Primary_Zone": "Noida",
-    "Daily_Capacity_Orders": 13000,
-    "Current_Utilization": 0.76,
-    "Storage_Capacity_Units": 15500,
-    "Average_Pick_Min": 15
+    "Facility_ID": "F-GGN-01",
+    "Zone": "Gurgaon",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 7000,
+    "Current_Utilization": 0.72,
+    "Storage_Capacity_Units": 13000,
+    "Avg_Delivery_Min": 18
+  },
+  {
+    "Facility_ID": "F-NOI-01",
+    "Zone": "Noida",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 6000,
+    "Current_Utilization": 0.91,
+    "Storage_Capacity_Units": 11000,
+    "Avg_Delivery_Min": 28
+  },
+  {
+    "Facility_ID": "F-WDL-01",
+    "Zone": "West Delhi",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 7000,
+    "Current_Utilization": 0.79,
+    "Storage_Capacity_Units": 13000,
+    "Avg_Delivery_Min": 19
+  },
+  {
+    "Facility_ID": "F-CDL-01",
+    "Zone": "Central Delhi",
+    "Node_Type": "UFC",
+    "Daily_Capacity_Orders": 12000,
+    "Current_Utilization": 0.83,
+    "Storage_Capacity_Units": 25000,
+    "Avg_Delivery_Min": 17
+  },
+  {
+    "Facility_ID": "F-NDL-01",
+    "Zone": "North Delhi",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 5500,
+    "Current_Utilization": 0.86,
+    "Storage_Capacity_Units": 10500,
+    "Avg_Delivery_Min": 24
+  },
+  {
+    "Facility_ID": "F-EDL-01",
+    "Zone": "East Delhi",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 6000,
+    "Current_Utilization": 0.89,
+    "Storage_Capacity_Units": 11500,
+    "Avg_Delivery_Min": 26
+  },
+  {
+    "Facility_ID": "F-GZB-01",
+    "Zone": "Ghaziabad",
+    "Node_Type": "MFC",
+    "Daily_Capacity_Orders": 4500,
+    "Current_Utilization": 0.94,
+    "Storage_Capacity_Units": 9000,
+    "Avg_Delivery_Min": 31
   }
 ]

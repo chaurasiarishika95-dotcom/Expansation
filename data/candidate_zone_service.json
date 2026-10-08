@@ -1,202 +1,1026 @@
 [
   {
-    "Candidate_ID": "UFC01",
-    "Zone_ID": "Z01",
-    "Zone": "South Delhi",
-    "Expected_Delivery_Min": 14,
-    "Serviceable_Customer_Pct": 0.98,
-    "Serviceable_Customers": 607600
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 552000,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 16
   },
   {
-    "Candidate_ID": "UFC01",
-    "Zone_ID": "Z02",
-    "Zone": "Central Delhi",
-    "Expected_Delivery_Min": 20,
-    "Serviceable_Customer_Pct": 0.89,
-    "Serviceable_Customers": 364900
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
   },
   {
-    "Candidate_ID": "UFC01",
-    "Zone_ID": "Z03",
-    "Zone": "West Delhi",
-    "Expected_Delivery_Min": 27,
-    "Serviceable_Customer_Pct": 0.764,
-    "Serviceable_Customers": 527160
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
   },
   {
-    "Candidate_ID": "UFC01",
-    "Zone_ID": "Z04",
-    "Zone": "Gurgaon",
-    "Expected_Delivery_Min": 25,
-    "Serviceable_Customer_Pct": 0.8,
-    "Serviceable_Customers": 464000
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 151200,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 22
   },
   {
-    "Candidate_ID": "UFC01",
-    "Zone_ID": "Z05",
-    "Zone": "Noida",
-    "Expected_Delivery_Min": 31,
-    "Serviceable_Customer_Pct": 0.692,
-    "Serviceable_Customers": 359840
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 92400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 22
   },
   {
-    "Candidate_ID": "UFC02",
-    "Zone_ID": "Z01",
-    "Zone": "South Delhi",
-    "Expected_Delivery_Min": 25,
-    "Serviceable_Customer_Pct": 0.8,
-    "Serviceable_Customers": 496000
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
   },
   {
-    "Candidate_ID": "UFC02",
-    "Zone_ID": "Z02",
-    "Zone": "Central Delhi",
-    "Expected_Delivery_Min": 28,
-    "Serviceable_Customer_Pct": 0.746,
-    "Serviceable_Customers": 305860
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 15000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
   },
   {
-    "Candidate_ID": "UFC02",
-    "Zone_ID": "Z03",
-    "Zone": "West Delhi",
-    "Expected_Delivery_Min": 34,
-    "Serviceable_Customer_Pct": 0.638,
-    "Serviceable_Customers": 440220
+    "Candidate_ID": "C01-UFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
   },
   {
-    "Candidate_ID": "UFC02",
-    "Zone_ID": "Z04",
-    "Zone": "Gurgaon",
-    "Expected_Delivery_Min": 16,
-    "Serviceable_Customer_Pct": 0.962,
-    "Serviceable_Customers": 557960
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 516000,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 18
   },
   {
-    "Candidate_ID": "UFC02",
-    "Zone_ID": "Z05",
-    "Zone": "Noida",
-    "Expected_Delivery_Min": 29,
-    "Serviceable_Customer_Pct": 0.728,
-    "Serviceable_Customers": 378560
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
   },
   {
-    "Candidate_ID": "UFC03",
-    "Zone_ID": "Z01",
-    "Zone": "South Delhi",
-    "Expected_Delivery_Min": 32,
-    "Serviceable_Customer_Pct": 0.674,
-    "Serviceable_Customers": 417880
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
   },
   {
-    "Candidate_ID": "UFC03",
-    "Zone_ID": "Z02",
-    "Zone": "Central Delhi",
-    "Expected_Delivery_Min": 27,
-    "Serviceable_Customer_Pct": 0.764,
-    "Serviceable_Customers": 313240
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 97200,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
   },
   {
-    "Candidate_ID": "UFC03",
-    "Zone_ID": "Z03",
-    "Zone": "West Delhi",
-    "Expected_Delivery_Min": 29,
-    "Serviceable_Customer_Pct": 0.728,
-    "Serviceable_Customers": 502320
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 59400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
   },
   {
-    "Candidate_ID": "UFC03",
-    "Zone_ID": "Z04",
-    "Zone": "Gurgaon",
-    "Expected_Delivery_Min": 31,
-    "Serviceable_Customer_Pct": 0.692,
-    "Serviceable_Customers": 401360
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
   },
   {
-    "Candidate_ID": "UFC03",
-    "Zone_ID": "Z05",
-    "Zone": "Noida",
-    "Expected_Delivery_Min": 17,
-    "Serviceable_Customer_Pct": 0.944,
-    "Serviceable_Customers": 490880
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 15000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
   },
   {
-    "Candidate_ID": "UFC04",
-    "Zone_ID": "Z01",
-    "Zone": "South Delhi",
-    "Expected_Delivery_Min": 28,
-    "Serviceable_Customer_Pct": 0.746,
-    "Serviceable_Customers": 462520
+    "Candidate_ID": "C01-MFC",
+    "Candidate_Zone": "South Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
   },
   {
-    "Candidate_ID": "UFC04",
-    "Zone_ID": "Z02",
-    "Zone": "Central Delhi",
-    "Expected_Delivery_Min": 25,
-    "Serviceable_Customer_Pct": 0.8,
-    "Serviceable_Customers": 328000
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 168000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 20
   },
   {
-    "Candidate_ID": "UFC04",
-    "Zone_ID": "Z03",
-    "Zone": "West Delhi",
-    "Expected_Delivery_Min": 16,
-    "Serviceable_Customer_Pct": 0.962,
-    "Serviceable_Customers": 663780
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 478400,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 14
   },
   {
-    "Candidate_ID": "UFC04",
-    "Zone_ID": "Z04",
-    "Zone": "Gurgaon",
-    "Expected_Delivery_Min": 32,
-    "Serviceable_Customer_Pct": 0.674,
-    "Serviceable_Customers": 390920
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
   },
   {
-    "Candidate_ID": "UFC04",
-    "Zone_ID": "Z05",
-    "Zone": "Noida",
-    "Expected_Delivery_Min": 30,
-    "Serviceable_Customer_Pct": 0.71,
-    "Serviceable_Customers": 369200
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
   },
   {
-    "Candidate_ID": "UFC05",
-    "Zone_ID": "Z01",
-    "Zone": "South Delhi",
-    "Expected_Delivery_Min": 20,
-    "Serviceable_Customer_Pct": 0.89,
-    "Serviceable_Customers": 551800
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 92400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 20
   },
   {
-    "Candidate_ID": "UFC05",
-    "Zone_ID": "Z02",
-    "Zone": "Central Delhi",
-    "Expected_Delivery_Min": 13,
-    "Serviceable_Customer_Pct": 0.98,
-    "Serviceable_Customers": 401800
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
   },
   {
-    "Candidate_ID": "UFC05",
-    "Zone_ID": "Z03",
-    "Zone": "West Delhi",
-    "Expected_Delivery_Min": 24,
-    "Serviceable_Customer_Pct": 0.818,
-    "Serviceable_Customers": 564420
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 15000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
   },
   {
-    "Candidate_ID": "UFC05",
-    "Zone_ID": "Z04",
-    "Zone": "Gurgaon",
-    "Expected_Delivery_Min": 29,
-    "Serviceable_Customer_Pct": 0.728,
-    "Serviceable_Customers": 422240
+    "Candidate_ID": "C02-UFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
   },
   {
-    "Candidate_ID": "UFC05",
-    "Zone_ID": "Z05",
-    "Zone": "Noida",
-    "Expected_Delivery_Min": 25,
-    "Serviceable_Customer_Pct": 0.8,
-    "Serviceable_Customers": 416000
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 108000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 447200,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 16
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 59400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 15000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C02-MFC",
+    "Candidate_Zone": "Gurgaon",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 561200,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 15
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 92400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 140000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C03-UFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 117600,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 524600,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 18
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 59400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 90000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C03-MFC",
+    "Candidate_Zone": "Noida",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 75600,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 168000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 20
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 496800,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 14
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 92400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 20
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 120400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 20
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 15000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
+  },
+  {
+    "Candidate_ID": "C04-UFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 28
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 108000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 464400,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 16
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 59400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 77400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 15000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C04-MFC",
+    "Candidate_Zone": "West Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 168000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 145600,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 27
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 151200,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 303600,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 13
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 120400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 140000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Candidate_ID": "C05-UFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 27
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 108000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 93600,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 97200,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 283800,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 15
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 77400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 90000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C05-MFC",
+    "Candidate_Zone": "Central Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 151200,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 92400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 395600,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 16
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 140000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 22
+  },
+  {
+    "Candidate_ID": "C06-UFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 30
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 18300,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 97200,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 25
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 59400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 25
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 369800,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 19
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 90000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 25
+  },
+  {
+    "Candidate_ID": "C06-MFC",
+    "Candidate_Zone": "North Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 12600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 33
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 170800,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 29
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 92400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 120400,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 460000,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 15
+  },
+  {
+    "Candidate_ID": "C07-UFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 117600,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 21
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 109800,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 32
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 59400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 77400,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 430000,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 18
+  },
+  {
+    "Candidate_ID": "C07-MFC",
+    "Candidate_Zone": "East Delhi",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 75600,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 24
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 170800,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 23
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 9900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 31
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 140000,
+    "Serviceable_Pct": 0.28,
+    "Expected_Delivery_Min": 23
+  },
+  {
+    "Candidate_ID": "C08-UFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 386400,
+    "Serviceable_Pct": 0.92,
+    "Expected_Delivery_Min": 17
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "South Delhi",
+    "Serviceable_Customers": 18000,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 34
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Gurgaon",
+    "Serviceable_Customers": 15600,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 34
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Noida",
+    "Serviceable_Customers": 109800,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 26
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "West Delhi",
+    "Serviceable_Customers": 16200,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 34
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Central Delhi",
+    "Serviceable_Customers": 9900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 34
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "North Delhi",
+    "Serviceable_Customers": 12900,
+    "Serviceable_Pct": 0.03,
+    "Expected_Delivery_Min": 34
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "East Delhi",
+    "Serviceable_Customers": 90000,
+    "Serviceable_Pct": 0.18,
+    "Expected_Delivery_Min": 26
+  },
+  {
+    "Candidate_ID": "C08-MFC",
+    "Candidate_Zone": "Ghaziabad",
+    "Service_Zone": "Ghaziabad",
+    "Serviceable_Customers": 361200,
+    "Serviceable_Pct": 0.86,
+    "Expected_Delivery_Min": 20
   }
 ]
