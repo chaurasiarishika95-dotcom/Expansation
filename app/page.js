@@ -15,7 +15,6 @@ const zones = [
 
 export default function Home() {
   const [zone, setZone] = useState("South Delhi");
-
   const [demand, setDemand] = useState(1);
   const [budget, setBudget] = useState(100);
   const [deliveryTarget, setDeliveryTarget] = useState(20);
@@ -30,39 +29,59 @@ export default function Home() {
     setError("");
 
     try {
+      const payload = {
+        zone,
+        demandMultiplier: Number(demand),
+        budget: Number(budget),
+        deliveryTarget: Number(deliveryTarget),
+        storageLimitPct: Number(storageLimit),
+      };
+
+      console.log("Planning request:", payload);
+
       const response = await fetch("/api/planning", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          zone,
-          demandMultiplier: demand,
-          budget,
-          deliveryTarget,
-          storageLimitPct: storageLimit,
-        }),
+        cache: "no-store",
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
 
-      if (!data.success) {
+      console.log("Planning response:", data);
+
+      if (!response.ok || !data.success) {
         throw new Error(
-          data.error || "Unable to generate plan"
+          data?.error ||
+            data?.details ||
+            `Planning API returned ${response.status}`
         );
       }
 
       setPlan(data.plan);
     } catch (err) {
-      setError(err.message);
+      console.error("Planning error:", err);
+      setError(err.message || "Unable to generate plan.");
     } finally {
       setLoading(false);
     }
   }
 
+  /*
+   * Recalculate automatically whenever
+   * a planning assumption changes.
+   */
   useEffect(() => {
     generatePlan();
-  }, []);
+  }, [
+    zone,
+    demand,
+    budget,
+    deliveryTarget,
+    storageLimit,
+  ]);
 
   return (
     <main className="min-h-screen bg-slate-950 text-white p-6 md:p-10">
@@ -91,168 +110,144 @@ export default function Home() {
 
           <div className="grid md:grid-cols-5 gap-5">
 
-            <div>
-              <label className="text-xs text-slate-400">
-                Planning Zone
-              </label>
+            <Control
+              label="Planning Zone"
+              value={zone}
+              onChange={(e) =>
+                setZone(e.target.value)
+              }
+              options={zones.map((z) => ({
+                value: z,
+                label: z,
+              }))}
+            />
 
-              <select
-                value={zone}
-                onChange={(e) =>
-                  setZone(e.target.value)
-                }
-                className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3"
-              >
-                {zones.map((z) => (
-                  <option key={z}>{z}</option>
-                ))}
-              </select>
-            </div>
+            <Control
+              label="Demand Scenario"
+              value={demand}
+              onChange={(e) =>
+                setDemand(Number(e.target.value))
+              }
+              options={[
+                {
+                  value: 0.8,
+                  label: "-20% demand",
+                },
+                {
+                  value: 0.9,
+                  label: "-10% demand",
+                },
+                {
+                  value: 1,
+                  label: "Base demand",
+                },
+                {
+                  value: 1.1,
+                  label: "+10% demand",
+                },
+                {
+                  value: 1.2,
+                  label: "+20% demand",
+                },
+                {
+                  value: 1.3,
+                  label: "+30% demand",
+                },
+              ]}
+            />
 
-            <div>
-              <label className="text-xs text-slate-400">
-                Demand Scenario
-              </label>
+            <Control
+              label="Budget"
+              value={budget}
+              onChange={(e) =>
+                setBudget(Number(e.target.value))
+              }
+              options={[60, 80, 100, 120, 150].map(
+                (value) => ({
+                  value,
+                  label: `₹${value}L`,
+                })
+              )}
+            />
 
-              <select
-                value={demand}
-                onChange={(e) =>
-                  setDemand(Number(e.target.value))
-                }
-                className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3"
-              >
-                <option value={0.8}>
-                  -20% demand
-                </option>
+            <Control
+              label="Delivery Target"
+              value={deliveryTarget}
+              onChange={(e) =>
+                setDeliveryTarget(
+                  Number(e.target.value)
+                )
+              }
+              options={[15, 18, 20, 25].map(
+                (value) => ({
+                  value,
+                  label: `${value} min`,
+                })
+              )}
+            />
 
-                <option value={0.9}>
-                  -10% demand
-                </option>
-
-                <option value={1}>
-                  Base demand
-                </option>
-
-                <option value={1.1}>
-                  +10% demand
-                </option>
-
-                <option value={1.2}>
-                  +20% demand
-                </option>
-
-                <option value={1.3}>
-                  +30% demand
-                </option>
-              </select>
-            </div>
-
-            <div>
-              <label className="text-xs text-slate-400">
-                Budget
-              </label>
-
-              <select
-                value={budget}
-                onChange={(e) =>
-                  setBudget(Number(e.target.value))
-                }
-                className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3"
-              >
-                {[60, 80, 100, 120, 150].map(
-                  (value) => (
-                    <option
-                      key={value}
-                      value={value}
-                    >
-                      ₹{value}L
-                    </option>
-                  )
-                )}
-              </select>
-            </div>
-
-            <div>
-              <label className="text-xs text-slate-400">
-                Delivery Target
-              </label>
-
-              <select
-                value={deliveryTarget}
-                onChange={(e) =>
-                  setDeliveryTarget(
-                    Number(e.target.value)
-                  )
-                }
-                className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3"
-              >
-                {[15, 18, 20, 25].map(
-                  (value) => (
-                    <option
-                      key={value}
-                      value={value}
-                    >
-                      {value} min
-                    </option>
-                  )
-                )}
-              </select>
-            </div>
-
-            <div>
-              <label className="text-xs text-slate-400">
-                Storage Limit
-              </label>
-
-              <select
-                value={storageLimit}
-                onChange={(e) =>
-                  setStorageLimit(
-                    Number(e.target.value)
-                  )
-                }
-                className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3"
-              >
-                {[70, 80, 85, 90].map(
-                  (value) => (
-                    <option
-                      key={value}
-                      value={value}
-                    >
-                      {value}%
-                    </option>
-                  )
-                )}
-              </select>
-            </div>
+            <Control
+              label="Storage Limit"
+              value={storageLimit}
+              onChange={(e) =>
+                setStorageLimit(
+                  Number(e.target.value)
+                )
+              }
+              options={[70, 80, 85, 90].map(
+                (value) => ({
+                  value,
+                  label: `${value}%`,
+                })
+              )}
+            />
 
           </div>
 
-          <button
-            onClick={generatePlan}
-            disabled={loading}
-            className="mt-6 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-50 font-semibold"
-          >
-            {loading
-              ? "Recalculating..."
-              : "Generate Expansion Plan"}
-          </button>
+          <div className="flex items-center gap-4 mt-6">
+
+            <button
+              type="button"
+              onClick={generatePlan}
+              disabled={loading}
+              className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-50 font-semibold transition"
+            >
+              {loading
+                ? "Calculating..."
+                : "Generate Expansion Plan"}
+            </button>
+
+            {loading && (
+              <span className="text-sm text-slate-400">
+                Recalculating network and assortment...
+              </span>
+            )}
+
+          </div>
 
         </section>
 
         {/* ERROR */}
 
         {error && (
-          <div className="bg-red-950 border border-red-800 rounded-xl p-5 mb-8 text-red-300">
-            {error}
-          </div>
+          <section className="bg-red-950 border border-red-800 rounded-xl p-5 mb-8">
+
+            <p className="font-semibold text-red-300">
+              Planning calculation failed
+            </p>
+
+            <p className="text-sm text-red-400 mt-2">
+              {error}
+            </p>
+
+          </section>
         )}
 
         {/* RESULTS */}
 
-        {plan && (
+        {plan && !error && (
           <>
-            {/* DECISION */}
+            {/* TOP DECISION */}
 
             <section className="grid md:grid-cols-4 gap-4 mb-8">
 
@@ -277,6 +272,37 @@ export default function Home() {
               />
 
             </section>
+
+            {/* DECISION REASON */}
+
+            {plan.decisionReasons?.length > 0 && (
+              <section className="bg-blue-950/30 border border-blue-900 rounded-2xl p-6 mb-8">
+
+                <p className="text-xs uppercase tracking-wider text-blue-400 font-semibold">
+                  Why this strategy?
+                </p>
+
+                <div className="mt-4 space-y-2">
+
+                  {plan.decisionReasons.map(
+                    (reason, index) => (
+                      <div
+                        key={index}
+                        className="flex gap-3 text-slate-300"
+                      >
+                        <span className="text-blue-400">
+                          •
+                        </span>
+
+                        <span>{reason}</span>
+                      </div>
+                    )
+                  )}
+
+                </div>
+
+              </section>
+            )}
 
             {/* NETWORK OPPORTUNITY */}
 
@@ -322,90 +348,120 @@ export default function Home() {
 
             </section>
 
-            {/* NODE OPTIONS */}
+            {/* NETWORK DESIGN */}
 
             <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
 
-              <h2 className="text-xl font-semibold mb-5">
-                02 — Network Design
-              </h2>
+              <div className="mb-6">
 
-              <div className="overflow-x-auto">
+                <p className="text-xs uppercase tracking-wider text-blue-400 font-semibold">
+                  Network Design
+                </p>
 
-                <table className="w-full text-sm">
+                <h2 className="text-2xl font-semibold mt-1">
+                  02 — Small MFC vs UFC vs Phased
+                </h2>
 
-                  <thead className="text-slate-400 border-b border-slate-800">
-                    <tr>
-                      <th className="text-left py-3">
-                        Node
-                      </th>
+                <p className="text-sm text-slate-400 mt-2">
+                  Compare the network options against the
+                  current demand and planning constraints.
+                </p>
 
-                      <th className="text-left">
-                        Cost
-                      </th>
+              </div>
 
-                      <th className="text-left">
-                        Capacity
-                      </th>
+              <div className="grid md:grid-cols-3 gap-5">
 
-                      <th className="text-left">
-                        Storage
-                      </th>
+                {plan.networkComparison?.map(
+                  (option) => {
 
-                      <th className="text-left">
-                        Delivery
-                      </th>
+                    const isRecommended =
+                      option.recommended;
 
-                      <th className="text-left">
-                        Score
-                      </th>
-                    </tr>
-                  </thead>
+                    return (
+                      <div
+                        key={option.strategy}
+                        className={`rounded-xl border p-5 ${
+                          isRecommended
+                            ? "border-blue-500 bg-blue-950/30"
+                            : "border-slate-700 bg-slate-950"
+                        }`}
+                      >
 
-                  <tbody>
+                        <div className="flex justify-between items-start">
 
-                    {plan.networkOptions.map(
-                      (option) => (
-                        <tr
-                          key={
-                            option.Candidate_ID
-                          }
-                          className="border-b border-slate-800"
-                        >
-                          <td className="py-4 font-semibold">
-                            {option.Node_Type}
-                          </td>
+                          <div>
+                            <p className="text-lg font-semibold">
+                              {option.strategy}
+                            </p>
 
-                          <td>
-                            ₹
-                            {
-                              option.Launch_Cost_Lakh
-                            }
-                            L
-                          </td>
+                            {isRecommended && (
+                              <span className="inline-block mt-2 text-xs bg-blue-600 px-2 py-1 rounded">
+                                RECOMMENDED
+                              </span>
+                            )}
+                          </div>
 
-                          <td>
-                            {option.Daily_Capacity_Orders.toLocaleString()}
-                          </td>
-
-                          <td>
-                            {option.Storage_Capacity_Units.toLocaleString()}
-                          </td>
-
-                          <td>
-                            {option.expectedDelivery} min
-                          </td>
-
-                          <td className="font-bold">
+                          <span className="text-2xl font-bold">
                             {option.score}
-                          </td>
-                        </tr>
-                      )
-                    )}
+                          </span>
 
-                  </tbody>
+                        </div>
 
-                </table>
+                        <div className="mt-5 space-y-3 text-sm">
+
+                          <Row
+                            label="Launch cost"
+                            value={`₹${option.cost}L`}
+                          />
+
+                          <Row
+                            label="Capacity"
+                            value={
+                              option.capacity?.toLocaleString()
+                            }
+                          />
+
+                          <Row
+                            label="Assortment"
+                            value={`${option.assortment?.toLocaleString()} SKUs`}
+                          />
+
+                          <Row
+                            label="Delivery"
+                            value={`${option.delivery} min`}
+                          />
+
+                          <Row
+                            label="Budget fit"
+                            value={
+                              option.withinBudget
+                                ? "YES"
+                                : "NO"
+                            }
+                          />
+
+                          <Row
+                            label="Capacity fit"
+                            value={
+                              option.capacityFit
+                                ? "YES"
+                                : "NO"
+                            }
+                          />
+
+                          {option.futureCapacity && (
+                            <Row
+                              label="Future capacity"
+                              value={option.futureCapacity.toLocaleString()}
+                            />
+                          )}
+
+                        </div>
+
+                      </div>
+                    );
+                  }
+                )}
 
               </div>
 
@@ -418,23 +474,30 @@ export default function Home() {
               <div className="flex justify-between items-center mb-5">
 
                 <div>
-                  <h2 className="text-xl font-semibold">
-                    03 — Assortment Plan
+                  <p className="text-xs uppercase tracking-wider text-blue-400 font-semibold">
+                    Assortment Planning
+                  </p>
+
+                  <h2 className="text-2xl font-semibold mt-1">
+                    03 — What Should the Node Stock?
                   </h2>
 
-                  <p className="text-sm text-slate-400 mt-1">
-                    What should this node stock?
+                  <p className="text-sm text-slate-400 mt-2">
+                    Category-level selection based on demand,
+                    availability and stockout pressure.
                   </p>
                 </div>
 
                 <div className="text-right">
-                  <div className="text-2xl font-bold">
+
+                  <div className="text-3xl font-bold">
                     {plan.assortment.selectedSKUs}
                   </div>
 
                   <div className="text-xs text-slate-400">
                     recommended SKUs
                   </div>
+
                 </div>
 
               </div>
@@ -463,7 +526,7 @@ export default function Home() {
                       </th>
 
                       <th className="text-left">
-                        Gap
+                        Selection Gap
                       </th>
 
                       <th className="text-left">
@@ -479,9 +542,7 @@ export default function Home() {
                     {plan.assortment.categories.map(
                       (category) => (
                         <tr
-                          key={
-                            category.category
-                          }
+                          key={category.category}
                           className="border-b border-slate-800"
                         >
 
@@ -521,17 +582,21 @@ export default function Home() {
 
             </section>
 
-            {/* SKU RECOMMENDATIONS */}
+            {/* SKU PRIORITIZATION */}
 
             <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
 
-              <h2 className="text-xl font-semibold mb-2">
-                04 — SKU Prioritization
+              <p className="text-xs uppercase tracking-wider text-blue-400 font-semibold">
+                SKU Prioritization
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-1">
+                04 — Which SKUs Should Launch First?
               </h2>
 
-              <p className="text-sm text-slate-400 mb-5">
-                Highest-priority SKUs based on demand,
-                availability, stockout pressure and margin.
+              <p className="text-sm text-slate-400 mt-2 mb-5">
+                Prioritized using demand share, availability,
+                stockout pressure and margin.
               </p>
 
               <div className="overflow-x-auto">
@@ -541,6 +606,7 @@ export default function Home() {
                   <thead className="text-slate-400 border-b border-slate-800">
 
                     <tr>
+
                       <th className="text-left py-3">
                         SKU
                       </th>
@@ -568,6 +634,7 @@ export default function Home() {
                       <th className="text-left">
                         Priority
                       </th>
+
                     </tr>
 
                   </thead>
@@ -621,7 +688,7 @@ export default function Home() {
 
             </section>
 
-            {/* CAPACITY */}
+            {/* CAPACITY + STORAGE */}
 
             <section className="grid md:grid-cols-2 gap-6 mb-8">
 
@@ -694,7 +761,6 @@ export default function Home() {
               </div>
 
             </section>
-
           </>
         )}
 
@@ -703,14 +769,48 @@ export default function Home() {
   );
 }
 
+/* =========================================================
+   COMPONENTS
+========================================================= */
 
-/* ---------------------------------------------------------
-   SMALL UI COMPONENTS
---------------------------------------------------------- */
+function Control({
+  label,
+  value,
+  onChange,
+  options,
+}) {
+  return (
+    <div>
+
+      <label className="text-xs text-slate-400">
+        {label}
+      </label>
+
+      <select
+        value={value}
+        onChange={onChange}
+        className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3 text-white"
+      >
+
+        {options.map((option) => (
+          <option
+            key={option.value}
+            value={option.value}
+          >
+            {option.label}
+          </option>
+        ))}
+
+      </select>
+
+    </div>
+  );
+}
 
 function Metric({ label, value }) {
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+
       <p className="text-xs text-slate-400 uppercase tracking-wide">
         {label}
       </p>
@@ -718,6 +818,7 @@ function Metric({ label, value }) {
       <p className="text-xl font-bold mt-2">
         {value}
       </p>
+
     </div>
   );
 }
@@ -725,6 +826,7 @@ function Metric({ label, value }) {
 function Row({ label, value }) {
   return (
     <div className="flex justify-between border-b border-slate-800 pb-3">
+
       <span className="text-slate-400">
         {label}
       </span>
@@ -732,6 +834,7 @@ function Row({ label, value }) {
       <span className="font-semibold">
         {value}
       </span>
+
     </div>
   );
 }
