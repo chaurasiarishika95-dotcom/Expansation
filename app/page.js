@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 const zones = [
-  "West Delhi",
   "South Delhi",
-  "East Delhi",
+  "Gurgaon",
+  "Noida",
+  "West Delhi",
+  "Central Delhi",
   "North Delhi",
+  "East Delhi",
+  "Ghaziabad",
 ];
 
 const demandOptions = [
@@ -43,7 +47,9 @@ function percent(value) {
 }
 
 function safe(value, fallback = 0) {
-  return value === undefined || value === null ? fallback : value;
+  return value === undefined || value === null
+    ? fallback
+    : value;
 }
 
 export default function Home() {
@@ -51,7 +57,8 @@ export default function Home() {
   const [demandMultiplier, setDemandMultiplier] = useState(1);
   const [budget, setBudget] = useState(100);
   const [deliveryTarget, setDeliveryTarget] = useState(20);
-  const [storageLimitPct, setStorageLimitPct] = useState(85);
+  const [storageLimitPct, setStorageLimitPct] =
+    useState(85);
 
   const [plan, setPlan] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -89,7 +96,9 @@ export default function Home() {
       setPlan(data.plan);
     } catch (err) {
       console.error(err);
-      setError(err.message || "Unable to generate plan.");
+      setError(
+        err.message || "Unable to generate plan."
+      );
     } finally {
       setLoading(false);
     }
@@ -112,26 +121,6 @@ export default function Home() {
   const financials = plan?.financials || {};
   const capacity = plan?.capacity || {};
   const storage = plan?.storage || {};
-
-  /*
-   * IMPORTANT:
-   * The optimizer now returns:
-   *
-   * totalUpfrontInvestmentLakh
-   * openingInventoryInvestmentLakh
-   * annualRevenueLakh
-   * annualGrossMarginLakh
-   * grossMarginRoiPct
-   * paybackMonths
-   *
-   * Capacity:
-   * dailyCapacity
-   * supportedDemand
-   * peakDemand
-   * utilizationPct
-   *
-   * This page intentionally uses those current field names.
-   */
 
   const totalInvestment = Number(
     safe(
@@ -180,7 +169,8 @@ export default function Home() {
       )
     ) ||
     (annualGrossMargin > 0
-      ? totalInvestment / (annualGrossMargin / 12)
+      ? totalInvestment /
+        (annualGrossMargin / 12)
       : 0);
 
   const dailyCapacity = Number(
@@ -221,12 +211,14 @@ export default function Home() {
     )
   );
 
-  const openingInventoryAssortment = Number(
-    safe(
-      assortment.economics?.openingInventoryInvestmentLakh,
-      openingInventory
-    )
-  );
+  const openingInventoryAssortment =
+    Number(
+      safe(
+        assortment.economics
+          ?.openingInventoryInvestmentLakh,
+        openingInventory
+      )
+    );
 
   const inventoryBudget = Number(
     safe(
@@ -253,10 +245,7 @@ export default function Home() {
     storageCapacity > 0
       ? (storageUsed / storageCapacity) * 100
       : Number(
-          safe(
-            storage.utilizationPct,
-            0
-          )
+          safe(storage.utilizationPct, 0)
         );
 
   const networkComparison =
@@ -269,49 +258,68 @@ export default function Home() {
     assortment.categories || [];
 
   const recommendation =
-    plan?.recommendation || "No recommendation";
+    plan?.recommendation ||
+    "No recommendation";
 
   const decisionReasons =
     plan?.decisionReasons || [];
 
-  const networkOpportunityScore =
-    Number(
-      safe(
-        opportunity.opportunityScore,
-        0
-      )
-    );
+  const opportunityScore = Number(
+    safe(
+      opportunity.opportunityScore,
+      0
+    )
+  );
 
-  const demandLabel =
-    demandMultiplier === 1
-      ? "Base demand"
-      : `${Math.round(
-          demandMultiplier * 100
-        )}% demand`;
+  const topCategories = [...categories]
+    .sort(
+      (a, b) =>
+        Number(b.demand || 0) -
+        Number(a.demand || 0)
+    )
+    .slice(0, 8);
+
+  const topSkus = skuRecommendations.slice(
+    0,
+    10
+  );
 
   return (
     <main className="min-h-screen bg-[#030817] text-white">
-      <div className="mx-auto max-w-[1400px] px-4 py-8">
+      <div className="mx-auto max-w-[1450px] px-4 py-6">
 
         {/* HEADER */}
-        <header className="mb-8">
-          <div className="mb-2 text-xs font-semibold tracking-[0.18em] text-blue-400">
+        <header className="mb-5">
+          <div className="mb-1 text-xs font-semibold tracking-[0.18em] text-blue-400">
             NETWORK PLANNING COMMAND CENTER
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-            UFC Network & Assortment Planner
-          </h1>
+          <div className="flex flex-col justify-between gap-3 lg:flex-row lg:items-end">
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+                UFC Network & Assortment Planner
+              </h1>
 
-          <p className="mt-2 text-sm text-slate-300 md:text-base">
-            Decide where to expand, what node to build,
-            what to stock, and how to scale the network.
-          </p>
+              <p className="mt-1 text-sm text-slate-400">
+                Decide where to expand, what node to build,
+                what to stock, and how to scale the network.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-right">
+              <div className="text-[10px] tracking-wider text-slate-500">
+                ACTIVE PLAN
+              </div>
+              <div className="text-sm font-semibold">
+                {zone}
+              </div>
+            </div>
+          </div>
         </header>
 
         {/* CONTROLS */}
-        <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5 shadow-xl">
-          <div className="grid gap-4 md:grid-cols-5">
+        <section className="mb-5 rounded-xl border border-slate-700 bg-slate-900/90 p-4">
+          <div className="grid gap-3 md:grid-cols-5">
 
             <SelectControl
               label="Planning Zone"
@@ -370,19 +378,26 @@ export default function Home() {
 
           </div>
 
-          <button
-            onClick={generatePlan}
-            disabled={loading}
-            className="mt-5 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {loading
-              ? "Generating..."
-              : "Generate Expansion Plan"}
-          </button>
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+            <button
+              onClick={generatePlan}
+              disabled={loading}
+              className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {loading
+                ? "Generating..."
+                : "Generate Expansion Plan"}
+            </button>
+
+            <div className="text-xs text-slate-500">
+              Scenario changes automatically recalculate
+              the planning recommendation.
+            </div>
+          </div>
         </section>
 
         {error && (
-          <div className="mb-6 rounded-xl border border-red-500/40 bg-red-950/30 p-4 text-sm text-red-300">
+          <div className="mb-5 rounded-xl border border-red-500/40 bg-red-950/30 p-4 text-sm text-red-300">
             {error}
           </div>
         )}
@@ -396,7 +411,7 @@ export default function Home() {
         {plan && (
           <>
             {/* EXECUTIVE DECISION */}
-            <section className="mb-7 grid gap-4 md:grid-cols-4">
+            <section className="mb-5 grid gap-3 md:grid-cols-4">
 
               <MetricCard
                 label="Recommended Strategy"
@@ -406,67 +421,126 @@ export default function Home() {
 
               <MetricCard
                 label="Opportunity Score"
-                value={`${networkOpportunityScore}/100`}
+                value={`${opportunityScore}/100`}
               />
 
               <MetricCard
                 label="Projected Daily Demand"
-                value={number(projectedDailyDemand)}
+                value={number(
+                  projectedDailyDemand
+                )}
               />
 
               <MetricCard
-                label="Peak Capacity Gap"
-                value={number(capacityGap)}
+                label="Peak Utilization"
+                value={percent(
+                  peakUtilization
+                )}
               />
 
             </section>
 
-            {/* DECISION RATIONALE */}
-            <section className="mb-7 rounded-2xl border border-blue-500/70 bg-blue-950/20 p-5">
-              <div className="mb-2 text-xs font-semibold tracking-[0.16em] text-blue-400">
-                DECISION RATIONALE
+            {/* DECISION RATIONALE + QUICK ECONOMICS */}
+            <section className="mb-5 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+
+              <div className="rounded-xl border border-blue-500/60 bg-blue-950/20 p-5">
+                <div className="mb-2 text-[10px] font-semibold tracking-[0.16em] text-blue-400">
+                  DECISION RATIONALE
+                </div>
+
+                <h2 className="mb-3 text-xl font-bold">
+                  Why {recommendation}?
+                </h2>
+
+                <div className="space-y-2">
+                  {decisionReasons
+                    .slice(0, 4)
+                    .map(
+                      (reason, index) => (
+                        <div
+                          key={index}
+                          className="flex gap-3 text-sm text-slate-200"
+                        >
+                          <span className="font-semibold text-blue-400">
+                            {String(
+                              index + 1
+                            ).padStart(
+                              2,
+                              "0"
+                            )}
+                          </span>
+
+                          <span>{reason}</span>
+                        </div>
+                      )
+                    )}
+                </div>
               </div>
 
-              <h2 className="mb-4 text-2xl font-bold">
-                Why {recommendation}?
-              </h2>
+              <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                <div className="mb-3 text-[10px] font-semibold tracking-[0.16em] text-blue-400">
+                  FINANCIAL SNAPSHOT
+                </div>
 
-              <div className="space-y-3">
-                {decisionReasons.length > 0 ? (
-                  decisionReasons.map(
-                    (reason, index) => (
-                      <div
-                        key={index}
-                        className="flex gap-3 text-sm text-slate-200"
-                      >
-                        <span className="font-semibold text-blue-400">
-                          {index + 1}
-                        </span>
+                <div className="grid grid-cols-2 gap-3">
+                  <SmallStat
+                    label="Investment"
+                    value={money(
+                      totalInvestment
+                    )}
+                  />
 
-                        <span>{reason}</span>
-                      </div>
-                    )
-                  )
-                ) : (
-                  <div className="text-sm text-slate-400">
-                    No additional decision rationale returned.
-                  </div>
-                )}
+                  <SmallStat
+                    label="Opening Inventory"
+                    value={money(
+                      openingInventory
+                    )}
+                  />
+
+                  <SmallStat
+                    label="Annual GM"
+                    value={money(
+                      annualGrossMargin
+                    )}
+                  />
+
+                  <SmallStat
+                    label="GM ROI"
+                    value={percent(roi)}
+                  />
+
+                  <SmallStat
+                    label="Payback"
+                    value={`${decimal(
+                      payback
+                    )} mo`}
+                  />
+
+                  <SmallStat
+                    label="Optimized SKUs"
+                    value={number(
+                      selectedSKUs
+                    )}
+                  />
+                </div>
               </div>
+
             </section>
 
-            {/* NETWORK OPPORTUNITY */}
-            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
+            {/* NETWORK GAP */}
+            <section className="mb-5 rounded-xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
-                eyebrow="NETWORK OPPORTUNITY"
-                title="01 — Is there a network gap?"
-                description="The model evaluates demand, capacity pressure, delivery performance and unmet customer selection."
+                eyebrow="01 — NETWORK OPPORTUNITY"
+                title="Is there a network gap?"
+                description="Demand, delivery, capacity and customer selection signals."
               />
 
               <div className="grid gap-3 md:grid-cols-6">
                 <MiniMetric
                   label="Current Utilization"
-                  value={percent(opportunity.utilization)}
+                  value={percent(
+                    opportunity.utilization
+                  )}
                 />
 
                 <MiniMetric
@@ -506,12 +580,55 @@ export default function Home() {
               </div>
             </section>
 
+            {/* GRAPHS */}
+            <section className="mb-5 grid gap-4 lg:grid-cols-2">
+
+              <ChartCard
+                title="Demand vs node capacity"
+                description="Peak demand should remain within the selected node's capacity."
+              >
+                <CapacityChart
+                  projected={projectedDailyDemand}
+                  peak={peakDemand}
+                  capacity={dailyCapacity}
+                />
+              </ChartCard>
+
+              <ChartCard
+                title="Network strategy comparison"
+                description="Strategy score across the modeled node options."
+              >
+                <StrategyChart
+                  options={networkComparison}
+                />
+              </ChartCard>
+
+              <ChartCard
+                title="Category demand"
+                description="Highest-demand categories in the optimized assortment."
+              >
+                <CategoryChart
+                  categories={topCategories}
+                />
+              </ChartCard>
+
+              <ChartCard
+                title="SKU priority queue"
+                description="Highest-priority SKUs for launch sequencing."
+              >
+                <PriorityChart
+                  skus={topSkus}
+                />
+              </ChartCard>
+
+            </section>
+
             {/* NETWORK DESIGN */}
-            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
+            <section className="mb-5 rounded-xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
-                eyebrow="NETWORK DESIGN"
-                title="02 — What node should we build?"
-                description="The model compares operational fit and economics rather than automatically selecting the largest node."
+                eyebrow="02 — NETWORK DESIGN"
+                title="What node should we build?"
+                description="Compare Small MFC, UFC and phased expansion."
               />
 
               <div className="grid gap-4 lg:grid-cols-3">
@@ -529,218 +646,260 @@ export default function Home() {
               </div>
             </section>
 
-            {/* NETWORK ECONOMICS */}
-            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
-              <SectionHeading
-                eyebrow="NETWORK ECONOMICS"
-                title="03 — Does the expansion make financial sense?"
-                description="Illustrative economics based on synthetic demand and unit-level gross margin."
-              />
+            {/* ASSORTMENT + ECONOMICS */}
+            <section className="mb-5 grid gap-4 lg:grid-cols-2">
 
-              <div className="grid gap-4 md:grid-cols-4">
-
-                <MetricCard
-                  label="Upfront Investment"
-                  value={money(totalInvestment)}
+              <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                <SectionHeading
+                  eyebrow="03 — ASSORTMENT"
+                  title="What should the node stock?"
+                  description="Inventory is optimized against demand, storage and budget."
                 />
 
-                <MetricCard
-                  label="Opening Inventory"
-                  value={money(openingInventory)}
-                />
-
-                <MetricCard
-                  label="Annual Gross Margin"
-                  value={money(annualGrossMargin)}
-                />
-
-                <MetricCard
-                  label="Year-1 GM ROI"
-                  value={percent(roi)}
-                  positive
-                />
-
-                <MetricCard
-                  label="Annual Revenue"
-                  value={money(annualRevenue)}
-                />
-
-                <MetricCard
-                  label="Estimated Payback"
-                  value={`${decimal(payback)} mo`}
-                />
-
-                <MetricCard
-                  label="Selected SKUs"
-                  value={number(selectedSKUs)}
-                />
-
-                <MetricCard
-                  label="Peak Utilization"
-                  value={percent(peakUtilization)}
-                />
-
-              </div>
-
-              <div className="mt-5 border-t border-slate-700 pt-4 text-xs text-slate-500">
-                Illustrative synthetic model.
-              </div>
-            </section>
-
-            {/* ASSORTMENT */}
-            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
-              <div className="mb-5 flex items-end justify-between">
-                <div>
-                  <div className="mb-2 text-xs font-semibold tracking-[0.16em] text-blue-400">
-                    ASSORTMENT PLANNING
-                  </div>
-
-                  <h2 className="text-2xl font-bold">
-                    04 — What should the node stock?
-                  </h2>
-
-                  <p className="mt-2 text-sm text-slate-400">
-                    SKU selection is constrained by demand,
-                    customer need, inventory investment and
-                    storage capacity.
-                  </p>
-                </div>
-
-                <div className="text-right">
-                  <div className="text-4xl font-bold">
-                    {number(selectedSKUs)}
-                  </div>
-
-                  <div className="text-xs text-slate-500">
-                    OPTIMIZED SKUs
-                  </div>
-                </div>
-              </div>
-
-              <div className="mb-6 grid gap-4 md:grid-cols-4">
-
-                <MetricCard
-                  label="Opening Inventory"
-                  value={money(
-                    openingInventoryAssortment
-                  )}
-                />
-
-                <MetricCard
-                  label="Inventory Budget"
-                  value={money(inventoryBudget)}
-                />
-
-                <MetricCard
-                  label="Storage Used"
-                  value={number(storageUsed)}
-                />
-
-                <MetricCard
-                  label="Storage Utilization"
-                  value={percent(
-                    storageUtilization
-                  )}
-                />
-
-              </div>
-
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[850px] text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-700 text-left text-slate-400">
-                      <th className="px-3 py-3">
-                        Category
-                      </th>
-                      <th className="px-3 py-3 text-right">
-                        Daily Demand
-                      </th>
-                      <th className="px-3 py-3 text-right">
-                        Availability
-                      </th>
-                      <th className="px-3 py-3 text-right">
-                        Stockout
-                      </th>
-                      <th className="px-3 py-3 text-right">
-                        Selection Gap
-                      </th>
-                      <th className="px-3 py-3 text-right">
-                        SKUs
-                      </th>
-                      <th className="px-3 py-3 text-right">
-                        Gross Margin
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    {categories.map(
-                      (category) => (
-                        <tr
-                          key={category.category}
-                          className="border-b border-slate-800"
-                        >
-                          <td className="px-3 py-3 font-semibold">
-                            {category.category}
-                          </td>
-
-                          <td className="px-3 py-3 text-right">
-                            {number(
-                              category.demand
-                            )}
-                          </td>
-
-                          <td className="px-3 py-3 text-right">
-                            {percent(
-                              category.availabilityPct
-                            )}
-                          </td>
-
-                          <td className="px-3 py-3 text-right">
-                            {percent(
-                              category.stockoutPct
-                            )}
-                          </td>
-
-                          <td className="px-3 py-3 text-right">
-                            {percent(
-                              category.unmetDemandPct
-                            )}
-                          </td>
-
-                          <td className="px-3 py-3 text-right text-blue-400">
-                            {number(
-                              category.recommendedSKUs
-                            )}
-                          </td>
-
-                          <td className="px-3 py-3 text-right">
-                            ₹
-                            {number(
-                              Number(
-                                category.dailyGrossMargin ||
-                                  0
-                              )
-                            )}
-                          </td>
-                        </tr>
-                      )
+                <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                  <SmallStat
+                    label="SKUs"
+                    value={number(
+                      selectedSKUs
                     )}
-                  </tbody>
-                </table>
+                  />
+
+                  <SmallStat
+                    label="Inventory"
+                    value={money(
+                      openingInventoryAssortment
+                    )}
+                  />
+
+                  <SmallStat
+                    label="Storage"
+                    value={percent(
+                      storageUtilization
+                    )}
+                  />
+
+                  <SmallStat
+                    label="Stock Budget"
+                    value={money(
+                      inventoryBudget
+                    )}
+                  />
+                </div>
+
+                <div className="mt-5">
+                  <ProgressBar
+                    label="Storage utilization"
+                    value={
+                      storageUtilization
+                    }
+                    max={100}
+                  />
+
+                  <ProgressBar
+                    label="Peak capacity utilization"
+                    value={
+                      peakUtilization
+                    }
+                    max={100}
+                  />
+                </div>
               </div>
+
+              <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                <SectionHeading
+                  eyebrow="04 — ECONOMICS"
+                  title="Does the expansion make sense?"
+                  description="Illustrative economics using the synthetic planning model."
+                />
+
+                <div className="grid grid-cols-2 gap-3">
+                  <SmallStat
+                    label="Investment"
+                    value={money(
+                      totalInvestment
+                    )}
+                  />
+
+                  <SmallStat
+                    label="Revenue"
+                    value={money(
+                      annualRevenue
+                    )}
+                  />
+
+                  <SmallStat
+                    label="Gross Margin"
+                    value={money(
+                      annualGrossMargin
+                    )}
+                  />
+
+                  <SmallStat
+                    label="GM ROI"
+                    value={percent(roi)}
+                  />
+
+                  <SmallStat
+                    label="Payback"
+                    value={`${decimal(
+                      payback
+                    )} mo`}
+                  />
+
+                  <SmallStat
+                    label="Delivery"
+                    value={`${decimal(
+                      node.expectedDelivery
+                    )} min`}
+                  />
+                </div>
+              </div>
+
             </section>
 
-            {/* SKU PRIORITIZATION */}
-            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
+            {/* COLLAPSIBLE CATEGORY TABLE */}
+            <section className="mb-5 rounded-xl border border-slate-700 bg-slate-900/80">
+              <details>
+                <summary className="cursor-pointer list-none p-5">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-[10px] font-semibold tracking-[0.16em] text-blue-400">
+                        DETAIL VIEW
+                      </div>
+
+                      <h2 className="mt-1 text-xl font-bold">
+                        Category assortment breakdown
+                      </h2>
+
+                      <p className="mt-1 text-sm text-slate-500">
+                        {categories.length} categories
+                        in the optimized assortment.
+                      </p>
+                    </div>
+
+                    <span className="rounded-lg border border-slate-700 px-3 py-2 text-xs text-slate-400">
+                      Expand
+                    </span>
+                  </div>
+                </summary>
+
+                <div className="border-t border-slate-800 p-5">
+                  <div className="overflow-x-auto">
+                    <table className="w-full min-w-[850px] text-sm">
+                      <thead>
+                        <tr className="border-b border-slate-700 text-left text-slate-400">
+                          <th className="px-3 py-3">
+                            Category
+                          </th>
+                          <th className="px-3 py-3 text-right">
+                            Daily Demand
+                          </th>
+                          <th className="px-3 py-3 text-right">
+                            Availability
+                          </th>
+                          <th className="px-3 py-3 text-right">
+                            Stockout
+                          </th>
+                          <th className="px-3 py-3 text-right">
+                            Selection Gap
+                          </th>
+                          <th className="px-3 py-3 text-right">
+                            SKUs
+                          </th>
+                          <th className="px-3 py-3 text-right">
+                            Daily GM
+                          </th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        {categories.map(
+                          (category) => (
+                            <tr
+                              key={
+                                category.category
+                              }
+                              className="border-b border-slate-800"
+                            >
+                              <td className="px-3 py-3 font-semibold">
+                                {
+                                  category.category
+                                }
+                              </td>
+
+                              <td className="px-3 py-3 text-right">
+                                {number(
+                                  category.demand
+                                )}
+                              </td>
+
+                              <td className="px-3 py-3 text-right">
+                                {percent(
+                                  category.availabilityPct
+                                )}
+                              </td>
+
+                              <td className="px-3 py-3 text-right">
+                                {percent(
+                                  category.stockoutPct
+                                )}
+                              </td>
+
+                              <td className="px-3 py-3 text-right">
+                                {percent(
+                                  category.unmetDemandPct
+                                )}
+                              </td>
+
+                              <td className="px-3 py-3 text-right text-blue-400">
+                                {number(
+                                  category.recommendedSKUs
+                                )}
+                              </td>
+
+                              <td className="px-3 py-3 text-right">
+                                ₹
+                                {number(
+                                  category.dailyGrossMargin
+                                )}
+                              </td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </details>
+            </section>
+
+            {/* SKU QUEUE */}
+            <section className="mb-5 rounded-xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
-                eyebrow="SKU PRIORITIZATION"
-                title="05 — Which SKUs launch first?"
-                description="The optimizer prioritizes individual SKUs rather than assigning the same number of products to every category."
+                eyebrow="05 — SKU PRIORITIZATION"
+                title="Which SKUs launch first?"
+                description="Launch the strongest candidates, test uncertain high-potential SKUs, and defer lower-priority items."
               />
 
+              <div className="mb-4 flex flex-wrap gap-2">
+                <ActionLegend
+                  action="LAUNCH"
+                  text="Strong launch candidate"
+                />
+
+                <ActionLegend
+                  action="TEST"
+                  text="Validate before scaling"
+                />
+
+                <ActionLegend
+                  action="DEFER"
+                  text="Lower initial priority"
+                />
+              </div>
+
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[1100px] text-sm">
+                <table className="w-full min-w-[1050px] text-sm">
                   <thead>
                     <tr className="border-b border-slate-700 text-left text-slate-400">
                       <th className="px-3 py-3">
@@ -786,119 +945,94 @@ export default function Home() {
                   </thead>
 
                   <tbody>
-                    {skuRecommendations.map(
-                      (sku, index) => {
+                    {skuRecommendations
+                      .slice(0, 30)
+                      .map((sku) => (
+                        <tr
+                          key={sku.SKU_ID}
+                          className="border-b border-slate-800"
+                        >
+                          <td className="px-3 py-3 font-semibold">
+                            {sku.SKU_ID}
+                          </td>
 
-                        const selected =
-                          Boolean(
-                            sku.selected
-                          );
+                          <td className="px-3 py-3">
+                            {sku.Category}
+                          </td>
 
-                        /*
-                         * The optimizer's selected flag is
-                         * authoritative. We only improve the
-                         * presentation of the action label here.
-                         */
-                        let action;
+                          <td className="px-3 py-3 text-right">
+                            {decimal(
+                              sku.dailyDemand
+                            )}
+                          </td>
 
-                        if (selected) {
-                          action =
-                            index < 5
-                              ? "Launch first"
-                              : "Launch";
-                        } else {
-                          action =
-                            index < 18
-                              ? "Watch"
-                              : "Defer";
-                        }
+                          <td className="px-3 py-3 text-right">
+                            ₹
+                            {decimal(
+                              sku.Selling_Price
+                            )}
+                          </td>
 
-                        return (
-                          <tr
-                            key={sku.SKU_ID}
-                            className="border-b border-slate-800"
-                          >
-                            <td className="px-3 py-3 font-semibold">
-                              {sku.SKU_ID}
-                            </td>
+                          <td className="px-3 py-3 text-right">
+                            ₹
+                            {decimal(
+                              sku.Margin_Per_Unit
+                            )}
+                          </td>
 
-                            <td className="px-3 py-3">
-                              {sku.Category}
-                            </td>
+                          <td className="px-3 py-3 text-right">
+                            {percent(
+                              sku.availabilityPct
+                            )}
+                          </td>
 
-                            <td className="px-3 py-3 text-right">
-                              {decimal(
-                                sku.dailyDemand
-                              )}
-                            </td>
+                          <td className="px-3 py-3 text-right">
+                            {percent(
+                              sku.stockoutPct
+                            )}
+                          </td>
 
-                            <td className="px-3 py-3 text-right">
-                              ₹
-                              {decimal(
-                                sku.Selling_Price
-                              )}
-                            </td>
+                          <td className="px-3 py-3 text-right">
+                            ₹
+                            {Number(
+                              sku.openingInvestment ||
+                                0
+                            ).toLocaleString(
+                              "en-IN",
+                              {
+                                maximumFractionDigits: 0,
+                              }
+                            )}
+                          </td>
 
-                            <td className="px-3 py-3 text-right">
-                              ₹
-                              {decimal(
-                                sku.Margin_Per_Unit
-                              )}
-                            </td>
+                          <td className="px-3 py-3 text-right">
+                            {decimal(
+                              sku.priorityScore
+                            )}
+                          </td>
 
-                            <td className="px-3 py-3 text-right">
-                              {percent(
-                                sku.availabilityPct
-                              )}
-                            </td>
-
-                            <td className="px-3 py-3 text-right">
-                              {percent(
-                                sku.stockoutPct
-                              )}
-                            </td>
-
-                            <td className="px-3 py-3 text-right">
-                              ₹
-                              {Number(
-                                sku.openingInvestment ||
-                                  0
-                              ).toLocaleString(
-                                "en-IN",
-                                {
-                                  maximumFractionDigits: 0,
-                                }
-                              )}
-                            </td>
-
-                            <td className="px-3 py-3 text-right">
-                              {decimal(
-                                sku.priorityScore
-                              )}
-                            </td>
-
-                            <td className="px-3 py-3 text-right">
-                              <ActionBadge
-                                action={action}
-                              />
-                            </td>
-                          </tr>
-                        );
-                      }
-                    )}
+                          <td className="px-3 py-3 text-right">
+                            <ActionBadge
+                              action={
+                                sku.action
+                              }
+                            />
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>
             </section>
 
-            {/* CAPACITY + STORAGE */}
-            <section className="grid gap-5 md:grid-cols-2">
+            {/* CAPACITY / STORAGE */}
+            <section className="mb-5 grid gap-4 md:grid-cols-2">
 
-              <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
+              <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
                 <SectionHeading
-                  eyebrow="CAPACITY"
-                  title="06 — Can the node handle demand?"
-                  description="Peak demand is compared with the selected node's daily order capacity."
+                  eyebrow="06 — CAPACITY"
+                  title="Can the node handle demand?"
+                  description="Peak demand is compared with node capacity."
                 />
 
                 <DataRow
@@ -938,11 +1072,11 @@ export default function Home() {
                 />
               </div>
 
-              <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
+              <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
                 <SectionHeading
-                  eyebrow="STORAGE"
-                  title="07 — Can the assortment fit?"
-                  description="Storage is treated as a hard planning constraint with the selected scenario limit."
+                  eyebrow="07 — STORAGE"
+                  title="Can the assortment fit?"
+                  description="Storage is treated as a planning constraint."
                 />
 
                 <DataRow
@@ -989,46 +1123,50 @@ export default function Home() {
 
             </section>
 
-            {/* FOOTER */}
-            <footer className="mt-7 rounded-2xl border border-slate-700 bg-slate-900/70 p-5 text-xs text-slate-500">
-              <div className="flex flex-wrap gap-x-5 gap-y-2">
-                <span>
-                  Demand:{" "}
-                  <strong className="text-slate-300">
-                    {Math.round(
-                      demandMultiplier * 100
-                    )}%
-                  </strong>
-                </span>
+            {/* ASSUMPTIONS */}
+            <details className="mb-5 rounded-xl border border-slate-700 bg-slate-900/70">
+              <summary className="cursor-pointer list-none p-4 text-sm font-semibold text-slate-300">
+                Model assumptions & methodology
+              </summary>
 
-                <span>
-                  Budget:{" "}
-                  <strong className="text-slate-300">
-                    ₹{budget}L
-                  </strong>
-                </span>
+              <div className="border-t border-slate-800 p-4 text-xs leading-6 text-slate-500">
+                <p>
+                  Year-1 gross-margin ROI =
+                  annual gross margin divided by
+                  total upfront investment.
+                </p>
 
-                <span>
-                  Delivery:{" "}
-                  <strong className="text-slate-300">
-                    {deliveryTarget} min
-                  </strong>
-                </span>
+                <p>
+                  Total upfront investment includes
+                  modeled launch cost plus opening
+                  inventory.
+                </p>
 
-                <span>
-                  Storage:{" "}
-                  <strong className="text-slate-300">
-                    {storageLimitPct}%
-                  </strong>
-                </span>
+                <p>
+                  Revenue and gross margin use the
+                  synthetic demand model and a
+                  modeled Year-1 realization factor.
+                </p>
+
+                <p>
+                  The model does not include rent,
+                  labor, logistics OPEX, taxes or
+                  financing costs.
+                </p>
+
+                <p>
+                  All values are illustrative
+                  planning data created for product
+                  demonstration.
+                </p>
               </div>
+            </details>
 
-              <p className="mt-4">
-                This is a synthetic planning model created
-                for portfolio demonstration. Financial outputs
-                are illustrative and should not be interpreted
-                as Amazon internal data or actual Amazon economics.
-              </p>
+            {/* FOOTER */}
+            <footer className="rounded-xl border border-slate-800 bg-slate-950/70 p-4 text-xs text-slate-600">
+              Synthetic planning model. Financial outputs
+              are illustrative and intended for product
+              demonstration.
             </footer>
           </>
         )}
@@ -1038,9 +1176,9 @@ export default function Home() {
 }
 
 
-/* -------------------------------------------------------
-   COMPONENTS
-------------------------------------------------------- */
+/* =====================================================
+   BASIC UI
+===================================================== */
 
 function SelectControl({
   label,
@@ -1050,8 +1188,8 @@ function SelectControl({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-xs font-medium text-slate-400">
-        {label}
+      <span className="mb-1.5 block text-[10px] font-medium tracking-wide text-slate-500">
+        {label.toUpperCase()}
       </span>
 
       <select
@@ -1059,7 +1197,7 @@ function SelectControl({
         onChange={(e) =>
           onChange(e.target.value)
         }
-        className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-3 text-sm text-white outline-none transition focus:border-blue-500"
+        className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2.5 text-sm text-white outline-none transition focus:border-blue-500"
       >
         {options.map((option) => (
           <option
@@ -1079,23 +1217,38 @@ function MetricCard({
   label,
   value,
   highlight = false,
-  positive = false,
 }) {
   return (
     <div
       className={`rounded-xl border p-4 ${
         highlight
-          ? "border-blue-500 bg-blue-950/20"
-          : positive
-          ? "border-emerald-500/60 bg-emerald-950/10"
+          ? "border-blue-500 bg-blue-950/25"
           : "border-slate-700 bg-slate-900/80"
       }`}
     >
-      <div className="text-[10px] font-medium tracking-wide text-blue-300">
+      <div className="text-[9px] font-medium tracking-[0.12em] text-blue-300">
         {label.toUpperCase()}
       </div>
 
       <div className="mt-2 text-xl font-bold">
+        {value}
+      </div>
+    </div>
+  );
+}
+
+
+function SmallStat({
+  label,
+  value,
+}) {
+  return (
+    <div className="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
+      <div className="text-[9px] tracking-wide text-slate-500">
+        {label.toUpperCase()}
+      </div>
+
+      <div className="mt-1 text-lg font-semibold">
         {value}
       </div>
     </div>
@@ -1109,11 +1262,11 @@ function MiniMetric({
 }) {
   return (
     <div className="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
-      <div className="text-[10px] text-slate-500">
+      <div className="text-[9px] text-slate-500">
         {label.toUpperCase()}
       </div>
 
-      <div className="mt-2 text-lg font-semibold">
+      <div className="mt-1 text-lg font-semibold">
         {value}
       </div>
     </div>
@@ -1127,17 +1280,17 @@ function SectionHeading({
   description,
 }) {
   return (
-    <div className="mb-5">
-      <div className="mb-2 text-xs font-semibold tracking-[0.16em] text-blue-400">
+    <div className="mb-4">
+      <div className="mb-1 text-[10px] font-semibold tracking-[0.15em] text-blue-400">
         {eyebrow}
       </div>
 
-      <h2 className="text-2xl font-bold">
+      <h2 className="text-xl font-bold">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-2 text-sm text-slate-400">
+        <p className="mt-1 text-xs text-slate-500">
           {description}
         </p>
       )}
@@ -1146,68 +1299,250 @@ function SectionHeading({
 }
 
 
-function DataRow({
-  label,
-  value,
-  positive = false,
-  last = false,
+/* =====================================================
+   GRAPH COMPONENTS
+===================================================== */
+
+function ChartCard({
+  title,
+  description,
+  children,
 }) {
   return (
-    <div
-      className={`flex items-center justify-between py-3 ${
-        !last
-          ? "border-b border-slate-800"
-          : ""
-      }`}
-    >
-      <span className="text-sm text-slate-400">
-        {label}
-      </span>
+    <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+      <div className="mb-4">
+        <h3 className="text-base font-bold">
+          {title}
+        </h3>
 
-      <strong
-        className={
-          positive
-            ? "text-emerald-400"
-            : ""
-        }
-      >
-        {value}
-      </strong>
+        <p className="mt-1 text-xs text-slate-500">
+          {description}
+        </p>
+      </div>
+
+      {children}
     </div>
   );
 }
 
 
-function ActionBadge({
-  action,
+function CapacityChart({
+  projected,
+  peak,
+  capacity,
 }) {
-  let classes =
-    "border-slate-600 bg-slate-800 text-slate-300";
-
-  if (action === "Launch first") {
-    classes =
-      "border-blue-500/60 bg-blue-500/10 text-blue-300";
-  }
-
-  if (action === "Launch") {
-    classes =
-      "border-emerald-500/60 bg-emerald-500/10 text-emerald-300";
-  }
-
-  if (action === "Watch") {
-    classes =
-      "border-yellow-500/60 bg-yellow-500/10 text-yellow-300";
-  }
+  const max = Math.max(
+    projected,
+    peak,
+    capacity,
+    1
+  );
 
   return (
-    <span
-      className={`inline-flex rounded-md border px-2 py-1 text-[10px] font-semibold ${classes}`}
-    >
-      {action.toUpperCase()}
-    </span>
+    <div className="space-y-4">
+      <Bar
+        label="Projected demand"
+        value={projected}
+        max={max}
+        suffix=""
+      />
+
+      <Bar
+        label="Peak demand"
+        value={peak}
+        max={max}
+        suffix=""
+      />
+
+      <Bar
+        label="Node capacity"
+        value={capacity}
+        max={max}
+        suffix=""
+      />
+
+      <div className="mt-3 text-xs text-slate-500">
+        Peak utilization:{" "}
+        <strong className="text-slate-300">
+          {percent(
+            capacity > 0
+              ? (peak / capacity) *
+                  100
+              : 0
+          )}
+        </strong>
+      </div>
+    </div>
   );
 }
 
+
+function StrategyChart({
+  options,
+}) {
+  const max = Math.max(
+    ...options.map(
+      (x) =>
+        Number(x.score || 0)
+    ),
+    1
+  );
+
+  return (
+    <div className="space-y-4">
+      {options.map((option) => (
+        <Bar
+          key={option.strategy}
+          label={
+            option.strategy
+          }
+          value={Number(
+            option.score || 0
+          )}
+          max={max}
+          suffix=""
+          recommended={
+            option.recommended
+          }
+        />
+      ))}
+    </div>
+  );
+}
+
+
+function CategoryChart({
+  categories,
+}) {
+  const max = Math.max(
+    ...categories.map(
+      (x) =>
+        Number(x.demand || 0)
+    ),
+    1
+  );
+
+  return (
+    <div className="space-y-3">
+      {categories.map(
+        (category) => (
+          <Bar
+            key={
+              category.category
+            }
+            label={
+              category.category
+            }
+            value={Number(
+              category.demand || 0
+            )}
+            max={max}
+            suffix=""
+          />
+        )
+      )}
+    </div>
+  );
+}
+
+
+function PriorityChart({
+  skus,
+}) {
+  const max = Math.max(
+    ...skus.map(
+      (x) =>
+        Number(
+          x.priorityScore || 0
+        )
+    ),
+    1
+  );
+
+  return (
+    <div className="space-y-2.5">
+      {skus.map((sku) => (
+        <Bar
+          key={sku.SKU_ID}
+          label={sku.SKU_ID}
+          value={Number(
+            sku.priorityScore || 0
+          )}
+          max={max}
+          suffix=""
+          action={sku.action}
+        />
+      ))}
+    </div>
+  );
+}
+
+
+function Bar({
+  label,
+  value,
+  max,
+  suffix = "",
+  recommended = false,
+  action,
+}) {
+  const width = Math.max(
+    3,
+    Math.min(
+      100,
+      (value / Math.max(max, 1)) *
+        100
+    )
+  );
+
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between gap-3 text-xs">
+        <span className="truncate text-slate-400">
+          {label}
+        </span>
+
+        <div className="flex items-center gap-2">
+          {action && (
+            <ActionBadge
+              action={action}
+              small
+            />
+          )}
+
+          {recommended && (
+            <span className="text-[9px] font-semibold text-blue-400">
+              RECOMMENDED
+            </span>
+          )}
+
+          <strong className="text-slate-200">
+            {decimal(value)}
+            {suffix}
+          </strong>
+        </div>
+      </div>
+
+      <div className="h-2 overflow-hidden rounded-full bg-slate-800">
+        <div
+          className={`h-full rounded-full ${
+            recommended
+              ? "bg-blue-500"
+              : "bg-slate-500"
+          }`}
+          style={{
+            width: `${width}%`,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+
+/* =====================================================
+   NETWORK OPTION
+===================================================== */
 
 function NetworkOption({
   option,
@@ -1225,44 +1560,36 @@ function NetworkOption({
     option.annualGrossMargin || 0
   );
 
-  const roi = Number(
-    option.grossMarginRoiPct ||
-      (totalInvestment > 0
-        ? (annualGrossMargin /
-            totalInvestment) *
-          100
-        : 0)
-  );
+  const roi =
+    Number(
+      option.grossMarginRoiPct || 0
+    ) ||
+    (totalInvestment > 0
+      ? (annualGrossMargin /
+          totalInvestment) *
+        100
+      : 0);
 
   const payback = Number(
     option.paybackMonths || 0
   );
 
-  const capacity =
-    Number(option.capacity || 0);
-
-  const delivery =
-    Number(option.delivery || 0);
-
-  const assortment =
-    Number(option.assortment || 0);
-
   return (
     <div
-      className={`rounded-2xl border p-4 ${
+      className={`rounded-xl border p-4 ${
         recommended
           ? "border-blue-500 bg-blue-950/20"
           : "border-slate-700 bg-slate-950/50"
       }`}
     >
-      <div className="mb-5 flex items-start justify-between">
+      <div className="mb-4 flex items-start justify-between">
         <div>
           <h3 className="text-lg font-bold">
             {option.strategy}
           </h3>
 
           {recommended && (
-            <span className="mt-2 inline-block rounded bg-blue-600 px-2 py-1 text-[10px] font-bold">
+            <span className="mt-2 inline-block rounded bg-blue-600 px-2 py-1 text-[9px] font-bold">
               RECOMMENDED
             </span>
           )}
@@ -1273,80 +1600,78 @@ function NetworkOption({
             {decimal(option.score)}
           </div>
 
-          <div className="text-[9px] text-slate-500">
-            strategy score
+          <div className="text-[8px] text-slate-500">
+            STRATEGY SCORE
           </div>
         </div>
       </div>
 
-      <div className="space-y-0">
+      <NetworkRow
+        label="Launch cost"
+        value={money(
+          option.launchCost ||
+            option.cost
+        )}
+      />
 
-        <NetworkRow
-          label="Launch cost"
-          value={money(
-            option.launchCost ||
-              option.cost
-          )}
-        />
+      <NetworkRow
+        label="Opening inventory"
+        value={money(
+          openingInventory
+        )}
+      />
 
-        <NetworkRow
-          label="Opening inventory"
-          value={money(
-            openingInventory
-          )}
-        />
+      <NetworkRow
+        label="Total investment"
+        value={money(
+          totalInvestment
+        )}
+      />
 
-        <NetworkRow
-          label="Total investment"
-          value={money(
-            totalInvestment
-          )}
-        />
+      <NetworkRow
+        label="Capacity"
+        value={number(
+          option.capacity
+        )}
+      />
 
-        <NetworkRow
-          label="Capacity"
-          value={number(capacity)}
-        />
+      <NetworkRow
+        label="Optimized assortment"
+        value={`${number(
+          option.assortment
+        )} SKUs`}
+      />
 
-        <NetworkRow
-          label="Optimized assortment"
-          value={`${number(
-            assortment
-          )} SKUs`}
-        />
+      <NetworkRow
+        label="Delivery"
+        value={`${decimal(
+          option.delivery
+        )} min`}
+      />
 
-        <NetworkRow
-          label="Delivery"
-          value={`${decimal(
-            delivery
-          )} min`}
-        />
+      <NetworkRow
+        label="Annual gross margin"
+        value={money(
+          annualGrossMargin
+        )}
+      />
 
-        <NetworkRow
-          label="Annual gross margin"
-          value={money(
-            annualGrossMargin
-          )}
-        />
+      <NetworkRow
+        label="Year-1 GM ROI"
+        value={percent(roi)}
+      />
 
-        <NetworkRow
-          label="Year-1 GM ROI"
-          value={percent(roi)}
-        />
-
-        <NetworkRow
-          label="Payback"
-          value={
-            payback > 0
-              ? `${decimal(
-                  payback
-                )} mo`
-              : "—"
-          }
-          last
-        />
-
-      </div>
+      <NetworkRow
+        label="Payback"
+        value={
+          payback > 0
+            ? `${decimal(
+                payback
+              )} mo`
+            : "—"
+        }
+        last
+      />
 
       <div className="mt-4 grid grid-cols-2 gap-2">
         <FitBadge
@@ -1381,13 +1706,13 @@ function NetworkRow({
 }) {
   return (
     <div
-      className={`flex items-center justify-between py-3 ${
+      className={`flex items-center justify-between py-2.5 ${
         !last
           ? "border-b border-slate-800"
           : ""
       }`}
     >
-      <span className="text-sm text-slate-400">
+      <span className="text-xs text-slate-500">
         {label}
       </span>
 
@@ -1405,13 +1730,142 @@ function FitBadge({
 }) {
   return (
     <div
-      className={`rounded-md border px-2 py-2 text-center text-[10px] font-semibold ${
+      className={`rounded-md border px-2 py-1.5 text-center text-[9px] font-semibold ${
         fit
           ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400"
           : "border-red-500/40 bg-red-500/10 text-red-400"
       }`}
     >
       {label}: {fit ? "FIT" : "GAP"}
+    </div>
+  );
+}
+
+
+/* =====================================================
+   OTHER UI
+===================================================== */
+
+function ProgressBar({
+  label,
+  value,
+  max,
+}) {
+  const width = Math.min(
+    100,
+    Math.max(
+      0,
+      (value / max) * 100
+    )
+  );
+
+  return (
+    <div className="mb-4">
+      <div className="mb-1 flex justify-between text-xs">
+        <span className="text-slate-500">
+          {label}
+        </span>
+
+        <strong>
+          {percent(value)}
+        </strong>
+      </div>
+
+      <div className="h-2 overflow-hidden rounded-full bg-slate-800">
+        <div
+          className="h-full rounded-full bg-blue-500"
+          style={{
+            width: `${width}%`,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+
+function DataRow({
+  label,
+  value,
+  positive = false,
+  last = false,
+}) {
+  return (
+    <div
+      className={`flex items-center justify-between py-2.5 ${
+        !last
+          ? "border-b border-slate-800"
+          : ""
+      }`}
+    >
+      <span className="text-xs text-slate-500">
+        {label}
+      </span>
+
+      <strong
+        className={
+          positive
+            ? "text-emerald-400"
+            : ""
+        }
+      >
+        {value}
+      </strong>
+    </div>
+  );
+}
+
+
+function ActionBadge({
+  action,
+  small = false,
+}) {
+  const normalized =
+    String(action || "")
+      .toUpperCase();
+
+  let classes =
+    "border-slate-600 bg-slate-800 text-slate-300";
+
+  if (normalized === "LAUNCH") {
+    classes =
+      "border-emerald-500/60 bg-emerald-500/10 text-emerald-300";
+  }
+
+  if (normalized === "TEST") {
+    classes =
+      "border-yellow-500/60 bg-yellow-500/10 text-yellow-300";
+  }
+
+  if (normalized === "DEFER") {
+    classes =
+      "border-slate-600 bg-slate-800 text-slate-400";
+  }
+
+  return (
+    <span
+      className={`inline-flex rounded-md border font-semibold ${
+        small
+          ? "px-1.5 py-0.5 text-[8px]"
+          : "px-2 py-1 text-[9px]"
+      } ${classes}`}
+    >
+      {normalized}
+    </span>
+  );
+}
+
+
+function ActionLegend({
+  action,
+  text,
+}) {
+  return (
+    <div className="flex items-center gap-2 rounded-md border border-slate-800 bg-slate-950/50 px-2 py-1.5">
+      <ActionBadge action={action} />
+      <span className="text-[10px] text-slate-500">
+        {text}
+      </span>
     </div>
   );
 }
