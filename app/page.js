@@ -1,39 +1,57 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const zones = [
-  "South Delhi",
-  "Gurgaon",
-  "Noida",
   "West Delhi",
-  "Central Delhi",
-  "North Delhi",
+  "South Delhi",
   "East Delhi",
-  "Ghaziabad",
+  "North Delhi",
 ];
 
 const demandOptions = [
-  { value: 0.8, label: "-20% demand" },
-  { value: 0.9, label: "-10% demand" },
-  { value: 1, label: "Base demand" },
-  { value: 1.1, label: "+10% demand" },
-  { value: 1.2, label: "+20% demand" },
-  { value: 1.3, label: "+30% demand" },
+  { label: "Base demand", value: 1 },
+  { label: "Demand -20%", value: 0.8 },
+  { label: "Demand +20%", value: 1.2 },
+  { label: "Demand +40%", value: 1.4 },
 ];
 
-const budgetOptions = [60, 80, 100, 120, 150];
+const budgets = [60, 80, 100, 120];
+const deliveryTargets = [15, 20, 25, 30];
+const storageLimits = [70, 80, 85, 90, 100];
 
-const deliveryOptions = [15, 18, 20, 25];
+function money(value) {
+  return `₹${Number(value || 0).toLocaleString("en-IN", {
+    maximumFractionDigits: 1,
+  })}L`;
+}
 
-const storageOptions = [70, 80, 85, 90];
+function number(value) {
+  return Number(value || 0).toLocaleString("en-IN", {
+    maximumFractionDigits: 0,
+  });
+}
+
+function decimal(value) {
+  return Number(value || 0).toLocaleString("en-IN", {
+    maximumFractionDigits: 1,
+  });
+}
+
+function percent(value) {
+  return `${Number(value || 0).toFixed(1)}%`;
+}
+
+function safe(value, fallback = 0) {
+  return value === undefined || value === null ? fallback : value;
+}
 
 export default function Home() {
-  const [zone, setZone] = useState("South Delhi");
-  const [demand, setDemand] = useState(1);
+  const [zone, setZone] = useState("West Delhi");
+  const [demandMultiplier, setDemandMultiplier] = useState(1);
   const [budget, setBudget] = useState(100);
   const [deliveryTarget, setDeliveryTarget] = useState(20);
-  const [storageLimit, setStorageLimit] = useState(85);
+  const [storageLimitPct, setStorageLimitPct] = useState(85);
 
   const [plan, setPlan] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -44,1043 +62,1064 @@ export default function Home() {
     setError("");
 
     try {
-      const payload = {
-        zone,
-        demandMultiplier: Number(demand),
-        budget: Number(budget),
-        deliveryTarget: Number(deliveryTarget),
-        storageLimitPct: Number(storageLimit),
-      };
-
       const response = await fetch("/api/planning", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        cache: "no-store",
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          zone,
+          demandMultiplier,
+          budget,
+          deliveryTarget,
+          storageLimitPct,
+        }),
       });
 
       const data = await response.json();
 
       if (!response.ok || !data.success) {
         throw new Error(
-          data?.error ||
-            data?.details ||
-            `Planning API returned ${response.status}`
+          data?.details ||
+            data?.error ||
+            "Unable to generate expansion plan."
         );
       }
 
       setPlan(data.plan);
     } catch (err) {
       console.error(err);
-      setError(
-        err.message ||
-          "Unable to generate expansion plan."
-      );
+      setError(err.message || "Unable to generate plan.");
     } finally {
       setLoading(false);
     }
   }
 
-  /*
-   * Automatically recalculate when
-   * a planning assumption changes.
-   */
   useEffect(() => {
     generatePlan();
   }, [
     zone,
-    demand,
+    demandMultiplier,
     budget,
     deliveryTarget,
-    storageLimit,
+    storageLimitPct,
   ]);
 
+  const node = plan?.node || {};
+  const opportunity = plan?.opportunity || {};
+  const assortment = plan?.assortment || {};
+  const economics = plan?.economics || {};
+  const financials = plan?.financials || {};
+  const capacity = plan?.capacity || {};
+  const storage = plan?.storage || {};
+
+  /*
+   * IMPORTANT:
+   * The optimizer now returns:
+   *
+   * totalUpfrontInvestmentLakh
+   * openingInventoryInvestmentLakh
+   * annualRevenueLakh
+   * annualGrossMarginLakh
+   * grossMarginRoiPct
+   * paybackMonths
+   *
+   * Capacity:
+   * dailyCapacity
+   * supportedDemand
+   * peakDemand
+   * utilizationPct
+   *
+   * This page intentionally uses those current field names.
+   */
+
+  const totalInvestment = Number(
+    safe(
+      financials.upfrontInvestmentLakh,
+      economics.totalUpfrontInvestmentLakh
+    )
+  );
+
+  const openingInventory = Number(
+    safe(
+      financials.openingInventoryLakh,
+      economics.openingInventoryInvestmentLakh
+    )
+  );
+
+  const annualRevenue = Number(
+    safe(
+      financials.annualRevenueLakh,
+      economics.annualRevenueLakh
+    )
+  );
+
+  const annualGrossMargin = Number(
+    safe(
+      financials.annualGrossMarginLakh,
+      economics.annualGrossMarginLakh
+    )
+  );
+
+  const roi =
+    Number(
+      safe(
+        financials.year1GrossMarginRoiPct,
+        economics.grossMarginRoiPct
+      )
+    ) ||
+    (totalInvestment > 0
+      ? (annualGrossMargin / totalInvestment) * 100
+      : 0);
+
+  const payback =
+    Number(
+      safe(
+        financials.paybackMonths,
+        economics.paybackMonths
+      )
+    ) ||
+    (annualGrossMargin > 0
+      ? totalInvestment / (annualGrossMargin / 12)
+      : 0);
+
+  const dailyCapacity = Number(
+    safe(
+      capacity.dailyCapacity,
+      node.Daily_Capacity_Orders
+    )
+  );
+
+  const projectedDailyDemand = Number(
+    safe(
+      opportunity.projectedDailyDemand,
+      capacity.supportedDemand
+    )
+  );
+
+  const peakDemand = Number(
+    safe(
+      capacity.peakDemand,
+      opportunity.peakDemand
+    )
+  );
+
+  const peakUtilization =
+    dailyCapacity > 0
+      ? (peakDemand / dailyCapacity) * 100
+      : 0;
+
+  const capacityGap = Math.max(
+    0,
+    peakDemand - dailyCapacity
+  );
+
+  const selectedSKUs = Number(
+    safe(
+      assortment.selectedSKUs,
+      node.selectedSKUs
+    )
+  );
+
+  const openingInventoryAssortment = Number(
+    safe(
+      assortment.economics?.openingInventoryInvestmentLakh,
+      openingInventory
+    )
+  );
+
+  const inventoryBudget = Number(
+    safe(
+      assortment.economics?.inventoryBudgetLakh,
+      0
+    )
+  );
+
+  const storageUsed = Number(
+    safe(
+      storage.estimatedUnits,
+      assortment.economics?.storageUsed
+    )
+  );
+
+  const storageCapacity = Number(
+    safe(
+      storage.capacityUnits,
+      assortment.economics?.storageCapacity
+    )
+  );
+
+  const storageUtilization =
+    storageCapacity > 0
+      ? (storageUsed / storageCapacity) * 100
+      : Number(
+          safe(
+            storage.utilizationPct,
+            0
+          )
+        );
+
+  const networkComparison =
+    plan?.networkComparison || [];
+
+  const skuRecommendations =
+    plan?.skuRecommendations || [];
+
+  const categories =
+    assortment.categories || [];
+
+  const recommendation =
+    plan?.recommendation || "No recommendation";
+
+  const decisionReasons =
+    plan?.decisionReasons || [];
+
+  const networkOpportunityScore =
+    Number(
+      safe(
+        opportunity.opportunityScore,
+        0
+      )
+    );
+
+  const demandLabel =
+    demandMultiplier === 1
+      ? "Base demand"
+      : `${Math.round(
+          demandMultiplier * 100
+        )}% demand`;
+
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+    <main className="min-h-screen bg-[#030817] text-white">
+      <div className="mx-auto max-w-[1400px] px-4 py-8">
 
-        {/* =================================================
-            HEADER
-        ================================================= */}
-
+        {/* HEADER */}
         <header className="mb-8">
+          <div className="mb-2 text-xs font-semibold tracking-[0.18em] text-blue-400">
+            NETWORK PLANNING COMMAND CENTER
+          </div>
 
-          <p className="text-sm font-semibold tracking-widest uppercase text-blue-400">
-            Network Planning Command Center
-          </p>
-
-          <h1 className="text-4xl md:text-5xl font-bold mt-3 tracking-tight">
+          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
             UFC Network & Assortment Planner
           </h1>
 
-          <p className="text-slate-400 mt-3 text-lg max-w-4xl">
+          <p className="mt-2 text-sm text-slate-300 md:text-base">
             Decide where to expand, what node to build,
             what to stock, and how to scale the network.
           </p>
-
         </header>
 
-        {/* =================================================
-            PLANNING CONTROLS
-        ================================================= */}
+        {/* CONTROLS */}
+        <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5 shadow-xl">
+          <div className="grid gap-4 md:grid-cols-5">
 
-        <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
-
-          <div className="grid md:grid-cols-5 gap-5">
-
-            <Control
+            <SelectControl
               label="Planning Zone"
               value={zone}
-              onChange={(e) =>
-                setZone(e.target.value)
-              }
-              options={zones.map((item) => ({
-                value: item,
-                label: item,
+              onChange={setZone}
+              options={zones.map((x) => ({
+                label: x,
+                value: x,
               }))}
             />
 
-            <Control
+            <SelectControl
               label="Demand Scenario"
-              value={demand}
-              onChange={(e) =>
-                setDemand(
-                  Number(e.target.value)
-                )
+              value={demandMultiplier}
+              onChange={(value) =>
+                setDemandMultiplier(Number(value))
               }
               options={demandOptions}
             />
 
-            <Control
+            <SelectControl
               label="Budget"
               value={budget}
-              onChange={(e) =>
-                setBudget(
-                  Number(e.target.value)
-                )
+              onChange={(value) =>
+                setBudget(Number(value))
               }
-              options={budgetOptions.map(
-                (value) => ({
-                  value,
-                  label: `₹${value}L`,
-                })
-              )}
+              options={budgets.map((x) => ({
+                label: `₹${x}L`,
+                value: x,
+              }))}
             />
 
-            <Control
+            <SelectControl
               label="Delivery Target"
               value={deliveryTarget}
-              onChange={(e) =>
-                setDeliveryTarget(
-                  Number(e.target.value)
-                )
+              onChange={(value) =>
+                setDeliveryTarget(Number(value))
               }
-              options={deliveryOptions.map(
-                (value) => ({
-                  value,
-                  label: `${value} min`,
-                })
-              )}
+              options={deliveryTargets.map((x) => ({
+                label: `${x} min`,
+                value: x,
+              }))}
             />
 
-            <Control
+            <SelectControl
               label="Storage Limit"
-              value={storageLimit}
-              onChange={(e) =>
-                setStorageLimit(
-                  Number(e.target.value)
-                )
+              value={storageLimitPct}
+              onChange={(value) =>
+                setStorageLimitPct(Number(value))
               }
-              options={storageOptions.map(
-                (value) => ({
-                  value,
-                  label: `${value}%`,
-                })
-              )}
+              options={storageLimits.map((x) => ({
+                label: `${x}%`,
+                value: x,
+              }))}
             />
 
           </div>
 
-          <div className="flex items-center gap-4 mt-6">
-
-            <button
-              type="button"
-              onClick={generatePlan}
-              disabled={loading}
-              className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-50 font-semibold transition"
-            >
-              {loading
-                ? "Calculating..."
-                : "Generate Expansion Plan"}
-            </button>
-
-            {loading && (
-              <span className="text-sm text-slate-400">
-                Recalculating network, assortment and economics...
-              </span>
-            )}
-
-          </div>
-
+          <button
+            onClick={generatePlan}
+            disabled={loading}
+            className="mt-5 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {loading
+              ? "Generating..."
+              : "Generate Expansion Plan"}
+          </button>
         </section>
 
-        {/* =================================================
-            ERROR
-        ================================================= */}
-
         {error && (
-          <section className="bg-red-950/40 border border-red-800 rounded-2xl p-5 mb-8">
-
-            <p className="font-semibold text-red-300">
-              Planning calculation failed
-            </p>
-
-            <p className="text-sm text-red-400 mt-2">
-              {error}
-            </p>
-
-          </section>
+          <div className="mb-6 rounded-xl border border-red-500/40 bg-red-950/30 p-4 text-sm text-red-300">
+            {error}
+          </div>
         )}
 
-        {/* =================================================
-            RESULTS
-        ================================================= */}
+        {!plan && loading && (
+          <div className="rounded-xl border border-slate-700 bg-slate-900 p-8 text-center text-slate-400">
+            Generating planning recommendation...
+          </div>
+        )}
 
-        {plan && !error && (
+        {plan && (
           <>
+            {/* EXECUTIVE DECISION */}
+            <section className="mb-7 grid gap-4 md:grid-cols-4">
 
-            {/* =================================================
-                EXECUTIVE DECISION
-            ================================================= */}
-
-            <section className="grid md:grid-cols-4 gap-4 mb-8">
-
-              <Metric
+              <MetricCard
                 label="Recommended Strategy"
-                value={
-                  plan.recommendation ||
-                  "—"
-                }
+                value={recommendation}
                 highlight
               />
 
-              <Metric
+              <MetricCard
                 label="Opportunity Score"
-                value={`${plan.opportunity?.opportunityScore ?? 0}/100`}
+                value={`${networkOpportunityScore}/100`}
               />
 
-              <Metric
+              <MetricCard
                 label="Projected Daily Demand"
-                value={formatNumber(
-                  plan.opportunity
-                    ?.projectedDailyDemand
-                )}
+                value={number(projectedDailyDemand)}
               />
 
-              <Metric
+              <MetricCard
                 label="Peak Capacity Gap"
-                value={formatNumber(
-                  plan.capacity?.capacityGap
-                )}
+                value={number(capacityGap)}
               />
 
             </section>
 
-            {/* =================================================
-                DECISION REASONS
-            ================================================= */}
+            {/* DECISION RATIONALE */}
+            <section className="mb-7 rounded-2xl border border-blue-500/70 bg-blue-950/20 p-5">
+              <div className="mb-2 text-xs font-semibold tracking-[0.16em] text-blue-400">
+                DECISION RATIONALE
+              </div>
 
-            {plan.decisionReasons?.length >
-              0 && (
-              <section className="bg-blue-950/30 border border-blue-900 rounded-2xl p-6 mb-8">
+              <h2 className="mb-4 text-2xl font-bold">
+                Why {recommendation}?
+              </h2>
 
-                <p className="text-xs uppercase tracking-widest text-blue-400 font-semibold">
-                  Decision rationale
-                </p>
-
-                <h2 className="text-2xl font-semibold mt-2">
-                  Why {plan.recommendation}?
-                </h2>
-
-                <div className="mt-5 space-y-3">
-
-                  {plan.decisionReasons.map(
+              <div className="space-y-3">
+                {decisionReasons.length > 0 ? (
+                  decisionReasons.map(
                     (reason, index) => (
                       <div
                         key={index}
-                        className="flex gap-3 text-slate-300"
+                        className="flex gap-3 text-sm text-slate-200"
                       >
-
-                        <span className="text-blue-400 font-bold">
+                        <span className="font-semibold text-blue-400">
                           {index + 1}
                         </span>
 
-                        <span>
-                          {reason}
-                        </span>
-
+                        <span>{reason}</span>
                       </div>
                     )
-                  )}
+                  )
+                ) : (
+                  <div className="text-sm text-slate-400">
+                    No additional decision rationale returned.
+                  </div>
+                )}
+              </div>
+            </section>
 
-                </div>
-
-              </section>
-            )}
-
-            {/* =================================================
-                NETWORK OPPORTUNITY
-            ================================================= */}
-
-            <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
-
+            {/* NETWORK OPPORTUNITY */}
+            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
                 eyebrow="NETWORK OPPORTUNITY"
                 title="01 — Is there a network gap?"
                 description="The model evaluates demand, capacity pressure, delivery performance and unmet customer selection."
               />
 
-              <div className="grid md:grid-cols-6 gap-4 mt-6">
-
-                <Metric
+              <div className="grid gap-3 md:grid-cols-6">
+                <MiniMetric
                   label="Current Utilization"
-                  value={`${plan.opportunity?.utilization ?? 0}%`}
+                  value={percent(opportunity.utilization)}
                 />
 
-                <Metric
+                <MiniMetric
                   label="Current Delivery"
-                  value={`${plan.opportunity?.avgDelivery ?? 0} min`}
+                  value={`${decimal(
+                    opportunity.avgDelivery
+                  )} min`}
                 />
 
-                <Metric
+                <MiniMetric
                   label="Delivery Gap"
-                  value={`${plan.opportunity?.deliveryGap ?? 0} min`}
+                  value={`${decimal(
+                    opportunity.deliveryGap
+                  )} min`}
                 />
 
-                <Metric
+                <MiniMetric
                   label="Selection Gap"
-                  value={`${plan.opportunity?.selectionGapPct ?? 0}%`}
+                  value={percent(
+                    opportunity.selectionGapPct
+                  )}
                 />
 
-                <Metric
+                <MiniMetric
                   label="Search Demand"
-                  value={formatNumber(
-                    plan.opportunity
-                      ?.searchDemand
+                  value={number(
+                    opportunity.searchDemand
                   )}
                 />
 
-                <Metric
+                <MiniMetric
                   label="Unavailable Searches"
-                  value={formatNumber(
-                    plan.opportunity
-                      ?.unavailableSearches
+                  value={number(
+                    opportunity.unavailableSearches
                   )}
                 />
-
               </div>
-
             </section>
 
-            {/* =================================================
-                NETWORK DESIGN
-            ================================================= */}
-
-            <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
-
+            {/* NETWORK DESIGN */}
+            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
                 eyebrow="NETWORK DESIGN"
                 title="02 — What node should we build?"
                 description="The model compares operational fit and economics rather than automatically selecting the largest node."
               />
 
-              <div className="grid lg:grid-cols-3 gap-5 mt-6">
-
-                {plan.networkComparison?.map(
+              <div className="grid gap-4 lg:grid-cols-3">
+                {networkComparison.map(
                   (option) => (
                     <NetworkOption
                       key={option.strategy}
                       option={option}
+                      recommended={
+                        option.recommended
+                      }
                     />
                   )
                 )}
-
               </div>
-
             </section>
 
-            {/* =================================================
-                ECONOMICS
-            ================================================= */}
-
-            <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
-
+            {/* NETWORK ECONOMICS */}
+            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
                 eyebrow="NETWORK ECONOMICS"
                 title="03 — Does the expansion make financial sense?"
                 description="Illustrative economics based on synthetic demand and unit-level gross margin."
               />
 
-              <div className="grid md:grid-cols-4 gap-4 mt-6">
+              <div className="grid gap-4 md:grid-cols-4">
 
-                <FinancialMetric
+                <MetricCard
                   label="Upfront Investment"
-                  value={`₹${formatNumber(
-                    plan.financials
-                      ?.upfrontInvestmentLakh
-                  )}L`}
+                  value={money(totalInvestment)}
                 />
 
-                <FinancialMetric
+                <MetricCard
                   label="Opening Inventory"
-                  value={`₹${formatNumber(
-                    plan.financials
-                      ?.openingInventoryLakh
-                  )}L`}
+                  value={money(openingInventory)}
                 />
 
-                <FinancialMetric
+                <MetricCard
                   label="Annual Gross Margin"
-                  value={`₹${formatNumber(
-                    plan.financials
-                      ?.annualGrossMarginLakh
-                  )}L`}
+                  value={money(annualGrossMargin)}
                 />
 
-                <FinancialMetric
+                <MetricCard
                   label="Year-1 GM ROI"
-                  value={`${plan.financials?.year1GrossMarginROI ?? 0}%`}
-                  highlight
+                  value={percent(roi)}
+                  positive
                 />
 
-              </div>
-
-              <div className="grid md:grid-cols-4 gap-4 mt-4">
-
-                <FinancialMetric
+                <MetricCard
                   label="Annual Revenue"
-                  value={`₹${formatNumber(
-                    plan.financials
-                      ?.annualRevenueLakh
-                  )}L`}
+                  value={money(annualRevenue)}
                 />
 
-                <FinancialMetric
+                <MetricCard
                   label="Estimated Payback"
-                  value={
-                    plan.financials
-                      ?.paybackMonths != null
-                      ? `${plan.financials.paybackMonths} mo`
-                      : "—"
-                  }
+                  value={`${decimal(payback)} mo`}
                 />
 
-                <FinancialMetric
+                <MetricCard
                   label="Selected SKUs"
-                  value={formatNumber(
-                    plan.assortment
-                      ?.selectedSKUs
-                  )}
+                  value={number(selectedSKUs)}
                 />
 
-                <FinancialMetric
+                <MetricCard
                   label="Peak Utilization"
-                  value={`${plan.capacity?.peakUtilizationPct ?? 0}%`}
+                  value={percent(peakUtilization)}
                 />
 
               </div>
 
-              <div className="mt-5 pt-5 border-t border-slate-800">
-
-                <p className="text-xs text-slate-500">
-                  {plan.financials?.methodology ||
-                    "Illustrative synthetic model."}
-                </p>
-
+              <div className="mt-5 border-t border-slate-700 pt-4 text-xs text-slate-500">
+                Illustrative synthetic model.
               </div>
-
             </section>
 
-            {/* =================================================
-                ASSORTMENT
-            ================================================= */}
-
-            <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
-
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-
-                <SectionHeading
-                  eyebrow="ASSORTMENT PLANNING"
-                  title="04 — What should the node stock?"
-                  description="SKU selection is constrained by demand, customer need, inventory investment and storage capacity."
-                />
-
-                <div className="text-left md:text-right">
-
-                  <div className="text-4xl font-bold">
-                    {formatNumber(
-                      plan.assortment
-                        ?.selectedSKUs
-                    )}
+            {/* ASSORTMENT */}
+            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
+              <div className="mb-5 flex items-end justify-between">
+                <div>
+                  <div className="mb-2 text-xs font-semibold tracking-[0.16em] text-blue-400">
+                    ASSORTMENT PLANNING
                   </div>
 
-                  <div className="text-xs text-slate-400 uppercase tracking-wide">
-                    optimized SKUs
-                  </div>
+                  <h2 className="text-2xl font-bold">
+                    04 — What should the node stock?
+                  </h2>
 
+                  <p className="mt-2 text-sm text-slate-400">
+                    SKU selection is constrained by demand,
+                    customer need, inventory investment and
+                    storage capacity.
+                  </p>
                 </div>
 
+                <div className="text-right">
+                  <div className="text-4xl font-bold">
+                    {number(selectedSKUs)}
+                  </div>
+
+                  <div className="text-xs text-slate-500">
+                    OPTIMIZED SKUs
+                  </div>
+                </div>
               </div>
 
-              <div className="grid md:grid-cols-4 gap-4 mt-6">
+              <div className="mb-6 grid gap-4 md:grid-cols-4">
 
-                <Metric
+                <MetricCard
                   label="Opening Inventory"
-                  value={`₹${formatNumber(
-                    plan.assortment
-                      ?.openingInventoryCost /
-                      100000
-                  )}L`}
-                />
-
-                <Metric
-                  label="Inventory Budget"
-                  value={`₹${formatNumber(
-                    plan.assortment
-                      ?.inventoryBudgetLakh
-                  )}L`}
-                />
-
-                <Metric
-                  label="Storage Used"
-                  value={formatNumber(
-                    plan.assortment
-                      ?.storageUsed
+                  value={money(
+                    openingInventoryAssortment
                   )}
                 />
 
-                <Metric
+                <MetricCard
+                  label="Inventory Budget"
+                  value={money(inventoryBudget)}
+                />
+
+                <MetricCard
+                  label="Storage Used"
+                  value={number(storageUsed)}
+                />
+
+                <MetricCard
                   label="Storage Utilization"
-                  value={`${plan.assortment?.storageUtilizationPct ?? 0}%`}
+                  value={percent(
+                    storageUtilization
+                  )}
                 />
 
               </div>
 
-              <div className="overflow-x-auto mt-8">
-
-                <table className="w-full text-sm">
-
-                  <thead className="text-slate-400 border-b border-slate-800">
-
-                    <tr>
-
-                      <th className="text-left py-4">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[850px] text-sm">
+                  <thead>
+                    <tr className="border-b border-slate-700 text-left text-slate-400">
+                      <th className="px-3 py-3">
                         Category
                       </th>
-
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Daily Demand
                       </th>
-
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Availability
                       </th>
-
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Stockout
                       </th>
-
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Selection Gap
                       </th>
-
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         SKUs
                       </th>
-
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Gross Margin
                       </th>
-
                     </tr>
-
                   </thead>
 
                   <tbody>
-
-                    {plan.assortment?.categories?.map(
+                    {categories.map(
                       (category) => (
                         <tr
-                          key={
-                            category.category
-                          }
+                          key={category.category}
                           className="border-b border-slate-800"
                         >
-
-                          <td className="py-4 font-semibold">
+                          <td className="px-3 py-3 font-semibold">
                             {category.category}
                           </td>
 
-                          <td className="text-right">
-                            {formatNumber(
+                          <td className="px-3 py-3 text-right">
+                            {number(
                               category.demand
                             )}
                           </td>
 
-                          <td className="text-right">
-                            {category.availabilityPct}%
-                          </td>
-
-                          <td className="text-right">
-                            {category.stockoutPct}%
-                          </td>
-
-                          <td className="text-right">
-                            {category.unmetDemandPct}%
-                          </td>
-
-                          <td className="text-right font-bold text-blue-400">
-                            {category.recommendedSKUs}
-                          </td>
-
-                          <td className="text-right">
-                            ₹
-                            {formatNumber(
-                              Number(
-                                category.grossMargin ||
-                                  0
-                              ) / 100000
+                          <td className="px-3 py-3 text-right">
+                            {percent(
+                              category.availabilityPct
                             )}
-                            L
                           </td>
 
+                          <td className="px-3 py-3 text-right">
+                            {percent(
+                              category.stockoutPct
+                            )}
+                          </td>
+
+                          <td className="px-3 py-3 text-right">
+                            {percent(
+                              category.unmetDemandPct
+                            )}
+                          </td>
+
+                          <td className="px-3 py-3 text-right text-blue-400">
+                            {number(
+                              category.recommendedSKUs
+                            )}
+                          </td>
+
+                          <td className="px-3 py-3 text-right">
+                            ₹
+                            {number(
+                              Number(
+                                category.dailyGrossMargin ||
+                                  0
+                              )
+                            )}
+                          </td>
                         </tr>
                       )
                     )}
-
                   </tbody>
-
                 </table>
-
               </div>
-
             </section>
 
-            {/* =================================================
-                SKU LEVEL
-            ================================================= */}
-
-            <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
-
+            {/* SKU PRIORITIZATION */}
+            <section className="mb-7 rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
               <SectionHeading
                 eyebrow="SKU PRIORITIZATION"
                 title="05 — Which SKUs launch first?"
                 description="The optimizer prioritizes individual SKUs rather than assigning the same number of products to every category."
               />
 
-              <div className="overflow-x-auto mt-6">
-
-                <table className="w-full text-sm">
-
-                  <thead className="text-slate-400 border-b border-slate-800">
-
-                    <tr>
-
-                      <th className="text-left py-4">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[1100px] text-sm">
+                  <thead>
+                    <tr className="border-b border-slate-700 text-left text-slate-400">
+                      <th className="px-3 py-3">
                         SKU
                       </th>
 
-                      <th className="text-left">
+                      <th className="px-3 py-3">
                         Category
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Daily Demand
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Price
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Margin
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Availability
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Stockout
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Opening Inv.
                       </th>
 
-                      <th className="text-right">
+                      <th className="px-3 py-3 text-right">
                         Priority
                       </th>
 
-                      <th className="text-center">
+                      <th className="px-3 py-3 text-right">
                         Action
                       </th>
-
                     </tr>
-
                   </thead>
 
                   <tbody>
+                    {skuRecommendations.map(
+                      (sku, index) => {
 
-                    {plan.skuRecommendations?.map(
-                      (sku) => (
-                        <tr
-                          key={sku.SKU_ID}
-                          className="border-b border-slate-800"
-                        >
+                        const selected =
+                          Boolean(
+                            sku.selected
+                          );
 
-                          <td className="py-3 font-semibold">
-                            {sku.SKU_ID}
-                          </td>
+                        /*
+                         * The optimizer's selected flag is
+                         * authoritative. We only improve the
+                         * presentation of the action label here.
+                         */
+                        let action;
 
-                          <td>
-                            {sku.Category}
-                          </td>
+                        if (selected) {
+                          action =
+                            index < 5
+                              ? "Launch first"
+                              : "Launch";
+                        } else {
+                          action =
+                            index < 18
+                              ? "Watch"
+                              : "Defer";
+                        }
 
-                          <td className="text-right">
-                            {formatNumber(
-                              sku.dailyDemand
-                            )}
-                          </td>
+                        return (
+                          <tr
+                            key={sku.SKU_ID}
+                            className="border-b border-slate-800"
+                          >
+                            <td className="px-3 py-3 font-semibold">
+                              {sku.SKU_ID}
+                            </td>
 
-                          <td className="text-right">
-                            ₹
-                            {formatNumber(
-                              sku.Selling_Price
-                            )}
-                          </td>
+                            <td className="px-3 py-3">
+                              {sku.Category}
+                            </td>
 
-                          <td className="text-right">
-                            ₹
-                            {formatNumber(
-                              sku.Margin_Per_Unit
-                            )}
-                          </td>
+                            <td className="px-3 py-3 text-right">
+                              {decimal(
+                                sku.dailyDemand
+                              )}
+                            </td>
 
-                          <td className="text-right">
-                            {sku.availabilityPct}%
-                          </td>
+                            <td className="px-3 py-3 text-right">
+                              ₹
+                              {decimal(
+                                sku.Selling_Price
+                              )}
+                            </td>
 
-                          <td className="text-right">
-                            {sku.stockoutPct}%
-                          </td>
+                            <td className="px-3 py-3 text-right">
+                              ₹
+                              {decimal(
+                                sku.Margin_Per_Unit
+                              )}
+                            </td>
 
-                          <td className="text-right">
-                            ₹
-                            {formatNumber(
-                              sku.openingInventoryCost
-                            )}
-                          </td>
+                            <td className="px-3 py-3 text-right">
+                              {percent(
+                                sku.availabilityPct
+                              )}
+                            </td>
 
-                          <td className="text-right font-bold">
-                            {sku.priority}
-                          </td>
+                            <td className="px-3 py-3 text-right">
+                              {percent(
+                                sku.stockoutPct
+                              )}
+                            </td>
 
-                          <td className="text-center">
+                            <td className="px-3 py-3 text-right">
+                              ₹
+                              {Number(
+                                sku.openingInvestment ||
+                                  0
+                              ).toLocaleString(
+                                "en-IN",
+                                {
+                                  maximumFractionDigits: 0,
+                                }
+                              )}
+                            </td>
 
-                            <ActionBadge
-                              action={
-                                sku.recommendation
-                              }
-                            />
+                            <td className="px-3 py-3 text-right">
+                              {decimal(
+                                sku.priorityScore
+                              )}
+                            </td>
 
-                          </td>
-
-                        </tr>
-                      )
+                            <td className="px-3 py-3 text-right">
+                              <ActionBadge
+                                action={action}
+                              />
+                            </td>
+                          </tr>
+                        );
+                      }
                     )}
-
                   </tbody>
-
                 </table>
-
               </div>
-
             </section>
 
-            {/* =================================================
-                CAPACITY + STORAGE
-            ================================================= */}
+            {/* CAPACITY + STORAGE */}
+            <section className="grid gap-5 md:grid-cols-2">
 
-            <section className="grid lg:grid-cols-2 gap-6 mb-8">
-
-              <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-
+              <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
                 <SectionHeading
                   eyebrow="CAPACITY"
                   title="06 — Can the node handle demand?"
                   description="Peak demand is compared with the selected node's daily order capacity."
                 />
 
-                <div className="space-y-4 mt-6">
+                <DataRow
+                  label="Node capacity"
+                  value={`${number(
+                    dailyCapacity
+                  )} orders/day`}
+                />
 
-                  <DataRow
-                    label="Node capacity"
-                    value={`${formatNumber(
-                      plan.capacity?.dailyCapacity
-                    )} orders/day`}
-                  />
+                <DataRow
+                  label="Projected daily demand"
+                  value={number(
+                    projectedDailyDemand
+                  )}
+                />
 
-                  <DataRow
-                    label="Projected daily demand"
-                    value={`${formatNumber(
-                      plan.capacity
-                        ?.projectedDailyDemand
-                    )}`}
-                  />
+                <DataRow
+                  label="Peak demand"
+                  value={number(
+                    peakDemand
+                  )}
+                />
 
-                  <DataRow
-                    label="Peak demand"
-                    value={`${formatNumber(
-                      plan.capacity?.peakDemand
-                    )}`}
-                  />
+                <DataRow
+                  label="Capacity gap"
+                  value={number(
+                    capacityGap
+                  )}
+                />
 
-                  <DataRow
-                    label="Capacity gap"
-                    value={`${formatNumber(
-                      plan.capacity?.capacityGap
-                    )}`}
-                  />
+                <DataRow
+                  label="Peak utilization"
+                  value={percent(
+                    peakUtilization
+                  )}
+                  last
+                />
+              </div>
 
-                  <DataRow
-                    label="Peak utilization"
-                    value={`${plan.capacity?.peakUtilizationPct ?? 0}%`}
-                  />
-
-                </div>
-
-              </section>
-
-              <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-
+              <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-5">
                 <SectionHeading
                   eyebrow="STORAGE"
                   title="07 — Can the assortment fit?"
                   description="Storage is treated as a hard planning constraint with the selected scenario limit."
                 />
 
-                <div className="space-y-4 mt-6">
+                <DataRow
+                  label="Estimated storage"
+                  value={`${number(
+                    storageUsed
+                  )} units`}
+                />
 
-                  <DataRow
-                    label="Estimated storage"
-                    value={`${formatNumber(
-                      plan.storage
-                        ?.estimatedUnits
-                    )} units`}
-                  />
+                <DataRow
+                  label="Node storage capacity"
+                  value={`${number(
+                    storageCapacity
+                  )} units`}
+                />
 
-                  <DataRow
-                    label="Node storage capacity"
-                    value={`${formatNumber(
-                      plan.storage
-                        ?.capacityUnits
-                    )} units`}
-                  />
+                <DataRow
+                  label="Storage utilization"
+                  value={percent(
+                    storageUtilization
+                  )}
+                />
 
-                  <DataRow
-                    label="Storage utilization"
-                    value={`${plan.storage?.utilizationPct ?? 0}%`}
-                  />
+                <DataRow
+                  label="Scenario limit"
+                  value={`${storageLimitPct}%`}
+                />
 
-                  <DataRow
-                    label="Scenario limit"
-                    value={`${plan.storage?.scenarioLimitPct ?? storageLimit}%`}
-                  />
-
-                  <DataRow
-                    label="Within constraint"
-                    value={
-                      plan.storage
-                        ?.withinLimit
-                        ? "YES"
-                        : "NO"
-                    }
-                    positive={
-                      plan.storage
-                        ?.withinLimit
-                    }
-                  />
-
-                </div>
-
-              </section>
-
-            </section>
-
-            {/* =================================================
-                ASSUMPTIONS
-            ================================================= */}
-
-            <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 mb-8">
-
-              <div className="flex flex-wrap gap-6 text-sm">
-
-                <div>
-                  <span className="text-slate-500">
-                    Demand:
-                  </span>{" "}
-                  <span className="font-semibold">
-                    {Math.round(
-                      Number(demand) *
-                        100
-                    )}
-                    %
-                  </span>
-                </div>
-
-                <div>
-                  <span className="text-slate-500">
-                    Budget:
-                  </span>{" "}
-                  <span className="font-semibold">
-                    ₹{budget}L
-                  </span>
-                </div>
-
-                <div>
-                  <span className="text-slate-500">
-                    Delivery:
-                  </span>{" "}
-                  <span className="font-semibold">
-                    {deliveryTarget} min
-                  </span>
-                </div>
-
-                <div>
-                  <span className="text-slate-500">
-                    Storage:
-                  </span>{" "}
-                  <span className="font-semibold">
-                    {storageLimit}%
-                  </span>
-                </div>
-
+                <DataRow
+                  label="Within constraint"
+                  value={
+                    storageUtilization <=
+                    storageLimitPct
+                      ? "YES"
+                      : "NO"
+                  }
+                  positive={
+                    storageUtilization <=
+                    storageLimitPct
+                  }
+                  last
+                />
               </div>
 
-              <p className="text-xs text-slate-500 mt-4">
-                This is a synthetic planning model created
-                for portfolio demonstration. Financial
-                outputs are illustrative and should not be
-                interpreted as Amazon internal data or actual
-                Amazon economics.
-              </p>
-
             </section>
 
+            {/* FOOTER */}
+            <footer className="mt-7 rounded-2xl border border-slate-700 bg-slate-900/70 p-5 text-xs text-slate-500">
+              <div className="flex flex-wrap gap-x-5 gap-y-2">
+                <span>
+                  Demand:{" "}
+                  <strong className="text-slate-300">
+                    {Math.round(
+                      demandMultiplier * 100
+                    )}%
+                  </strong>
+                </span>
+
+                <span>
+                  Budget:{" "}
+                  <strong className="text-slate-300">
+                    ₹{budget}L
+                  </strong>
+                </span>
+
+                <span>
+                  Delivery:{" "}
+                  <strong className="text-slate-300">
+                    {deliveryTarget} min
+                  </strong>
+                </span>
+
+                <span>
+                  Storage:{" "}
+                  <strong className="text-slate-300">
+                    {storageLimitPct}%
+                  </strong>
+                </span>
+              </div>
+
+              <p className="mt-4">
+                This is a synthetic planning model created
+                for portfolio demonstration. Financial outputs
+                are illustrative and should not be interpreted
+                as Amazon internal data or actual Amazon economics.
+              </p>
+            </footer>
           </>
         )}
-
       </div>
     </main>
   );
 }
 
-/* =========================================================
-   COMPONENTS
-========================================================= */
 
-function Control({
+/* -------------------------------------------------------
+   COMPONENTS
+------------------------------------------------------- */
+
+function SelectControl({
   label,
   value,
   onChange,
   options,
 }) {
   return (
-    <div>
-
-      <label className="text-xs font-medium text-slate-400">
+    <label className="block">
+      <span className="mb-2 block text-xs font-medium text-slate-400">
         {label}
-      </label>
+      </span>
 
       <select
         value={value}
-        onChange={onChange}
-        className="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg p-3 text-white outline-none focus:border-blue-500"
+        onChange={(e) =>
+          onChange(e.target.value)
+        }
+        className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-3 text-sm text-white outline-none transition focus:border-blue-500"
       >
-
-        {options.map(
-          (option) => (
-            <option
-              key={String(
-                option.value
-              )}
-              value={option.value}
-            >
-              {option.label}
-            </option>
-          )
-        )}
-
+        {options.map((option) => (
+          <option
+            key={String(option.value)}
+            value={option.value}
+          >
+            {option.label}
+          </option>
+        ))}
       </select>
-
-    </div>
+    </label>
   );
 }
 
-function Metric({
+
+function MetricCard({
   label,
   value,
   highlight = false,
+  positive = false,
 }) {
   return (
     <div
-      className={`rounded-xl border p-5 ${
+      className={`rounded-xl border p-4 ${
         highlight
-          ? "border-blue-700 bg-blue-950/30"
-          : "border-slate-800 bg-slate-900"
+          ? "border-blue-500 bg-blue-950/20"
+          : positive
+          ? "border-emerald-500/60 bg-emerald-950/10"
+          : "border-slate-700 bg-slate-900/80"
       }`}
     >
+      <div className="text-[10px] font-medium tracking-wide text-blue-300">
+        {label.toUpperCase()}
+      </div>
 
-      <p className="text-xs text-slate-400 uppercase tracking-wide">
-        {label}
-      </p>
-
-      <p className="text-xl font-bold mt-2">
+      <div className="mt-2 text-xl font-bold">
         {value}
-      </p>
-
+      </div>
     </div>
   );
 }
 
-function FinancialMetric({
+
+function MiniMetric({
   label,
   value,
-  highlight = false,
 }) {
   return (
-    <div
-      className={`rounded-xl border p-5 ${
-        highlight
-          ? "border-emerald-700 bg-emerald-950/20"
-          : "border-slate-800 bg-slate-950"
-      }`}
-    >
+    <div className="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
+      <div className="text-[10px] text-slate-500">
+        {label.toUpperCase()}
+      </div>
 
-      <p className="text-xs text-slate-400 uppercase tracking-wide">
-        {label}
-      </p>
-
-      <p className="text-2xl font-bold mt-2">
+      <div className="mt-2 text-lg font-semibold">
         {value}
-      </p>
-
+      </div>
     </div>
   );
 }
+
 
 function SectionHeading({
   eyebrow,
@@ -1088,278 +1127,291 @@ function SectionHeading({
   description,
 }) {
   return (
-    <div>
-
-      <p className="text-xs uppercase tracking-widest text-blue-400 font-semibold">
+    <div className="mb-5">
+      <div className="mb-2 text-xs font-semibold tracking-[0.16em] text-blue-400">
         {eyebrow}
-      </p>
+      </div>
 
-      <h2 className="text-2xl font-semibold mt-2">
+      <h2 className="text-2xl font-bold">
         {title}
       </h2>
 
       {description && (
-        <p className="text-sm text-slate-400 mt-2 max-w-3xl">
+        <p className="mt-2 text-sm text-slate-400">
           {description}
         </p>
       )}
-
     </div>
   );
 }
+
 
 function DataRow({
   label,
   value,
-  positive = null,
+  positive = false,
+  last = false,
 }) {
   return (
-    <div className="flex justify-between items-center border-b border-slate-800 pb-3">
-
-      <span className="text-slate-400">
+    <div
+      className={`flex items-center justify-between py-3 ${
+        !last
+          ? "border-b border-slate-800"
+          : ""
+      }`}
+    >
+      <span className="text-sm text-slate-400">
         {label}
       </span>
 
-      <span
+      <strong
         className={
-          positive === true
-            ? "font-semibold text-emerald-400"
-            : positive === false
-            ? "font-semibold text-red-400"
-            : "font-semibold"
+          positive
+            ? "text-emerald-400"
+            : ""
         }
       >
         {value}
-      </span>
-
+      </strong>
     </div>
   );
 }
 
-function Row({
-  label,
-  value,
-}) {
-  return (
-    <div className="flex justify-between gap-4 border-b border-slate-800 pb-3">
-
-      <span className="text-slate-400">
-        {label}
-      </span>
-
-      <span className="font-semibold text-right">
-        {value}
-      </span>
-
-    </div>
-  );
-}
-
-function NetworkOption({
-  option,
-}) {
-  const recommended =
-    option.recommended;
-
-  return (
-    <div
-      className={`rounded-2xl border p-5 ${
-        recommended
-          ? "border-blue-500 bg-blue-950/30"
-          : "border-slate-700 bg-slate-950"
-      }`}
-    >
-
-      <div className="flex justify-between items-start gap-3">
-
-        <div>
-
-          <p className="text-lg font-semibold">
-            {option.strategy}
-          </p>
-
-          {recommended && (
-            <span className="inline-block mt-2 text-xs font-semibold bg-blue-600 px-2 py-1 rounded">
-              RECOMMENDED
-            </span>
-          )}
-
-        </div>
-
-        <div className="text-right">
-
-          <p className="text-2xl font-bold">
-            {option.score}
-          </p>
-
-          <p className="text-xs text-slate-500">
-            strategy score
-          </p>
-
-        </div>
-
-      </div>
-
-      <div className="mt-6 space-y-3 text-sm">
-
-        <Row
-          label="Launch cost"
-          value={`₹${formatNumber(
-            option.cost
-          )}L`}
-        />
-
-        <Row
-          label="Opening inventory"
-          value={`₹${formatNumber(
-            option.openingInventory
-          )}L`}
-        />
-
-        <Row
-          label="Total investment"
-          value={`₹${formatNumber(
-            option.upfrontInvestment
-          )}L`}
-        />
-
-        <Row
-          label="Capacity"
-          value={formatNumber(
-            option.capacity
-          )}
-        />
-
-        <Row
-          label="Optimized assortment"
-          value={`${formatNumber(
-            option.assortment
-          )} SKUs`}
-        />
-
-        <Row
-          label="Delivery"
-          value={`${option.delivery} min`}
-        />
-
-        <Row
-          label="Annual gross margin"
-          value={`₹${formatNumber(
-            option.annualGrossMargin
-          )}L`}
-        />
-
-        <Row
-          label="Year-1 GM ROI"
-          value={`${option.roi}%`}
-        />
-
-        <Row
-          label="Payback"
-          value={
-            option.payback != null
-              ? `${option.payback} months`
-              : "—"
-          }
-        />
-
-      </div>
-
-      <div className="grid grid-cols-2 gap-2 mt-5">
-
-        <FitBadge
-          label="Budget"
-          good={option.withinBudget}
-        />
-
-        <FitBadge
-          label="Capacity"
-          good={option.capacityFit}
-        />
-
-        <FitBadge
-          label="Delivery"
-          good={option.deliveryFit}
-        />
-
-        <FitBadge
-          label="Storage"
-          good={option.storageFit}
-        />
-
-      </div>
-
-    </div>
-  );
-}
-
-function FitBadge({
-  label,
-  good,
-}) {
-  return (
-    <div
-      className={`text-center rounded-lg py-2 text-xs font-semibold ${
-        good
-          ? "bg-emerald-950/50 text-emerald-400 border border-emerald-900"
-          : "bg-red-950/50 text-red-400 border border-red-900"
-      }`}
-    >
-      {label}: {good ? "FIT" : "GAP"}
-    </div>
-  );
-}
 
 function ActionBadge({
   action,
 }) {
-  const normalized =
-    String(
-      action || ""
-    ).toLowerCase();
+  let classes =
+    "border-slate-600 bg-slate-800 text-slate-300";
 
-  if (
-    normalized ===
-    "launch"
-  ) {
-    return (
-      <span className="text-xs font-semibold text-emerald-400 bg-emerald-950/50 border border-emerald-900 px-2 py-1 rounded">
-        LAUNCH
-      </span>
-    );
+  if (action === "Launch first") {
+    classes =
+      "border-blue-500/60 bg-blue-500/10 text-blue-300";
   }
 
-  if (
-    normalized ===
-    "test"
-  ) {
-    return (
-      <span className="text-xs font-semibold text-amber-400 bg-amber-950/50 border border-amber-900 px-2 py-1 rounded">
-        TEST
-      </span>
-    );
+  if (action === "Launch") {
+    classes =
+      "border-emerald-500/60 bg-emerald-500/10 text-emerald-300";
+  }
+
+  if (action === "Watch") {
+    classes =
+      "border-yellow-500/60 bg-yellow-500/10 text-yellow-300";
   }
 
   return (
-    <span className="text-xs font-semibold text-slate-400 bg-slate-800 border border-slate-700 px-2 py-1 rounded">
-      DEFER
+    <span
+      className={`inline-flex rounded-md border px-2 py-1 text-[10px] font-semibold ${classes}`}
+    >
+      {action.toUpperCase()}
     </span>
   );
 }
 
-/* =========================================================
-   FORMATTERS
-========================================================= */
 
-function formatNumber(value) {
-  const number = Number(
-    value || 0
+function NetworkOption({
+  option,
+  recommended,
+}) {
+  const totalInvestment = Number(
+    option.totalInvestment || 0
   );
 
-  return number.toLocaleString(
-    "en-IN",
-    {
-      maximumFractionDigits: 1,
-    }
+  const openingInventory = Number(
+    option.openingInventory || 0
+  );
+
+  const annualGrossMargin = Number(
+    option.annualGrossMargin || 0
+  );
+
+  const roi = Number(
+    option.grossMarginRoiPct ||
+      (totalInvestment > 0
+        ? (annualGrossMargin /
+            totalInvestment) *
+          100
+        : 0)
+  );
+
+  const payback = Number(
+    option.paybackMonths || 0
+  );
+
+  const capacity =
+    Number(option.capacity || 0);
+
+  const delivery =
+    Number(option.delivery || 0);
+
+  const assortment =
+    Number(option.assortment || 0);
+
+  return (
+    <div
+      className={`rounded-2xl border p-4 ${
+        recommended
+          ? "border-blue-500 bg-blue-950/20"
+          : "border-slate-700 bg-slate-950/50"
+      }`}
+    >
+      <div className="mb-5 flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-bold">
+            {option.strategy}
+          </h3>
+
+          {recommended && (
+            <span className="mt-2 inline-block rounded bg-blue-600 px-2 py-1 text-[10px] font-bold">
+              RECOMMENDED
+            </span>
+          )}
+        </div>
+
+        <div className="text-right">
+          <div className="text-2xl font-bold">
+            {decimal(option.score)}
+          </div>
+
+          <div className="text-[9px] text-slate-500">
+            strategy score
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-0">
+
+        <NetworkRow
+          label="Launch cost"
+          value={money(
+            option.launchCost ||
+              option.cost
+          )}
+        />
+
+        <NetworkRow
+          label="Opening inventory"
+          value={money(
+            openingInventory
+          )}
+        />
+
+        <NetworkRow
+          label="Total investment"
+          value={money(
+            totalInvestment
+          )}
+        />
+
+        <NetworkRow
+          label="Capacity"
+          value={number(capacity)}
+        />
+
+        <NetworkRow
+          label="Optimized assortment"
+          value={`${number(
+            assortment
+          )} SKUs`}
+        />
+
+        <NetworkRow
+          label="Delivery"
+          value={`${decimal(
+            delivery
+          )} min`}
+        />
+
+        <NetworkRow
+          label="Annual gross margin"
+          value={money(
+            annualGrossMargin
+          )}
+        />
+
+        <NetworkRow
+          label="Year-1 GM ROI"
+          value={percent(roi)}
+        />
+
+        <NetworkRow
+          label="Payback"
+          value={
+            payback > 0
+              ? `${decimal(
+                  payback
+                )} mo`
+              : "—"
+          }
+          last
+        />
+
+      </div>
+
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        <FitBadge
+          label="Budget"
+          fit={option.budgetFit}
+        />
+
+        <FitBadge
+          label="Capacity"
+          fit={option.capacityFit}
+        />
+
+        <FitBadge
+          label="Delivery"
+          fit={option.deliveryFit}
+        />
+
+        <FitBadge
+          label="Storage"
+          fit={option.storageFit}
+        />
+      </div>
+    </div>
+  );
+}
+
+
+function NetworkRow({
+  label,
+  value,
+  last = false,
+}) {
+  return (
+    <div
+      className={`flex items-center justify-between py-3 ${
+        !last
+          ? "border-b border-slate-800"
+          : ""
+      }`}
+    >
+      <span className="text-sm text-slate-400">
+        {label}
+      </span>
+
+      <strong className="text-sm">
+        {value}
+      </strong>
+    </div>
+  );
+}
+
+
+function FitBadge({
+  label,
+  fit,
+}) {
+  return (
+    <div
+      className={`rounded-md border px-2 py-2 text-center text-[10px] font-semibold ${
+        fit
+          ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400"
+          : "border-red-500/40 bg-red-500/10 text-red-400"
+      }`}
+    >
+      {label}: {fit ? "FIT" : "GAP"}
+    </div>
   );
 }
