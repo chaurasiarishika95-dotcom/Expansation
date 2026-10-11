@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { combine, seasonLabel } from "../lib/seasonality";
 
 const zones = [
   "South Delhi",
@@ -50,6 +51,14 @@ function safe(value, fallback = 0) {
   return value === undefined || value === null
     ? fallback
     : value;
+}
+
+function seasonOnly(zone, note) {
+  const month = Number(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata", month: "numeric" })
+  );
+  const { categories, factors } = combine(month, {}, "season table");
+  return { zone, month, seasonLabel: seasonLabel(month), weather: null, mode: "season", aiStatus: note, categories, factors };
 }
 
 export default function Home() {
@@ -126,11 +135,12 @@ export default function Home() {
     })
       .then((r) => r.json())
       .then((d) => {
-        if (!cancelled) setWs(d.error ? { zone, error: d.error } : d);
+        if (!cancelled)
+          setWs(d.error ? seasonOnly(zone, "The weather service did not respond, so only the season is applied.") : d);
       })
       .catch(() => {
         if (!cancelled)
-          setWs({ zone, error: "Weather and season data is unavailable right now." });
+          setWs(seasonOnly(zone, "The weather service did not respond, so only the season is applied."));
       })
       .finally(() => {
         if (!cancelled) setWsLoading(false);
@@ -1979,11 +1989,17 @@ function WeatherSeasonPanel({ mode, setMode, ws, loading, plan }) {
         <>
           <div className="mb-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-400">
             <span>Season: {ws.seasonLabel}</span>
-            <span>Avg high {ws.weather.avgMax ?? "-"}C</span>
-            <span>Avg low {ws.weather.avgMin ?? "-"}C</span>
-            <span>Rain {ws.weather.rainMm ?? "-"} mm (7 days)</span>
-            <span>Peak AQI {ws.weather.aqiMax ?? "n/a"}</span>
-            <span>Source: {ws.mode === "ai" ? "Gemini AI (bounded, unvalidated)" : "season table and weather rules"}</span>
+            {ws.weather ? (
+              <>
+                <span>Avg high {ws.weather.avgMax ?? "-"}C</span>
+                <span>Avg low {ws.weather.avgMin ?? "-"}C</span>
+                <span>Rain {ws.weather.rainMm ?? "-"} mm (7 days)</span>
+                <span>Peak AQI {ws.weather.aqiMax ?? "n/a"}</span>
+              </>
+            ) : (
+              <span>Weather forecast unavailable</span>
+            )}
+            <span>Source: {ws.mode === "ai" ? "Gemini AI (bounded, unvalidated)" : ws.mode === "season" ? "season table only" : "season table and weather rules"}</span>
           </div>
           {ws.aiStatus && (
             <div className="mb-3 rounded-lg border border-amber-500/40 bg-amber-950/20 p-2 text-xs text-amber-300">
