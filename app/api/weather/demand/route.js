@@ -13,24 +13,30 @@ export async function POST(req) {
     const { zone = "West Delhi", useAI = false } = await req.json();
     const c = COORDS[zone] || COORDS["West Delhi"];
     const month = Number(new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata", month: "numeric" }));
-    let w = cache.get(zone);
+    let w = cache.get(zone), weatherNote = null;
     if (!w || now - w.t > 1800000) {
-      const [f, a] = await Promise.all([
-        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c[0]}&longitude=${c[1]}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&forecast_days=7&timezone=Asia%2FKolkata`, { cache: "no-store" }).then((r) => r.json()),
-        fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${c[0]}&longitude=${c[1]}&hourly=us_aqi&forecast_days=5&timezone=Asia%2FKolkata`, { cache: "no-store" }).then((r) => r.json()).catch(() => null),
-      ]);
-      if (f.error) throw new Error("weather");
-      w = { t: now, summary: summarizeWeather(f.daily, a?.hourly?.us_aqi) };
-      cache.set(zone, w);
+      try {
+        const [f, a] = await Promise.all([
+          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c[0]}&longitude=${c[1]}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&forecast_days=7&timezone=Asia%2FKolkata`, { cache: "no-store" }).then((r) => r.json()),
+          fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${c[0]}&longitude=${c[1]}&hourly=us_aqi&forecast_days=5&timezone=Asia%2FKolkata`, { cache: "no-store" }).then((r) => r.json()).catch(() => null),
+        ]);
+        if (f.error) throw new Error("weather");
+        w = { t: now, summary: summarizeWeather(f.daily, a?.hourly?.us_aqi) };
+        cache.set(zone, w);
+      } catch (e) {
+        w = null;
+        weatherNote = "Weather forecast is unavailable right now, so only the season is applied.";
+      }
     }
-    const rules = weatherRules(w.summary);
+    const summary = w ? w.summary : null;
+    const rules = summary ? weatherRules(summary) : {};
     let weatherPart = rules, mode = "rules", aiStatus = null;
     const key = process.env.GEMINI_API_KEY;
-    if (useAI) {
+    if (useAI && summary) {
       if (!key) aiStatus = "Gemini key not configured, using rules.";
       else {
         try {
-          const prompt = `You help an urban fulfillment demand planner in Delhi NCR. Month number: ${month} (${seasonLabel(month)}). Zone: ${zone}. 7-day forecast summary: ${JSON.stringify(w.summary)}. Rule-based reference adjustments: ${JSON.stringify(Object.fromEntries(Object.entries(rules).map(([k, v]) => [k, Math.round(v.m * 1000) / 1000])))}.
+          const prompt = `You help an urban fulfillment demand planner in Delhi NCR. Month number: ${month} (${seasonLabel(month)}). Zone: ${zone}. 7-day forecast summary: ${JSON.stringify(summary)}. Rule-based reference adjustments: ${JSON.stringify(Object.fromEntries(Object.entries(rules).map(([k, v]) => [k, Math.round(v.m * 1000) / 1000])))}.
 Estimate the demand multiplier from WEATHER AND LOCAL EVENTS ONLY (the seasonal pattern is handled separately) for these categories: ${CATEGORIES.join(", ")}.
 Rules: be conservative; each multiplier must be between 0.85 and 1.25; include only categories you expect to move by 2% or more; mention a festival or event only if you are confident it falls in this period; keep each reason under 100 characters; do not invent data.
 Return ONLY JSON: {"adjustments":[{"category":"...","multiplier":1.00,"reason":"..."}]}`;
@@ -46,7 +52,7 @@ Return ONLY JSON: {"adjustments":[{"category":"...","multiplier":1.00,"reason":"
       }
     }
     const { categories, factors } = combine(month, weatherPart, mode === "ai" ? "Gemini" : "weather rules");
-    return Response.json({ zone, month, seasonLabel: seasonLabel(month), weather: w.summary, mode, aiStatus, categories, factors });
+    return Response.json({ zone, month, seasonLabel: seasonLabel(month), weather: summary, mode: summary ? mode : "season", aiStatus: weatherNote || aiStatus, categories, factors });
   } catch (e) {
     return Response.json({ error: "Weather and season data is unavailable right now." }, { status: 502 });
   }
