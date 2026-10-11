@@ -60,6 +60,10 @@ export default function Home() {
   const [storageLimitPct, setStorageLimitPct] =
     useState(85);
 
+  const [wsMode, setWsMode] = useState("off");
+  const [ws, setWs] = useState(null);
+  const [wsLoading, setWsLoading] = useState(false);
+
   const [plan, setPlan] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -80,6 +84,10 @@ export default function Home() {
           budget,
           deliveryTarget,
           storageLimitPct,
+          categoryFactors:
+            wsMode !== "off" && ws && ws.zone === zone
+              ? ws.factors
+              : undefined,
         }),
       });
 
@@ -105,6 +113,34 @@ export default function Home() {
   }
 
   useEffect(() => {
+    if (wsMode === "off") {
+      setWs(null);
+      return;
+    }
+    let cancelled = false;
+    setWsLoading(true);
+    fetch("/api/weather-demand", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ zone, useAI: wsMode === "ai" }),
+    })
+      .then((r) => r.json())
+      .then((d) => {
+        if (!cancelled) setWs(d.error ? { zone, error: d.error } : d);
+      })
+      .catch(() => {
+        if (!cancelled)
+          setWs({ zone, error: "Weather and season data is unavailable right now." });
+      })
+      .finally(() => {
+        if (!cancelled) setWsLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [zone, wsMode]);
+
+  useEffect(() => {
     generatePlan();
   }, [
     zone,
@@ -112,6 +148,8 @@ export default function Home() {
     budget,
     deliveryTarget,
     storageLimitPct,
+    ws,
+    wsMode,
   ]);
 
   const node = plan?.node || {};
@@ -395,6 +433,14 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <WeatherSeasonPanel
+          mode={wsMode}
+          setMode={setWsMode}
+          ws={ws}
+          loading={wsLoading}
+          plan={plan}
+        />
 
         {error && (
           <div className="mb-5 rounded-xl border border-red-500/40 bg-red-950/30 p-4 text-sm text-red-300">
@@ -1867,5 +1913,168 @@ function ActionLegend({
         {text}
       </span>
     </div>
+  );
+}
+
+
+function WeatherSeasonPanel({ mode, setMode, ws, loading, plan }) {
+  const ok = ws && !ws.error;
+  const movers = ok
+    ? [...ws.categories]
+        .filter((c) => c.final !== 1)
+        .sort((a, b) => Math.abs(b.final - 1) - Math.abs(a.final - 1))
+        .slice(0, 8)
+    : [];
+  const wd = plan?.weatherDemand;
+  const pct = (a, b) =>
+    a ? `${b >= a ? "+" : ""}${(((b - a) / a) * 100).toFixed(1)}%` : "";
+  const rows = wd
+    ? [
+        ["Projected daily orders", wd.baseline.projectedDailyDemand, wd.adjusted.projectedDailyDemand, true],
+        ["Peak daily orders", wd.baseline.peakDemand, wd.adjusted.peakDemand, true],
+        ["Capacity utilization %", wd.baseline.capacityUtilizationPct, wd.adjusted.capacityUtilizationPct, false],
+        ["Storage utilization %", wd.baseline.storageUtilizationPct, wd.adjusted.storageUtilizationPct, false],
+        ["Year-1 revenue (lakh)", wd.baseline.annualRevenueLakh, wd.adjusted.annualRevenueLakh, true],
+      ]
+    : [];
+  return (
+    <section className="mb-5 rounded-xl border border-slate-700 bg-slate-900/90 p-4">
+      <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div>
+          <div className="text-xs font-semibold tracking-[0.18em] text-blue-400">
+            SEASON AND WEATHER DEMAND LAYER
+          </div>
+          <p className="mt-1 max-w-3xl text-sm text-slate-400">
+            Adjusts category demand for the season and the next 7 days of weather and air
+            quality, then re-runs the plan.
+          </p>
+        </div>
+        <div className="w-full md:w-72">
+          <SelectControl
+            label="Adjustment mode"
+            value={mode}
+            onChange={setMode}
+            options={[
+              { label: "Off (base demand)", value: "off" },
+              { label: "Season + weather rules", value: "rules" },
+              { label: "Season + weather + Gemini AI", value: "ai" },
+            ]}
+          />
+        </div>
+      </div>
+
+      {mode === "off" && (
+        <div className="text-sm text-slate-500">
+          Switch the mode on to see how season and weather change demand and the plan.
+        </div>
+      )}
+      {mode !== "off" && loading && (
+        <div className="text-sm text-slate-400">Loading forecast and adjustments...</div>
+      )}
+      {mode !== "off" && ws?.error && (
+        <div className="text-sm text-red-300">{ws.error} The plan is shown without this layer.</div>
+      )}
+
+      {mode !== "off" && ok && (
+        <>
+          <div className="mb-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-400">
+            <span>Season: {ws.seasonLabel}</span>
+            <span>Avg high {ws.weather.avgMax ?? "-"}C</span>
+            <span>Avg low {ws.weather.avgMin ?? "-"}C</span>
+            <span>Rain {ws.weather.rainMm ?? "-"} mm (7 days)</span>
+            <span>Peak AQI {ws.weather.aqiMax ?? "n/a"}</span>
+            <span>Source: {ws.mode === "ai" ? "Gemini AI (bounded, unvalidated)" : "season table and weather rules"}</span>
+          </div>
+          {ws.aiStatus && (
+            <div className="mb-3 rounded-lg border border-amber-500/40 bg-amber-950/20 p-2 text-xs text-amber-300">
+              {ws.aiStatus}
+            </div>
+          )}
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead className="text-slate-500">
+                  <tr>
+                    <th className="py-1 pr-2">Category</th>
+                    <th className="pr-2">Season</th>
+                    <th className="pr-2">Weather</th>
+                    <th className="pr-2">Final</th>
+                    <th>Why</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {movers.length ? (
+                    movers.map((c) => (
+                      <tr key={c.category} className="border-t border-slate-800 align-top">
+                        <td className="py-1 pr-2 text-slate-200">{c.category}</td>
+                        <td className="pr-2">{c.season.toFixed(2)}</td>
+                        <td className="pr-2">{c.weather.toFixed(2)}</td>
+                        <td className={`pr-2 font-semibold ${c.final > 1 ? "text-emerald-400" : "text-amber-400"}`}>
+                          {c.final.toFixed(2)}
+                        </td>
+                        <td className="text-slate-400">{c.reason}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={5} className="py-2 text-slate-500">
+                        No category is expected to move this period.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              {wd ? (
+                <table className="w-full text-left text-xs">
+                  <thead className="text-slate-500">
+                    <tr>
+                      <th className="py-1 pr-2">Plan metric</th>
+                      <th className="pr-2">Base</th>
+                      <th className="pr-2">Adjusted</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.map(([label, a, b, showPct]) => (
+                      <tr key={label} className="border-t border-slate-800">
+                        <td className="py-1 pr-2 text-slate-200">{label}</td>
+                        <td className="pr-2">{Number(a).toLocaleString()}</td>
+                        <td className="pr-2 font-semibold">{Number(b).toLocaleString()}</td>
+                        <td className="text-slate-400">{showPct ? pct(a, b) : `${(b - a).toFixed(1)} pts`}</td>
+                      </tr>
+                    ))}
+                    <tr className="border-t border-slate-800">
+                      <td className="py-1 pr-2 text-slate-200">Recommended node</td>
+                      <td className="pr-2">{wd.baseline.node}</td>
+                      <td className="pr-2 font-semibold">{wd.adjusted.node}</td>
+                      <td className="text-slate-400">
+                        {wd.baseline.node === wd.adjusted.node ? "same" : "changed"}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              ) : (
+                <div className="text-sm text-slate-500">Recalculating the plan...</div>
+              )}
+              {wd && (
+                <div className="mt-2 text-xs text-slate-500">
+                  Overall demand factor for this zone: {wd.zoneFactor.toFixed(3)}.
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="mt-3 text-xs text-slate-500">
+            Season factors, weather rules and AI suggestions are planning assumptions, kept within
+            -20% and +35%. They are not measured from real orders. Replace the season table with
+            observed seasonality when real data is available.
+          </div>
+        </>
+      )}
+    </section>
   );
 }
