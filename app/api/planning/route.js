@@ -11,7 +11,12 @@ export async function POST(request) {
       budget = 100,
       deliveryTarget = 20,
       storageLimitPct = 85,
+      categoryFactors,
     } = body;
+
+    const cf = categoryFactors && typeof categoryFactors === "object"
+      ? Object.fromEntries(Object.entries(categoryFactors).map(([k, v]) => [k, Math.max(0.8, Math.min(1.35, Number(v) || 1))]))
+      : undefined;
 
     const plan = buildExpansionPlan({
       zone,
@@ -19,6 +24,7 @@ export async function POST(request) {
       budget: Number(budget),
       deliveryTarget: Number(deliveryTarget),
       storageLimitPct: Number(storageLimitPct),
+      categoryFactors: cf,
     });
 
     return NextResponse.json({
